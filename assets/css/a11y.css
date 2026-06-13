@@ -1,0 +1,38 @@
+/* ============================================================
+   PeriodismoIA 2026 — Capa de accesibilidad
+   Añadido por mejoras de código. No altera el diseño en reposo:
+   el foco visible solo aparece al navegar con teclado y el
+   skip-link permanece oculto hasta recibir foco.
+   ============================================================ */
+
+/* Salto al contenido principal (lectores de pantalla / teclado) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: #0D1B3E;
+  color: #fff;
+  padding: .6rem 1rem;
+  border-radius: 0 0 6px 0;
+  font: 600 .85rem/1 'DM Sans', system-ui, sans-serif;
+  text-decoration: none;
+}
+.skip-link:focus { left: 0; }
+
+/* Foco visible solo con teclado */
+:focus-visible {
+  outline: 2px solid #00B4D8;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Respeto explícito por quienes reducen el movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

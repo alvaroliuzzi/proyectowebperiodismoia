@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descargar la guía | PeriodismoIA 2026</title>
+<meta name="description" content="Descargá la Guía PeriodismoIA 2026 en formato PDF: siete capítulos sobre integración de inteligencia artificial en redacciones, por Álvaro Liuzzi.">
+<meta name="author" content="Álvaro Liuzzi">
+<meta name="theme-color" content="#0D1B3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://periodismoia.com/descargar.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PeriodismoIA 2026">
+<meta property="og:title" content="Descargar la guía | PeriodismoIA 2026">
+<meta property="og:description" content="La guía completa en PDF, para llevar a la redacción.">
+<meta property="og:url" content="https://periodismoia.com/descargar.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/chapter.css">
+<link rel="stylesheet" href="assets/css/a11y.css">
+<style>
+/* ════════════════════════════════════════
+   DESCARGAR · página de descarga del PDF
+   ════════════════════════════════════════ */
+.dl-section{padding:5rem 0;}
+.dl-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center;max-width:1080px;margin:0 auto;}
+
+/* Cover del PDF (stack de páginas — sugiere documento de varias páginas) */
+.dl-cover{position:relative;}
+.dl-cover-wrap{position:relative;isolation:isolate;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.dl-page{position:absolute;inset:0;border-radius:8px;border:1px solid rgba(13,27,62,.08);transform-origin:top left;transition:transform .55s cubic-bezier(.22,1,.36,1);box-shadow:0 8px 18px -10px rgba(13,27,62,.18);}
+.dl-page--1{transform:translate(1px,2px) rotate(.2deg);background:#f0f6fb;z-index:0;}
+.dl-page--2{transform:translate(2px,5px) rotate(.5deg);background:#e3eef7;z-index:-1;}
+.dl-page--3{transform:translate(3px,8px) rotate(.9deg);background:#d4e3f1;z-index:-2;}
+.dl-page--4{transform:translate(4px,11px) rotate(1.3deg);background:#c4d8ec;z-index:-3;}
+.dl-page--5{transform:translate(5px,14px) rotate(1.7deg);background:#b3cce6;z-index:-4;}
+.dl-cover-wrap:hover{transform:translateY(-4px);}
+.dl-cover-wrap:hover .dl-page--1{transform:translate(2px,4px) rotate(.4deg);}
+.dl-cover-wrap:hover .dl-page--2{transform:translate(4px,8px) rotate(.9deg);}
+.dl-cover-wrap:hover .dl-page--3{transform:translate(6px,13px) rotate(1.5deg);}
+.dl-cover-wrap:hover .dl-page--4{transform:translate(9px,18px) rotate(2.1deg);}
+.dl-cover-wrap:hover .dl-page--5{transform:translate(12px,23px) rotate(2.8deg);}
+.dl-cover-img{position:relative;z-index:1;display:block;width:100%;height:auto;border-radius:8px;overflow:hidden;filter:drop-shadow(0 20px 40px rgba(13,27,62,.28));}
+.dl-cover-tag{position:absolute;top:-.8rem;left:-.6rem;z-index:5;background:var(--cyan);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.4rem .8rem;border-radius:99px;box-shadow:0 8px 18px -8px rgba(0,180,216,.5);}
+
+/* Info lado derecho */
+.dl-info{display:flex;flex-direction:column;gap:1.1rem;}
+.dl-info .section-label{margin-bottom:0;}
+.dl-info h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy);line-height:1.18;letter-spacing:-.01em;margin:0;}
+.dl-info .dl-lead{font-size:.95rem;color:var(--g700);line-height:1.65;margin:0;}
+
+/* Features */
+.dl-features{list-style:none;padding:0;margin:.4rem 0 .2rem;display:grid;grid-template-columns:1fr 1fr;gap:.65rem 1.2rem;}
+.dl-features li{display:flex;align-items:center;gap:.55rem;font-family:'DM Sans',sans-serif;font-size:.78rem;color:var(--navy);font-weight:600;}
+.dl-features svg{flex-shrink:0;color:var(--cyan);}
+
+/* Botón de descarga */
+.dl-btn-wrap{margin-top:.8rem;display:flex;flex-direction:column;gap:.6rem;}
+.dl-btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--g200);color:var(--g400);font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.9rem 1.5rem;border-radius:99px;text-decoration:none;border:1px solid var(--g200);cursor:not-allowed;width:fit-content;}
+.dl-btn--ready{background:var(--cyan);color:var(--navy);border-color:var(--cyan);cursor:pointer;transition:gap .25s,box-shadow .25s;}
+.dl-btn--ready:hover{gap:.85rem;box-shadow:0 12px 28px -10px rgba(0,180,216,.65);}
+.dl-btn svg{flex-shrink:0;}
+.dl-note{font-family:'DM Sans',sans-serif;font-size:.75rem;color:var(--g700);line-height:1.5;display:flex;align-items:flex-start;gap:.5rem;padding:.7rem .9rem;background:var(--violet-l);border-radius:8px;border-left:3px solid var(--violet);max-width:42ch;}
+.dl-note svg{flex-shrink:0;color:var(--violet);margin-top:.15rem;}
+
+/* Stats section (arriba de la cover, en sintonía con sobre-programa y cap. 4) */
+.dl-stats-section{padding:3rem 0;}
+.dl-stats-head{max-width:62ch;margin-bottom:1.6rem;}
+.dl-stats-title{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(1.4rem,2.4vw,1.85rem);color:var(--navy);line-height:1.2;margin:.4rem 0 0;letter-spacing:-.01em;}
+.dl-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+.dl-stat{position:relative;background:#fff;border:1px solid var(--g200);border-radius:12px;padding:1.4rem 1.4rem 1.2rem;overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;}
+.dl-stat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.dl-stat--1::before{background:#3D1968;}
+.dl-stat--2::before{background:var(--violet);}
+.dl-stat--3::before{background:#5DCBE6;}
+.dl-stat--4::before{background:var(--cyan);}
+.dl-stat:hover{transform:translateY(-3px);border-color:var(--g200);box-shadow:0 12px 26px -16px rgba(13,27,62,.22);}
+.dl-stat-num{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(2rem,3.5vw,2.6rem);line-height:1;letter-spacing:-.02em;margin-bottom:.45rem;}
+.dl-stat--1 .dl-stat-num{background:linear-gradient(135deg,#3D1968 0%,var(--violet) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+.dl-stat--2 .dl-stat-num{background:linear-gradient(135deg,var(--violet) 0%,#8A50C4 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+.dl-stat--3 .dl-stat-num{background:linear-gradient(135deg,#5DCBE6 0%,var(--cyan) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+.dl-stat--4 .dl-stat-num{background:linear-gradient(135deg,var(--cyan) 0%,#0E6FA8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
+.dl-stat-label{font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);}
+@media (max-width:720px){
+  .dl-stats{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width:820px){
+  .dl-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .dl-cover-wrap{max-width:420px;margin:0 auto;}
+  .dl-features{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- BARRA DE PROGRESO -->
+<div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+
+<!-- NAV FIJA -->
+<nav class="site-nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html#top" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="introduccion.html">Introducción</a></li>
+        <li><a href="index.html#capitulos">Capítulos</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="bibliografia.html">Bibliografía</a></li>
+        <li><a href="sobre-metodologia.html">Metodología</a></li>
+        <li><a href="sobre-programa.html">Programa</a></li>
+        <li><a href="sobre-alvaro.html">Autor</a></li>
+      </ul>
+      <a href="descargar.html" class="nav-cta">Descargar guía</a>
+      <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero--cyan">
+  <div class="hero-geo" aria-hidden="true">
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.10) 1px,transparent 1px);background-size:40px 40px;-webkit-mask:radial-gradient(135% 125% at 0% 100%,#000 0%,#000 24%,transparent 82%);mask:radial-gradient(135% 125% at 0% 100%,#000 0%,#000 24%,transparent 82%);"></div>
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.30) 1.4px,transparent 1.7px);background-size:22px 22px;-webkit-mask:radial-gradient(92% 92% at 100% 0%,#000 0%,#000 18%,transparent 64%);mask:radial-gradient(92% 92% at 100% 0%,#000 0%,#000 18%,transparent 64%);"></div>
+    <svg viewBox="0 0 340 340" fill="none" style="position:absolute;top:-100px;right:-80px;width:340px;height:340px;">
+      <circle cx="170" cy="170" r="140" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+      <circle cx="170" cy="170" r="85" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+      <circle cx="170" cy="170" r="40" fill="rgba(91,45,142,0.25)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+      <path id="orb" d="M170 40 A130 130 0 1 1 169.9 40" fill="none"/>
+      <circle r="5.5" fill="#FFFFFF"><animate attributeName="opacity" values="0.55;1;0.55" dur="3s" repeatCount="indefinite"/><animateMotion dur="22s" repeatCount="indefinite"><mpath href="#orb"/></animateMotion></circle>
+    </svg>
+  </div>
+
+  <div class="hero-center">
+    <div class="hero-logo anim-word" style="animation-delay:.05s">
+      <span class="hero-logo-personal">Periodismo<span>IA</span></span>
+    </div>
+    <div class="hero-sep anim-word" style="animation-delay:.2s"></div>
+    <div class="hero-chapter anim-word" style="animation-delay:.3s">La guía completa</div>
+    <div class="hero-movement-pill anim-word" style="animation-delay:.4s">Versión 2.0 · PDF imprimible</div>
+    <div class="hero-divider anim-line" style="animation-delay:.5s"></div>
+    <h1 class="hero-title anim-word" style="animation-delay:.65s">Descargar la guía</h1>
+    <p class="hero-tagline anim-word" style="animation-delay:.85s">Los siete capítulos en un único documento, listo para imprimir y llevar a la redacción.</p>
+  </div>
+</section>
+
+<main id="contenido">
+
+<section class="section section--white dl-section">
+  <div class="container">
+    <div class="dl-grid">
+
+      <!-- Cover del PDF -->
+      <div class="dl-cover reveal">
+        <span class="dl-cover-tag">Portada · v2.0</span>
+        <div class="dl-cover-wrap">
+          <span class="dl-page dl-page--5" aria-hidden="true"></span>
+          <span class="dl-page dl-page--4" aria-hidden="true"></span>
+          <span class="dl-page dl-page--3" aria-hidden="true"></span>
+          <span class="dl-page dl-page--2" aria-hidden="true"></span>
+          <span class="dl-page dl-page--1" aria-hidden="true"></span>
+          <img class="dl-cover-img" src="img/portada-guia.png" alt="Portada de la Guía PeriodismoIA 2026" loading="eager">
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="dl-info reveal" style="transition-delay:.1s">
+        <div class="section-label">Documento descargable</div>
+        <h2>La guía completa, en un solo PDF</h2>
+        <p class="dl-lead">Los siete capítulos de PeriodismoIA 2026 reunidos en una edición integral en PDF, lista para descargar, imprimir y compartir. Pensada para circular en reuniones editoriales, consultar offline o trabajar en equipo. Incluye el relevamiento internacional, recursos complementarios, bibliografía y la propuesta de directrices para integrar inteligencia artificial en redacciones.</p>
+
+        <ul class="dl-features">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l4 4L19 5"/></svg>
+            7 capítulos completos
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l4 4L19 5"/></svg>
+            Versión imprimible
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l4 4L19 5"/></svg>
+            Bibliografía completa
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l4 4L19 5"/></svg>
+            Propuesta de directrices
+          </li>
+        </ul>
+
+        <div class="dl-btn-wrap">
+          <span class="dl-btn" aria-disabled="true">
+            <svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8.5"/><path d="M11 6v5l3 2"/></svg>
+            Próximamente disponible
+          </span>
+          <div class="dl-note">
+            <svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8.5"/><path d="M11 7v5"/><circle cx="11" cy="15" r=".5" fill="currentColor"/></svg>
+            <span>La versión final del PDF está en edición. Cuando esté lista, este botón habilitará la descarga directa.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></div>
+  </div>
+  <div style="display:flex;gap:2rem">
+    <a href="index.html">← Inicio</a>
+    <a href="index.html#capitulos" style="color:var(--cyan)">Explorar la guía →</a>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" aria-label="Volver arriba">↑</button>
+<script src="assets/js/app.js"></script>
+<script>
+  var pb = document.getElementById('progressBar');
+  var tt = document.getElementById('toTop');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    if (pb) pb.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    if (tt) tt.classList.toggle('show', h.scrollTop > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  if (tt) tt.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  var burger = document.querySelector('.nav-burger');
+  if(burger){
+    burger.addEventListener('click', function(){
+      var open = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!open));
+      var links = document.querySelector('.nav-links');
+      if(!open){ links.style.display='flex'; links.style.position='absolute'; links.style.flexDirection='column'; links.style.top='100%'; links.style.right='1.5rem'; links.style.background='var(--navy)'; links.style.padding='1.2rem 1.6rem'; links.style.borderRadius='0 0 10px 10px'; links.style.border='1px solid rgba(255,255,255,.1)'; links.style.gap='1.1rem'; links.style.zIndex='200'; }
+      else { links.style.display='none'; }
+    });
+  }
+</script>
+
+</body>
+</html>

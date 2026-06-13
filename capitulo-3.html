@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítulo 3 — Integración de la inteligencia artificial en medios: una posible hoja de ruta | PeriodismoIA 2026</title>
+<meta name="description" content="Fases, decisiones clave y criterios para integrar la IA en una redacción de manera ordenada. Desde el diagnóstico inicial hasta la escala y la gobernanza.">
+<meta name="author" content="Álvaro Liuzzi">
+<meta name="theme-color" content="#0D1B3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://periodismoia.com/capitulo-3.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PeriodismoIA 2026">
+<meta property="og:title" content="Capítulo 3 — Integración de la inteligencia artificial en medios: una posible hoja de ruta | PeriodismoIA 2026">
+<meta property="og:description" content="Fases, decisiones clave y criterios para integrar la IA en una redacción de manera ordenada. Desde el diagnóstico inicial hasta la escala y la gobernanza.">
+<meta property="og:url" content="https://periodismoia.com/capitulo-3.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/chapter.css">
+<link rel="stylesheet" href="assets/css/a11y.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Capítulo 3 — Integración de la inteligencia artificial en medios: una posible hoja de ruta",
+  "author": { "@type": "Person", "name": "Álvaro Liuzzi" },
+  "publisher": { "@type": "Organization", "name": "Redacciones5G · Personal Argentina" },
+  "datePublished": "2026-01-01",
+  "inLanguage": "es",
+  "articleSection": "Integración"
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- NAV STICKY -->
+<nav class="chapter-nav" aria-label="Navegación entre capítulos">
+  <div class="chapter-nav-inner">
+    <a href="index.html" class="chapter-nav-brand">Periodismo<span>IA</span> <span class="ver">v2.0</span></a>
+    <ol class="chapter-nav-dots" aria-label="Capítulos">
+      <li><a href="capitulo-1.html" class="cnav-dot"><span class="cnav-num">01</span><span class="cnav-title">Fundamentos</span></a></li>
+      <li><a href="capitulo-2.html" class="cnav-dot"><span class="cnav-num">02</span><span class="cnav-title">Ética</span></a></li>
+      <li><a href="capitulo-3.html" class="cnav-dot is-current" aria-current="page"><span class="cnav-num">03</span><span class="cnav-title">Integración</span></a></li>
+      <li><a href="capitulo-4.html" class="cnav-dot"><span class="cnav-num">04</span><span class="cnav-title">Morfología</span></a></li>
+      <li><a href="capitulo-5.html" class="cnav-dot"><span class="cnav-num">05</span><span class="cnav-title">Audiencias</span></a></li>
+      <li><a href="capitulo-6.html" class="cnav-dot"><span class="cnav-num">06</span><span class="cnav-title">Casos</span></a></li>
+      <li><a href="capitulo-7.html" class="cnav-dot"><span class="cnav-num">07</span><span class="cnav-title">Reflexiones</span></a></li>
+      <li><a href="recursos.html" class="cnav-dot cnav-dot--rsc"><span class="cnav-num">+</span><span class="cnav-title">Recursos</span></a></li>
+    </ol>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero--cyan">
+  <div class="hero-geo" aria-hidden="true">
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.22) 1px,transparent 1px);background-size:40px 40px;-webkit-mask:radial-gradient(135% 125% at 100% 0%,#000 0%,#000 24%,transparent 82%);mask:radial-gradient(135% 125% at 100% 0%,#000 0%,#000 24%,transparent 82%);"></div>
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.42) 1.4px,transparent 1.7px);background-size:22px 22px;-webkit-mask:radial-gradient(92% 92% at 0% 100%,#000 0%,#000 18%,transparent 64%);mask:radial-gradient(92% 92% at 0% 100%,#000 0%,#000 18%,transparent 64%);"></div>
+    <svg viewBox="0 0 340 340" fill="none" style="position:absolute;top:50%;right:-105px;transform:translateY(-50%);width:340px;height:340px;">
+      <circle cx="170" cy="170" r="140" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <circle cx="170" cy="170" r="85" stroke="rgba(255,255,255,0.32)" stroke-width="1.2"/>
+      <circle cx="170" cy="170" r="40" fill="rgba(91,45,142,0.3)" stroke="rgba(91,45,142,0.5)" stroke-width="1"/>
+      <path id="orb" d="M170 40 A130 130 0 1 1 169.9 40" fill="none"/>
+      <circle r="5.5" fill="#FFFFFF"><animate attributeName="opacity" values="0.55;1;0.55" dur="3s" repeatCount="indefinite"/><animateMotion dur="22s" repeatCount="indefinite"><mpath href="#orb"/></animateMotion></circle>
+    </svg>
+  </div>
+  <div class="hero-center">
+    <div class="hero-logo anim-word" style="animation-delay:.05s">
+      <span class="hero-logo-personal">Periodismo<span>IA</span></span>
+    </div>
+    <div class="hero-sep anim-word" style="animation-delay:.2s"></div>
+    <div class="hero-chapter anim-word" style="animation-delay:.3s">
+      Capítulo <em>3</em>
+    </div>
+        <div class="hero-movement-pill anim-word" style="animation-delay:.4s">Movimiento · Integración</div>
+    <div class="hero-divider anim-line" style="animation-delay:.5s"></div>
+    <h1 class="hero-title anim-word" style="animation-delay:.65s">
+      <em>Integración de la inteligencia artificial en medios:</em><br>
+      una posible hoja de ruta
+    </h1>
+  </div>
+</section>
+
+<main id="contenido">
+<section class="section section--white">
+  <div class="container">
+    <div class="prose">
+      <div class="section-label reveal">Hoja de ruta</div>
+      <p class="lead reveal">La integración de la inteligencia artificial en las redacciones periodísticas es uno de los procesos de transformación más complejos que enfrenta la industria de los medios. A diferencia de cambios tecnológicos anteriores, la IA no se instala en un área específica del flujo de trabajo sino que lo atraviesa por completo, reconfigura cómo se producen los contenidos, cómo se distribuyen, cómo se relacionan los medios con sus audiencias y tiene un impacto directo en las condiciones de sustentabilidad.</p>
+      <p class="reveal">Incorporar inteligencia artificial en una redacción en 2026 es un desafío cualitativamente distinto al que enfrentaron los primeros medios que lo intentaron en 2023. Lo que entonces era territorio experimental, con herramientas incipientes y escasas referencias, es hoy un campo con tres años de experiencias documentadas, casos fallidos y modelos que probaron funcionar. La aceleración del ciclo tecnológico ha comprimido ese aprendizaje de tal manera que lo que antes tomaba años de adaptación industrial ocurre ahora en meses. Las organizaciones que comienzan hoy parten de una mayor madurez colectiva, aunque enfrentan también expectativas más altas y presiones concretas sobre los resultados.</p>
+      <p class="reveal">La experiencia acumulada en redacciones de distintas escalas muestra que las organizaciones que avanzan con mayor solidez no son necesariamente las que adoptan más tecnología, sino las que toman decisiones con claridad sobre sus propios objetivos, sus capacidades reales y sus valores periodísticos. Las razones que explican los fracasos son casi siempre culturales. La resistencia interna, la brecha entre periodistas con distintos niveles de experiencia digital y la ausencia de marcos claros de uso resultan, en la práctica, más determinantes que cualquier limitación presupuestaria o tecnológica.</p>
+
+      <div class="pull-quote reveal">Las organizaciones que avanzan con mayor solidez no son necesariamente las que adoptan más tecnología, sino las que toman decisiones con claridad sobre sus propios objetivos, sus capacidades reales y sus valores periodísticos.</div>
+      <p class="reveal">La hoja de ruta que se presenta en este capítulo propone diez etapas para orientar ese proceso. Cada organización tiene su historia, su cultura y sus recursos, y lo que funciona en una puede no funcionar en otra. Por eso, este marco debe leerse como una guía adaptable y no como una secuencia rígida. Lo que permanece constante, independientemente del contexto, es la necesidad de avanzar con método, con supervisión humana en cada paso crítico y con disposición para aprender del error con la misma atención que se le presta al éxito.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--gray">
+  <div class="container">
+    <div class="prose">
+      <div class="section-label reveal">Fase 1 de 3</div>
+      <h2 class="section-title reveal">Planificación</h2>
+
+      <div class="directive reveal">
+        <div class="directive-num">1</div>
+        <div class="directive-body">
+          <div class="directive-title">Diagnóstico editorial y organizacional</div>
+          <p class="reveal">Antes de evaluar herramientas o definir casos de uso, una organización necesita comprender con honestidad qué tipo de redacción es, qué hace bien, dónde tiene fricciones y cuál es su verdadera disposición al cambio. Este primer paso tiene una dimensión editorial y una organizacional, y ambas son igualmente necesarias.</p>
+          <p class="reveal">La dimensión editorial analiza los flujos de producción, los cuellos de botella, las tareas que consumen tiempo desproporcionado y los procesos que dependen de conocimiento no documentado. La dimensión organizacional examina la cultura interna, el nivel de alfabetización digital del equipo, las resistencias explícitas e implícitas y la capacidad de liderazgo para sostener un proceso de transformación.</p>
+          <p class="reveal">Un aspecto frecuentemente subestimado en esta etapa es el denominado “sesgo de supervivencia”, que refiere a la tendencia a observar únicamente los casos de implementación exitosa, generalmente de grandes redacciones con recursos abundantes, mientras quedan fuera del análisis los procesos que no prosperaron. En esta etapa los aprendizajes más valiosos suelen estar precisamente en esos fracasos, que revelan errores de enfoque y problemas de implementación que ningún caso de éxito muestra con claridad.</p>
+          <p class="reveal">Un diagnóstico honesto puede revelar que una redacción no está lista para ciertos tipos de implementación, y esa información es igual de valiosa que descubrir oportunidades. Actuar sin ese mapeo previo es una de las causas más frecuentes de proyectos piloto que se diluyen sin dejar aprendizajes.</p>
+        </div>
+      </div>
+
+      <div class="directive reveal">
+        <div class="directive-num">2</div>
+        <div class="directive-body">
+          <div class="directive-title">Evaluación de capacidades y recursos</div>
+          <p class="reveal">Con el diagnóstico en mano, el paso siguiente es hacer un inventario realista de lo disponible. Allí se debe incluir la infraestructura tecnológica, el acceso a datos, las competencias del equipo y el presupuesto, por mencionar solo algunos ítems. Esta evaluación debe sortear dos trampas opuestas, el entusiasmo que sobredimensiona las posibilidades reales y la cautela excesiva que paraliza cualquier iniciativa antes de comenzar.</p>
+          <p class="reveal">Una pregunta central en esta etapa es si hay capacidad técnica interna para dar soporte a nuevas herramientas, o si se contratarán proveedores externos. La dependencia de proveedores tecnológicos merece atención especial. La experiencia de la última década con plataformas de distribución y la pérdida de autonomía que eso implicó para muchas organizaciones es una advertencia válida para este nuevo ciclo. Evaluar qué tan reversibles son los compromisos tecnológicos que se asumen también forma parte de una adopción responsable.</p>
+          <p class="reveal">También importa saber si el equipo periodístico tiene la formación mínima para trabajar con sistemas generativos, o si la curva de aprendizaje requerirá una inversión significativa antes de ver resultados. Las redacciones con recursos limitados que aprenden a hacer las preguntas correctas desde el inicio, enfocándose en resolver problemas concretos con los medios disponibles, avanzan con mayor claridad que aquellas con más recursos pero sin una estrategia definida.</p>
+        </div>
+      </div>
+
+      <div class="directive reveal">
+        <div class="directive-num">3</div>
+        <div class="directive-body">
+          <div class="directive-title">Definición de objetivos claros y medibles</div>
+          <p class="reveal">Una implementación sin objetivos definidos carece de posibilidad de evaluación. Antes de avanzar, cada organización necesita responder con precisión para qué quiere usar la IA. ¿Para reducir el tiempo que demanda la producción de ciertos formatos? ¿Para mejorar la cobertura de determinados temas? ¿Para liberar tiempo periodístico de tareas mecánicas y redirigirlo hacia trabajo de mayor valor?</p>
+          <p class="reveal">La pregunta de partida nunca debería ser qué herramienta de IA adoptar, sino qué problema necesita resolverse. Esa inversión en el orden de las preguntas marca toda la diferencia entre una integración genuina y la adopción de tecnología por presión del entorno o por imitación de otros medios. Priorizar el para qué antes que el con qué es lo que permite evitar el fetichismo tecnológico y sostener la implementación en el tiempo.</p>
+          <p class="reveal">Los objetivos deben ser específicos, alcanzables y medibles. Conviene definir qué proceso concreto debe mejorar, en qué medida y en qué plazo. Los indicadores de rendimiento que emergen de esos objetivos serán la herramienta central para evaluar si la implementación avanza en la dirección correcta y para justificar las decisiones ante distintos actores dentro de la organización.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="prose">
+      <div class="section-label reveal">Fase 2 de 3</div>
+      <h2 class="section-title reveal">Adopción</h2>
+
+      <div class="directive reveal">
+        <div class="directive-num">4</div>
+        <div class="directive-body">
+          <div class="directive-title">Selección de herramientas y enfoques</div>
+          <p class="reveal">El ecosistema de herramientas de IA disponibles para redacciones es amplio, cambia con rapidez y no ofrece jerarquías estables. Lo que sirve para un medio generalista de alcance nacional puede ser irrelevante para un medio local conformado por un equipo pequeño. El proceso de selección importa tanto como el resultado final.</p>
+          <p class="reveal">Una selección responsable implica analizar la escalabilidad de las soluciones, su facilidad de integración con los sistemas existentes, la calidad del soporte técnico disponible y las condiciones de uso de los datos que la herramienta requiere. También implica evaluar si existen alternativas de código abierto o desarrollo propio que ofrezcan mayor autonomía a largo plazo.</p>
+          <p class="reveal">La experiencia muestra que herramientas simples diseñadas internamente y ajustadas a las necesidades reales de producción, generan mayor apropiación que soluciones sofisticadas impuestas desde afuera. Cuando el staff periodístico participa en el diseño de las herramientas que va a usar, las comprenden mejor, las adaptan con más facilidad y las sostienen en el tiempo. Trasladar el control del proveedor al equipo periodístico es el paso que muchas implementaciones nunca dan, y por eso no logran consolidarse.</p>
+        </div>
+      </div>
+
+      <div class="directive reveal">
+        <div class="directive-num">5</div>
+        <div class="directive-body">
+          <div class="directive-title">Pruebas piloto con casos de uso específicos</div>
+          <p class="reveal">Antes de cualquier despliegue amplio, las buenas prácticas en procesos de innovación sugieren comenzar a pequeña escala. Un piloto bien diseñado permite aprender en condiciones reales sin comprometer toda la operación, identificar problemas de integración que no eran visibles en la evaluación inicial y generar evidencia concreta sobre el valor de una herramienta en ese contexto particular.</p>
+          <p class="reveal">La elección del caso piloto tiene una dimensión estratégica. Conviene seleccionar un proceso con impacto visible, posibilidad de medición clara y un equipo dispuesto a participar activamente en la experimentación. Un piloto en un área de alta resistencia interna tiene pocas probabilidades de producir aprendizaje genuino. Un piloto en un área tan marginal que sus resultados no interesan a nadie tampoco genera los incentivos necesarios para sostener el proceso.</p>
+          <p class="reveal">Igualmente importante es crear un entorno donde los equipos puedan probar, fallar y aprender sin que los errores tengan consecuencias en el plano profesional. Esa libertad controlada es clave para que el staff de periodistas identifiquen el potencial de la tecnología y también sus límites, que son tan importantes como sus posibilidades. El miedo bloquea la innovación, el permiso para equivocarse la habilita.</p>
+        </div>
+      </div>
+
+      <div class="directive reveal">
+        <div class="directive-num">6</div>
+        <div class="directive-body">
+          <div class="directive-title">Integración en flujos de trabajo existentes</div>
+          <p class="reveal">Cuando un piloto demuestra valor, el desafío siguiente es integrarlo sin fracturar los flujos de trabajo que ya existen. Esta es una de las etapas más delicadas del proceso porque implica rediseñar rutinas establecidas y redistribuir responsabilidades, lo que siempre genera algún grado de fricción.</p>
+          <p class="reveal">El trabajo en esta fase consiste en identificar los puntos donde la IA puede aportar mayor valor sin desplazar las capacidades centrales del trabajo periodístico, entre las que se hallan: el juicio editorial, la construcción de fuentes, el criterio ético y la capacidad de contextualización. La supervisión humana cumple aquí una función doble, por un lado, garantiza la responsabilidad periodística de los contenidos y, por otro, reduce el riesgo de errores que la automatización sin control tiende a multiplicar.</p>
+          <p class="reveal">El concepto anglosajón <em>human in the loop</em>, mantener a las personas en el centro de los procesos de automatización y especialmente en las decisiones críticas, responde tanto a un principio ético como a uno de calidad. Los flujos deben diseñarse con puntos de control humano desde el inicio y no agregarlos posteriormente como corrección. La tecnología asiste, las decisiones finales permanecen en manos de periodistas.</p>
+        </div>
+      </div>
+
+      <div class="directive reveal">
+        <div class="directive-num">7</div>
+        <div class="directive-body">
+          <div class="directive-title">Capacitación continua del equipo</div>
+          <p class="reveal">La capacitación en el uso de IA requiere un enfoque de proceso sostenido en el tiempo. Las herramientas evolucionan, los casos de uso se amplían y las mejores prácticas se actualizan con frecuencia. Una organización que forma a su equipo una sola vez y da por cerrado el tema está creando las condiciones para que sus periodistas trabajen con conocimientos desactualizados en un plazo relativamente corto.</p>
+          <p class="reveal">Los programas de formación que funcionan comparten una estructura escalonada que combina talleres iniciales para comprender conceptos y posibilidades, sesiones prácticas para diseñar herramientas en contexto real, y seguimiento para ajustar cuando aparecen problemas. Los equipos que atraviesan ese proceso no solo suman habilidades técnicas sino que desarrollan algo más valioso a largo plazo, la capacidad de adaptarse cuando lleguen las próximas herramientas. Entender la formación como infraestructura y no como gasto puntual es lo que separa la adopción superficial de la transformación real.</p>
+          <p class="reveal">Los procesos que mejor funcionan son los que promueven el trabajo conjunto entre perfiles con distintas trayectorias, sin asumir incapacidades por experiencia ni por edad. Cuando la fluidez tecnológica y el criterio editorial se combinan en lugar de coexistir en silos, la adopción se vuelve más sólida para toda la organización.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--gray">
+  <div class="container">
+    <div class="prose">
+      <div class="section-label reveal">Fase 3 de 3</div>
+      <h2 class="section-title reveal">Gobernanza</h2>
+
+      <div class="directive reveal">
+        <div class="directive-num">8</div>
+        <div class="directive-body">
+          <div class="directive-title">Diseño de roles y gobernanza interna</div>
+          <p class="reveal">Uno de los aprendizajes más claros de los últimos años es que la IA tiende a quedar en tierra de nadie cuando no hay roles explícitamente definidos a su alrededor. Las organizaciones que han avanzado con mayor solidez son las que establecieron con claridad quién evalúa nuevas herramientas, quién define los criterios de uso, quién audita los resultados y quién gestiona los incidentes.</p>
+          <p class="reveal">Esto puede lograrse sin crear departamentos nuevos ni contratar perfiles altamente especializados, algo que muchas redacciones no pueden hacer. Basta con asignar responsabilidades de forma explícita, documentar los criterios de decisión y crear mecanismos de revisión que no dependan solo de la iniciativa individual. En redacciones medianas y pequeñas, esto puede tomar la forma de un referente de IA por sección, un protocolo de revisión para contenidos asistidos y un canal interno para compartir aprendizajes y resolver dudas en tiempo real.</p>
+          <p class="reveal">La IA es también una oportunidad para trabajar de forma más articulada entre las distintas áreas de una redacción. Cuando periodistas, editores y perfiles técnicos se involucran conjuntamente en el proceso, pueden detectar más rápido riesgos, sesgos o efectos no deseados, y construir una cultura de innovación compartida en la que la tecnología se desarrolla desde las necesidades reales de la organización.</p>
+        </div>
+      </div>
+
+      <div class="directive reveal">
+        <div class="directive-num">9</div>
+        <div class="directive-body">
+          <div class="directive-title">Monitoreo y análisis continuo de resultados</div>
+          <p class="reveal">Una implementación de IA requiere seguimiento activo mucho después de que la herramienta empieza a funcionar. El monitoreo continuo permite distinguir si lo que se está haciendo tiene el impacto buscado, si está generando problemas no previstos o si las condiciones han cambiado de tal manera que requieren ajustes en el enfoque.</p>
+          <p class="reveal">Este monitoreo debe cubrir dimensiones editoriales, como la calidad de los contenidos producidos con asistencia de IA, la precisión y la consistencia con los estándares del medio; dimensiones operativas, como tiempos, costos y eficiencia de los flujos; y dimensiones de audiencia, relacionadas con cómo responden los lectores a los contenidos producidos con estas herramientas.</p>
+          <p class="reveal">La evaluación de calidad de los <em>outputs</em> merece un protocolo específico antes de que cualquier contenido asistido llegue a publicación. Ese protocolo puede ser simple, pero debe ser explícito en tres aspectos: quién revisa, qué revisa y con qué criterios. Los elementos que con mayor frecuencia requieren verificación humana son la precisión factual, la consistencia con el estilo editorial del medio, la ausencia de sesgos introducidos por el modelo y la adecuación del tono al contexto. Un <em>output</em> que pasa esa revisión es un <em>output</em> con IA supervisada, que es exactamente lo que una redacción responsable debería poder garantizar ante su audiencia.</p>
+          <p class="reveal">Sin medición constante, el proyecto pierde impulso y dirección. La evaluación es la única forma de saber si lo que se está haciendo funciona o necesita cambiar de rumbo. La retroalimentación constante entre los datos recogidos y las decisiones sobre cómo usar la IA es lo que convierte la implementación en un proceso de mejora continua.</p>
+        </div>
+      </div>
+
+      <div class="directive reveal">
+        <div class="directive-num">10</div>
+        <div class="directive-body">
+          <div class="directive-title">Diseño de <em>guidelines</em> propias y adaptación constante</div>
+          <p class="reveal">La definición de un marco interno que oriente el uso de la IA de forma coherente con los valores y la identidad del medio cierra el ciclo de implementación y al mismo tiempo lo renueva. Las <em>guidelines</em> propias articulan qué usos son aceptables, cuáles están fuera del límite editorial, cómo se etiqueta el contenido asistido, cómo se revisa antes de publicar y cómo se actualiza el marco cuando cambian las herramientas o las circunstancias.</p>
+          <p class="reveal">A nivel interno, estas pautas ofrecen al equipo un marco de referencia compartido que reduce la ambigüedad y facilita la toma de decisiones cotidianas. A nivel externo, su publicación funciona como un gesto de transparencia hacia la audiencia, una señal de que la adopción tecnológica está mediada por criterios editoriales explícitos.</p>
+          <p class="reveal">Las directrices que funcionan son las que se discuten, se revisan y se ajustan. Un documento estático archivado en una carpeta no construye gobernanza. La conversación constante sobre límites, usos y responsabilidades, sí. Por eso, las políticas de uso deben construirse en paralelo a la adopción, como un proceso vivo, y no redactarse al final como un cierre formal del proyecto. En un contexto de erosión sostenida de la confianza en los medios, ese tipo de transparencia forma parte de la propuesta de valor del periodismo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <figure class="figure cycle-fig">
+      <div class="section-label reveal">Itinerario</div>
+      <div class="figure-title">10 etapas para integrar IA en redacciones</div>
+      <div class="figure-sub">Un proceso iterativo y centrado en las personas para transformar el trabajo periodístico con inteligencia artificial de manera responsable y sostenible.</div>
+      <div class="cycle-ring">
+        <div class="cycle-hub">
+            <div class="cycle-hub-title">IA en redacciones</div>
+            <div class="cycle-hub-sub">Personas <b>+</b> Tecnología <b>+</b> Procesos <b>+</b> Audiencias</div>
+            <div class="cycle-hub-tag">Mejor periodismo, más impacto</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">1</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><line x1="13" y1="13" x2="18.5" y2="18.5"/></svg></span></div>
+            <div class="cycle-card-title">Diagnóstico editorial y organizacional</div>
+            <div class="cycle-card-desc">Entender flujos, desafíos, cultura y disposición al cambio. Aprender de aciertos y fracasos.</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">2</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="18.5" x2="5" y2="11"/><line x1="11" y1="18.5" x2="11" y2="5.5"/><line x1="17" y1="18.5" x2="17" y2="13"/></svg></span></div>
+            <div class="cycle-card-title">Evaluación de capacidades y recursos</div>
+            <div class="cycle-card-desc">Inventario realista de tecnología, datos, talento y presupuesto. Evaluar dependencias y riesgos.</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">3</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><circle cx="11" cy="11" r="3.6"/><circle cx="11" cy="11" r="0.9" fill="#5B2D8E" stroke="none"/></svg></span></div>
+            <div class="cycle-card-title">Definición de objetivos claros y medibles</div>
+            <div class="cycle-card-desc">Partir del problema, no de la herramienta. Objetivos específicos e indicadores.</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">4</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 4.6a3.4 3.4 0 0 0-4.3 4.3l-5.6 5.6a1.6 1.6 0 0 0 2.3 2.3l5.6-5.6a3.4 3.4 0 0 0 4.3-4.3l-2.2 2.2-2.1-.1-.1-2.1z"/></svg></span></div>
+            <div class="cycle-card-title">Selección de herramientas y enfoques</div>
+            <div class="cycle-card-desc">Elegir soluciones escalables, seguras y alineadas al objetivo. Priorizar lo simple, útil y controlable.</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">5</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5l-4 8.2A1.4 1.4 0 0 0 6.3 18.4h9.4A1.4 1.4 0 0 0 17 16.2L13 8V3"/><line x1="7.6" y1="3" x2="14.4" y2="3"/><line x1="7" y1="13.5" x2="15" y2="13.5"/></svg></span></div>
+            <div class="cycle-card-title">Pruebas piloto con casos de uso específicos</div>
+            <div class="cycle-card-desc">Probar a pequeña escala para aprender, ajustar y validar valor antes de escalar.</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">6</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="6.5" r="3"/><path d="M5 18a6 6 0 0 1 12 0"/></svg></span></div>
+            <div class="cycle-card-title">Capacitación y adopción del equipo</div>
+            <div class="cycle-card-desc">Formar, acompañar y generar confianza.</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">7</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="2.8"/><path d="M11 3v2.2M11 16.8V19M3 11h2.2M16.8 11H19M5.3 5.3l1.6 1.6M15.1 15.1l1.6 1.6M16.7 5.3l-1.6 1.6M6.9 15.1l-1.6 1.6"/></svg></span></div>
+            <div class="cycle-card-title">Implementación gradual y escalable</div>
+            <div class="cycle-card-desc">Integrar por etapas, con mejoras continuas y documentación de aprendizajes.</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">8</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16l4-4.5 3 2.5 5-6.5"/><circle cx="8" cy="11.5" r="0.9" fill="#5B2D8E" stroke="none"/><circle cx="11" cy="14" r="0.9" fill="#5B2D8E" stroke="none"/><circle cx="16" cy="7.5" r="0.9" fill="#5B2D8E" stroke="none"/></svg></span></div>
+            <div class="cycle-card-title">Monitoreo, evaluación y medición</div>
+            <div class="cycle-card-desc">Medir impacto en tiempo, calidad, costos y audiencias. Ajustar sobre datos y resultados.</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">9</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5l6 2v4.5c0 3.8-2.6 6.3-6 7.5-3.4-1.2-6-3.7-6-7.5V5.5z"/><path d="M8.2 11l2 2 3.6-3.8"/></svg></span></div>
+            <div class="cycle-card-title">Gobernanza, ética y responsabilidad</div>
+            <div class="cycle-card-desc">Establecer políticas, supervisión y límites claros. Asegurar uso responsable y transparente.</div>
+          </div>
+        <div class="cycle-card">
+            <div class="cycle-card-head"><span class="cycle-num">10</span><span class="cycle-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 2.5c2.4 1.6 3.8 4.4 3.8 7.6 0 1.4-.4 2.8-1 4H8.2c-.6-1.2-1-2.6-1-4 0-3.2 1.4-6 3.8-7.6z"/><circle cx="11" cy="8.5" r="1.4"/><path d="M8.3 14.1l-1.8 2M13.7 14.1l1.8 2"/></svg></span></div>
+            <div class="cycle-card-title">Mejora continua e innovación</div>
+            <div class="cycle-card-desc">Iterar, explorar nuevas oportunidades y mantener la IA al servicio del periodismo y las audiencias.</div>
+          </div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="prose">
+      <div class="section-label reveal">Puntos críticos</div>
+      <h2 class="section-title section-title--light reveal">Señales de alerta: errores frecuentes en la implementación</h2>
+      <p class="lead lead--light reveal">La hoja de ruta describe un proceso ordenado, pero la realidad de las redacciones rara vez sigue un orden previsible. Conocer los errores más frecuentes permite reconocerlos a tiempo y corregir el rumbo antes de que se vuelvan estructurales. Estos son los patrones que aparecen con mayor regularidad en procesos de integración de distintas escalas y contextos:</p>
+
+      <div class="tension-block reveal">
+        <div class="tension-title">Adoptar tecnología sin diagnóstico previo</div>
+        <p>Incorporar herramientas porque son tendencia o porque otros medios las están usando, sin haber identificado primero qué problema concreto se quiere resolver, es el error más frecuente y el que más recursos desperdicia. Las implementaciones que parten de la tecnología y no del problema editorial casi siempre terminan en pilotos abandonados.</p>
+      </div>
+
+      <div class="tension-block reveal">
+        <div class="tension-title">Delegar la implementación solo al área técnica</div>
+        <p>Cuando la integración de IA queda exclusivamente en manos de quienes gestionan la tecnología, sin involucrar a periodistas y editores desde el inicio, se corre el riesgo de desarrollar una solución técnicamente funcional pero editorialmente irrelevante. La IA en una redacción es un asunto de cultura y criterio periodístico antes que de infraestructura.</p>
+      </div>
+
+      <div class="tension-block reveal">
+        <div class="tension-title">Confundir volumen con impacto</div>
+        <p>Una señal de alerta clara es cuando el éxito de una implementación se mide exclusivamente por la cantidad de contenidos producidos. El objetivo de integrar IA en una redacción es publicar mejor, liberar tiempo para trabajo de mayor valor y fortalecer la conexión con las audiencias. El volumen sin dirección editorial es ruido.</p>
+      </div>
+
+      <div class="tension-block reveal">
+        <div class="tension-title">Capacitar una sola vez y dar el tema por cerrado</div>
+        <p>Un taller de dos horas no construye capacidad organizacional. Las redacciones que forman a su equipo en un momento puntual y no sostienen ese proceso en el tiempo descubren rápidamente que las herramientas quedan subutilizadas y que los conocimientos se desactualizan antes de consolidarse.</p>
+      </div>
+
+      <div class="tension-block reveal">
+        <div class="tension-title">Implementar sin política de uso definida</div>
+        <p>Avanzar en la integración sin haber establecido criterios claros sobre qué usos son aceptables, cómo se supervisa el contenido asistido y cómo se informa a la audiencia, genera ambigüedad interna y riesgo editorial. Las políticas de uso son una condición de partida, no un trámite final.</p>
+      </div>
+
+      <div class="tension-block reveal">
+        <div class="tension-title">Ignorar las resistencias en lugar de trabajarlas</div>
+        <p>La resistencia al cambio dentro de los equipos es predecible y legítima. Los medios que la ignoran o intentan saltearla con mandatos unilaterales generan tensiones que terminan saboteando la implementación. Trabajar las resistencias implica comunicar con claridad, involucrar al equipo en las decisiones y crear espacios seguros para experimentar y equivocarse.</p>
+      </div>
+
+      <div class="tension-block reveal">
+        <div class="tension-title">Antropomorfizar la IA</div>
+        <p>Tratar a los sistemas de inteligencia artificial como si tuvieran criterio propio, intención o capacidad de juicio editorial es uno de los errores más frecuentes y menos discutidos. La IA predice texto a partir de patrones estadísticos. No entiende, no decide ni se equivoca en sentido humano. Cuando los equipos diseñan flujos asumiendo que la herramienta sabe lo que hace, suelen omitir los puntos de control humano que deberían ser obligatorios. Entender con precisión qué hace la tecnología y qué está fuera de su alcance, es la base de cualquier integración responsable.</p>
+      </div>
+
+      <div class="tension-block reveal">
+        <div class="tension-title">Reducir la supervisión a medida que crece la autonomía del sistema</div>
+        <p>A medida que los sistemas de IA se vuelven más capaces, especialmente en entornos agénticos donde encadenan tareas de forma autónoma, existe una tendencia a reducir los puntos de control humano bajo el argumento de que el sistema “ya lo maneja”. Esa lógica invierte la relación correcta. Cuanto mayor es la autonomía del sistema, más preciso y riguroso debe ser el diseño de la supervisión. La sofisticación tecnológica amplía las capacidades editoriales de una redacción, pero la responsabilidad sobre lo que se publica permanece en manos de quienes ejercen el periodismo.</p>
+      </div>
+
+      <div class="tension-block reveal">
+        <div class="tension-title">Medir sólo al inicio o al final</div>
+        <p>El monitoreo puntual no permite detectar problemas en desarrollo ni corregir el rumbo a tiempo. La evaluación debe ser continua e integrada al trabajo cotidiano, no postergada a informes periódicos que llegan cuando las dificultades ya están instaladas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="prose">
+      <div class="section-label reveal">Autonomía supervisada</div>
+      <h2 class="section-title reveal">Agentes de IA en redacciones: de la asistencia a la autonomía editorial</h2>
+      <p class="reveal">Durante los primeros años de integración de IA generativa en medios, el modelo predominante fue el del asistente, una herramienta que responde cuando se le pregunta, genera cuando se le pide y espera instrucciones para cada tarea. Ese modelo sigue siendo válido y útil, pero ya no es el único disponible. A partir de 2024, la expansión de los agentes de IA introdujo una lógica diferente que las redacciones necesitan comprender antes de decidir si están en condiciones de adoptarla.</p>
+      <p class="reveal">Un agente de IA es un sistema capaz de planificar y ejecutar secuencias de tareas de forma autónoma, tomar decisiones intermedias, usar herramientas externas y ajustar su comportamiento en función de los resultados que obtiene. El término no es casual. En filosofía y en teoría organizacional, "agencia" designa precisamente la capacidad de actuar con autonomía y propósito propio. Aplicado a los sistemas de IA, señala un salto cualitativo respecto a las herramientas anteriores. A diferencia de un modelo que responde a un <em>prompt</em> puntual, un agente recibe un objetivo y opera para alcanzarlo, encadenando acciones sin que una persona intervenga en cada paso. Esa autonomía es precisamente lo que lo hace poderoso y lo que exige mayor cuidado editorial.</p>
+      <p class="reveal">En el contexto de una redacción, un agente puede monitorear fuentes de información en tiempo real y alertar cuando detecta un tema relevante, generar borradores a partir de datos estructurados, verificar afirmaciones contra bases de conocimiento internas, distribuir contenido adaptado a múltiples plataformas o producir resúmenes diarios de cobertura propia. Lo que distingue a estos flujos de la automatización tradicional es que el agente navega variaciones, maneja excepciones y produce resultados distintos según el contexto, en lugar de ejecutar una tarea fija.</p>
+      <p class="reveal">Esa capacidad de adaptación cambia la naturaleza del control humano. En un flujo de asistencia puntual, el periodista revisa cada <em>output</em> antes de que tenga consecuencias. En un flujo agéntico, el sistema puede haber tomado varias decisiones antes de que una persona vea el resultado. Eso obliga a rediseñar el principio de <em>human in the loop</em>. El control humano en entornos agénticos se ejerce en el diseño del sistema, en la definición de sus límites operativos, en los puntos de validación obligatoria y en los mecanismos de revisión que se activan cuando algo sale del rango esperado.</p>
+      <h3 class="subsection-title reveal">Qué implica trabajar con agentes en una redacción</h3>
+      <p class="reveal">Antes de incorporar agentes en cualquier flujo editorial, una redacción necesita resolver cuatro preguntas que adquieren una dimensión distinta a la que plantean las herramientas de asistencia convencional.</p>
+      <p class="reveal">La primera es sobre el alcance de la autonomía. Qué decisiones puede tomar el sistema sin aprobación humana y cuáles requieren validación antes de continuar. Esa definición es editorial antes que técnica, y debe tomarse con participación de periodistas y editores, más allá de quienes gestionan la tecnología.</p>
+      <p class="reveal">La segunda es sobre la trazabilidad. Un agente que encadena múltiples acciones puede producir un resultado cuya lógica es difícil de reconstruir. Las redacciones que trabajan con estos sistemas necesitan mecanismos para entender qué hizo el agente, qué fuentes consultó, qué decisiones intermedias tomó y cómo llegó al <em>outpu</em>t que produjo. La supervisión humana depende de esa trazabilidad para ser real y no solo formal.</p>
+      <p class="reveal">La tercera es sobre el manejo del error. Los agentes amplifican tanto los aciertos como los errores. Un sistema que opera con autonomía sobre un flujo de producción puede replicar un error en múltiples piezas antes de que alguien lo detecte. Diseñar mecanismos de contención, puntos de pausa automática ante resultados anómalos y protocolos de revisión ante incidentes forma parte del trabajo previo al despliegue y debe ocurrir antes de que el sistema entre en funcionamiento.</p>
+      <p class="reveal">La cuarta es sobre la dependencia tecnológica. Los agentes más sofisticados disponibles hoy operan sobre infraestructura de terceros y consumen recursos computacionales significativos. Una redacción que construye flujos editoriales críticos sobre estos sistemas asume una dependencia que merece la misma atención que se recomienda para cualquier proveedor tecnológico.</p>
+      <h3 class="subsection-title reveal">Cómo empezar</h3>
+      <p class="reveal">El punto de entrada más sólido para una redacción que quiere explorar agentes de IA es identificar un flujo de trabajo repetitivo, bien delimitado y con criterios de éxito claros. Los mejores candidatos iniciales son procesos parcialmente automatizados, que involucran decisiones editoriales de bajo impacto y donde el error tiene consecuencias manejables. La cobertura de datos públicos estructurados, el monitoreo de fuentes institucionales o la generación de resúmenes internos para el equipo son puntos de entrada razonables.</p>
+      <p class="reveal">A medida que la redacción gana experiencia con estos sistemas, puede avanzar hacia flujos más complejos, siempre con la misma lógica de ampliar el alcance de la autonomía en proporción directa a la capacidad de supervisión. Un agente que opera sobre contenido publicable requiere un nivel de control editorial distinto al que se aplica sobre uno que produce materiales de uso interno.</p>
+      <p class="reveal">Lo que conviene evitar en todos los casos es adoptar agentes por las mismas razones que llevaron a muchas redacciones a implementar herramientas sin diagnóstico previo. Es decir, impulsadas por la novedad tecnológica, por la imitación de otros medios o por la ilusión de que la automatización resolverá problemas que en realidad tienen raíces organizacionales. Un agente de IA no corrige un flujo editorial mal diseñado, sino que lo ejecuta con mayor velocidad y escala. Al reducir las fricciones visibles, puede demorar la detección de errores y dificultar su posterior corrección.</p>
+
+
+      <div class="pull-quote reveal">Un agente de IA no corrige un flujo editorial mal diseñado, sino que lo ejecuta con mayor velocidad y escala.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--gray" id="para-tu-redaccion">
+  <div class="container">
+    <div class="prose">
+      <div class="section-label reveal">Para tu redacción</div>
+      <div class="tool-panel">
+      <div class="tool-panel-badge"><svg width="15" height="15" viewBox="0 0 22 22" fill="none" stroke="#00B4D8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 4.6a3.4 3.4 0 0 0-4.3 4.3l-5.6 5.6a1.6 1.6 0 0 0 2.3 2.3l5.6-5.6a3.4 3.4 0 0 0 4.3-4.3l-2.2 2.2-2.1-.1-.1-2.1z"/></svg>Herramienta práctica</div>
+      <h2 class="section-title reveal"><em>Sprint</em> de diseño editorial: una herramienta para dar el siguiente paso</h2>
+      <p class="reveal">Un <em>sprint</em> de diseño editorial es un proceso corto, intensivo y colaborativo para crear, prototipar y validar un producto periodístico en un tiempo acotado. El objeto de diseño es siempre periodístico —una noticia, una sección, un newsletter, un especial o un nuevo formato narrativo— y aplicado a la integración de IA permite que los equipos experimenten con soluciones concretas sin comprometer la operación diaria.</p>
+      <p class="reveal">La hoja de ruta de diez etapas ofrece un marco estratégico para orientar el proceso de integración. Las redacciones que ya iniciaron ese camino necesitan también herramientas concretas para planificar cada iniciativa de forma sistemática. El <em>sprint</em> que se presenta a continuación fue desarrollado específicamente para esta guía, a partir del trabajo con redacciones de distintas escalas y contextos.</p>
+      <p class="reveal">Su estructura no está construida alrededor de plataformas o tecnologías específicas sino alrededor de preguntas que permanecen vigentes independientemente de lo que ocurra en el ecosistema. Esa estabilidad es la que le permite funcionar como herramienta de trabajo sostenida en el tiempo. Se puede usar individualmente o en talleres de equipo, y su utilidad crece cuando se completa de forma colaborativa entre periodistas, editores y perfiles técnicos. Las áreas de trabajo más frecuentes son la producción, la distribución, el análisis de audiencias, la calidad editorial y la estrategia de nuevos productos editoriales con IA.</p>
+                  <div class="seq-timeline">
+        <div class="seq-step">
+          <div class="seq-node">1</div>
+          <div class="seq-card">
+            <div class="seq-head"><span class="seq-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><line x1="13" y1="13" x2="18.5" y2="18.5"/></svg></span><span class="seq-title">Problema a resolver</span></div>
+            <div class="seq-desc">¿Qué proceso es problemático en la operación diaria? Describir con precisión la fricción, la ineficiencia o la tarea que consume tiempo sin aportar valor editorial. Cuanto más específico sea el problema identificado, más útil será la solución que se diseñe.</div>
+          </div>
+        </div>
+        <div class="seq-step">
+          <div class="seq-node">2</div>
+          <div class="seq-card">
+            <div class="seq-head"><span class="seq-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 20V3"/><path d="M6 4.5h9.5l-2.2 3 2.2 3H6z"/></svg></span><span class="seq-title">Etapa de integración</span></div>
+            <div class="seq-desc">¿En qué momento del proceso se encuentra la redacción? Las cuatro etapas posibles son: exploración, cuando se está conociendo la tecnología y probando sus posibilidades; adopción, cuando se incorporan herramientas en flujos concretos; expansión, cuando se escalan soluciones que ya demostraron valor; y consolidación, cuando la IA forma parte estable de la cultura editorial y los procesos están documentados.</div>
+          </div>
+        </div>
+        <div class="seq-step">
+          <div class="seq-node">3</div>
+          <div class="seq-card">
+            <div class="seq-head"><span class="seq-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="6.5" width="9" height="9" rx="2"/><circle cx="11" cy="11" r="1.6"/><path d="M9 3v3M13 3v3M9 16v3M13 16v3M3 9h3M3 13h3M16 9h3M16 13h3"/></svg></span><span class="seq-title">Solución de IA propuesta</span></div>
+            <div class="seq-desc">¿Qué tarea automatiza, mejora o asiste la solución diseñada? Describir con claridad qué hace la herramienta, qué tipo de modelo o plataforma se utilizará y qué resultado concreto produce.</div>
+          </div>
+        </div>
+        <div class="seq-step">
+          <div class="seq-node">4</div>
+          <div class="seq-card">
+            <div class="seq-head"><span class="seq-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="7.2" r="2.4"/><circle cx="14.6" cy="8.2" r="2"/><path d="M3.6 17a4.4 4.4 0 0 1 8.8 0"/><path d="M12.6 16.5a4 4 0 0 1 5.8-2.8"/></svg></span><span class="seq-title">Roles involucrados y propósito</span></div>
+            <div class="seq-desc">¿Quién usaría esta herramienta y para qué? Identificar los perfiles que interactúan con la solución, tanto quienes la operan directamente como quienes reciben o validan sus resultados. La claridad sobre los roles es uno de los factores que más incide en la sostenibilidad de cualquier implementación.</div>
+          </div>
+        </div>
+        <div class="seq-step">
+          <div class="seq-node">5</div>
+          <div class="seq-card">
+            <div class="seq-head"><span class="seq-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="15" height="12" rx="2"/><path d="M7 9.5l2.4 2-2.4 2"/><line x1="11.5" y1="14" x2="15" y2="14"/></svg></span><span class="seq-title"><em>Prompt</em> de ejemplo o flujo de uso</span></div>
+            <div class="seq-desc">¿Cómo se activa o se utiliza la herramienta en la práctica? Un <em>prompt</em> de ejemplo, una secuencia de pasos o una descripción del flujo de trabajo ayudan a verificar que la solución es realmente aplicable en el contexto de la redacción y no solo conceptualmente viable.</div>
+          </div>
+        </div>
+        <div class="seq-step">
+          <div class="seq-node">6</div>
+          <div class="seq-card">
+            <div class="seq-head"><span class="seq-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.2l6 2v4.5c0 3.8-2.6 6.3-6 7.6-3.4-1.3-6-3.8-6-7.6V5.2z"/><circle cx="11" cy="9.3" r="1.7"/><path d="M8.2 14a2.9 2.9 0 0 1 5.6 0"/></svg></span><span class="seq-title">Control humano</span></div>
+            <div class="seq-desc">¿Qué mecanismos aseguran la calidad editorial? Definir en qué momento del flujo interviene una persona, qué revisa, qué puede modificar y quién tiene la responsabilidad final sobre el contenido publicado. Este campo es obligatorio: toda solución de IA en una redacción debe tener definido su punto de supervisión humana antes de entrar en funcionamiento.</div>
+          </div>
+        </div>
+        <div class="seq-step">
+          <div class="seq-node">7</div>
+          <div class="seq-card">
+            <div class="seq-head"><span class="seq-ico"><svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="18.5" x2="5" y2="13"/><line x1="9.6" y1="18.5" x2="9.6" y2="9.5"/><line x1="14.2" y1="18.5" x2="14.2" y2="11.5"/><path d="M4 8.5l4-3 3 2 5-3.5"/></svg></span><span class="seq-title">Indicadores de impacto</span></div>
+            <div class="seq-desc">¿Cómo se va a medir si la solución funcionó? Definir antes del despliegue qué indicador concreto debería cambiar y en qué dirección. Puede ser tiempo liberado, volumen de contenido de mayor valor, satisfacción del equipo o cualquier otro indicador alineado con el objetivo definido en el primer punto. Sin este campo, el <em>sprint</em> queda completo como ejercicio de diseño, pero incompleto como herramienta de evaluación.</div>
+          </div>
+        </div>
+      </div>
+      <div class="tool-cta reveal">
+        <div class="tool-cta-text">
+          <strong>Llevate el sprint para usarlo</strong>
+          <p>Hoja de trabajo imprimible con los siete campos, lista para completar en equipo.</p>
+        </div>
+        <a href="assets/pdf/sprint-periodismoia.pdf" class="tool-cta-btn" target="_blank" rel="noopener" download>
+          <svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3v11"/><path d="M6 10l5 5 5-5"/><path d="M4 19h14"/></svg>
+          Descargar el sprint en PDF
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white section--cierre">
+  <div class="container">
+    <div class="prose">
+      <div class="section-label reveal">Para cerrar</div>
+      <div class="chapter-close reveal">
+        <div class="chapter-close-text">
+        <p>La hoja de ruta, las señales de alerta, la comprensión de los agentes y el <em>sprint</em> de diseño son herramientas para estructurar un proceso que, en última instancia, cada organización recorre a su manera. Ofrecen un lenguaje compartido para discutir, un orden para avanzar y criterios para evaluar; pero hay una dimensión que ninguna herramienta puede resolver por anticipado.</p>
+        <p>La integración de la inteligencia artificial en las organizaciones de noticias plantea, en el fondo, una pregunta de identidad editorial. Las decisiones sobre qué automatizar, qué delegar a los algoritmos y qué reservar para el juicio humano son decisiones sobre qué clase de periodismo quiere hacer cada medio y con qué valores quiere hacerlo.</p>
+        <p>Esa pregunta no tiene una respuesta universal ni un momento ideal para ser respondida. Las redacciones que avanzan con mayor solidez son las que aprendieron a tomar decisiones en condiciones cambiantes, con información incompleta y en un ecosistema que se transforma antes de que cualquier implementación se consolide. Recorrer ese camino con honestidad, convicción y criterio periodístico en cada paso es, en definitiva, el enfoque que atraviesa todo este capítulo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></div>
+  </div>
+  <div style="display:flex;gap:2rem">
+    <a href="index.html">← Inicio</a>
+    <a href="capitulo-4.html" style="color:var(--cyan)">Capítulo 4 →</a>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

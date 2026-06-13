@@ -1,0 +1,13 @@
+{
+  "name": "PeriodismoIA 2026",
+  "short_name": "PeriodismoIA",
+  "description": "Guía para la integración de inteligencia artificial en el periodismo.",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0D1B3E",
+  "background_color": "#0D1B3E",
+  "display": "browser",
+  "start_url": "/"
+}

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bibliografía | PeriodismoIA 2026</title>
+<meta name="description" content="Bibliografía completa de la Guía PeriodismoIA 2026: directrices editoriales, marcos regulatorios, asociaciones, institutos de investigación y cobertura periodística sobre IA en redacciones.">
+<meta name="author" content="Álvaro Liuzzi">
+<meta name="theme-color" content="#0D1B3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://periodismoia.com/bibliografia.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PeriodismoIA 2026">
+<meta property="og:title" content="Bibliografía | PeriodismoIA 2026">
+<meta property="og:description" content="Más de 125 fuentes citadas en la Guía PeriodismoIA 2026: directrices editoriales, organismos, institutos y cobertura.">
+<meta property="og:url" content="https://periodismoia.com/bibliografia.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/chapter.css">
+<link rel="stylesheet" href="assets/css/a11y.css">
+<style>
+section[id]{scroll-margin-top:84px;}
+.biblio-count{font-family:'DM Sans',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--g400);margin-left:.55rem;padding:.18rem .5rem;border:1px solid var(--g200);border-radius:99px;text-transform:none;letter-spacing:.04em;}
+/* Nav de categorías */
+.biblio-nav{display:flex;flex-wrap:wrap;gap:.55rem;margin:2rem 0 .5rem;}
+.biblio-cat-pill{display:inline-flex;align-items:center;gap:.55rem;padding:.5rem .9rem;background:#fff;border:1px solid var(--g200);border-radius:99px;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;color:var(--navy);transition:background .2s,border-color .2s,transform .2s;}
+.biblio-cat-pill:hover{transform:translateY(-1px);border-color:var(--violet);}
+.biblio-cat-pill-label{}
+.biblio-cat-pill-count{display:inline-flex;align-items:center;justify-content:center;font-family:'DM Serif Display',Georgia,serif;font-size:.85rem;color:var(--violet);min-width:1.4rem;line-height:1;}
+.biblio-cat-pill--organismos .biblio-cat-pill-count{color:#0E6FA8;}
+.biblio-cat-pill--asociaciones .biblio-cat-pill-count{color:var(--violet);}
+.biblio-cat-pill--institutos .biblio-cat-pill-count{color:#8B6FBE;}
+.biblio-cat-pill--medios-globales .biblio-cat-pill-count{color:var(--cyan);}
+.biblio-cat-pill--medios-iberoamerica .biblio-cat-pill-count{color:#5DCBE6;}
+.biblio-cat-pill--cobertura .biblio-cat-pill-count{color:#0E6FA8;}
+
+/* Secciones de categoría */
+.biblio-section{padding:3.5rem 0;}
+.biblio-section--organismos{background:var(--white);border-top:1px solid var(--g100);}
+.biblio-section--asociaciones{background:var(--g100);}
+.biblio-section--institutos{background:var(--white);}
+.biblio-section--medios-globales{background:var(--g100);}
+.biblio-section--medios-iberoamerica{background:var(--white);}
+.biblio-section--cobertura{background:var(--g100);}
+
+/* Grid de fuentes */
+.biblio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem;margin-top:2rem;}
+.biblio-item{display:flex;flex-direction:column;gap:.45rem;padding:1.05rem 1.15rem;background:#fff;border:1px solid var(--g200);border-radius:9px;border-top:2.5px solid var(--violet);text-decoration:none;color:inherit;transition:transform .2s,border-color .2s,box-shadow .2s;}
+.biblio-section--organismos .biblio-item{border-top-color:#0E6FA8;}
+.biblio-section--asociaciones .biblio-item{border-top-color:var(--violet);}
+.biblio-section--institutos .biblio-item{border-top-color:#8B6FBE;}
+.biblio-section--medios-globales .biblio-item{border-top-color:var(--cyan);}
+.biblio-section--medios-iberoamerica .biblio-item{border-top-color:#5DCBE6;}
+.biblio-section--cobertura .biblio-item{border-top-color:#0E6FA8;}
+.biblio-item:hover{transform:translateY(-2px);border-color:var(--violet);box-shadow:0 10px 22px -16px rgba(13,27,62,.22);}
+.biblio-section--medios-globales .biblio-item:hover,
+.biblio-section--medios-iberoamerica .biblio-item:hover{border-color:var(--cyan);box-shadow:0 10px 22px -16px rgba(0,180,216,.28);}
+
+.biblio-item-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.6rem;}
+.biblio-item-name{font-family:'DM Sans',sans-serif;font-weight:600;font-size:.88rem;color:var(--navy);line-height:1.25;}
+.biblio-item-country{flex-shrink:0;font-family:'DM Sans',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g400);border:1px solid var(--g200);border-radius:99px;padding:.18rem .5rem;white-space:nowrap;}
+.biblio-item-desc{font-size:.74rem;color:var(--g700);line-height:1.45;margin:0;}
+.biblio-item-go{margin-top:auto;font-family:'DM Sans',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);padding-top:.6rem;display:inline-flex;align-items:center;gap:.35rem;transition:gap .2s,color .2s;}
+.biblio-section--medios-globales .biblio-item-go,
+.biblio-section--medios-iberoamerica .biblio-item-go{color:var(--cyan);}
+.biblio-item:hover .biblio-item-go{gap:.55rem;}
+
+@media (max-width:900px){.biblio-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.biblio-grid{grid-template-columns:1fr;} .biblio-nav{gap:.4rem;} .biblio-cat-pill{font-size:.7rem;padding:.42rem .75rem;}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- BARRA DE PROGRESO -->
+<div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+
+<!-- NAV FIJA -->
+<nav class="site-nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html#top" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="introduccion.html">Introducción</a></li>
+        <li><a href="index.html#capitulos">Capítulos</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="bibliografia.html" aria-current="page">Bibliografía</a></li>
+        <li><a href="sobre-metodologia.html">Metodología</a></li>
+        <li><a href="sobre-programa.html">Programa</a></li>
+        <li><a href="sobre-alvaro.html">Autor</a></li>
+      </ul>
+      <a href="descargar.html" class="nav-cta">Descargar guía</a>
+      <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero--violet">
+  <div class="hero-geo" aria-hidden="true">
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,180,216,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(0,180,216,.10) 1px,transparent 1px);background-size:40px 40px;-webkit-mask:radial-gradient(135% 125% at 0% 100%,#000 0%,#000 24%,transparent 82%);mask:radial-gradient(135% 125% at 0% 100%,#000 0%,#000 24%,transparent 82%);"></div>
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.30) 1.4px,transparent 1.7px);background-size:22px 22px;-webkit-mask:radial-gradient(92% 92% at 100% 0%,#000 0%,#000 18%,transparent 64%);mask:radial-gradient(92% 92% at 100% 0%,#000 0%,#000 18%,transparent 64%);"></div>
+    <svg viewBox="0 0 340 340" fill="none" style="position:absolute;top:-100px;right:-80px;width:340px;height:340px;">
+      <circle cx="170" cy="170" r="140" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <circle cx="170" cy="170" r="85" stroke="rgba(0,180,216,0.25)" stroke-width="1.2"/>
+      <circle cx="170" cy="170" r="40" fill="rgba(91,45,142,0.3)" stroke="rgba(91,45,142,0.5)" stroke-width="1"/>
+      <path id="orb" d="M170 40 A130 130 0 1 1 169.9 40" fill="none"/>
+      <circle r="5.5" fill="#00B4D8"><animate attributeName="opacity" values="0.55;1;0.55" dur="3s" repeatCount="indefinite"/><animateMotion dur="22s" repeatCount="indefinite"><mpath href="#orb"/></animateMotion></circle>
+    </svg>
+  </div>
+
+  <div class="hero-center">
+    <div class="hero-logo anim-word" style="animation-delay:.05s">
+      <span class="hero-logo-personal">Periodismo<span>IA</span></span>
+    </div>
+    <div class="hero-sep anim-word" style="animation-delay:.2s"></div>
+    <div class="hero-chapter anim-word" style="animation-delay:.3s">Fuentes y referencias</div>
+    <div class="hero-movement-pill anim-word" style="animation-delay:.4s">63 fuentes · 6 categorías</div>
+    <div class="hero-divider anim-line" style="animation-delay:.5s"></div>
+    <h1 class="hero-title anim-word" style="animation-delay:.65s">Bibliografía</h1>
+    <p class="hero-tagline anim-word" style="animation-delay:.85s">El corpus completo de fuentes consultadas para la Guía PeriodismoIA 2026.</p>
+  </div>
+</section>
+
+<main id="contenido">
+
+<!-- INTRO + NAV DE CATEGORÍAS -->
+<section class="section section--white">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">Cómo está organizada</div>
+      <h2 class="section-title reveal">El corpus completo en seis categorías</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Las fuentes consultadas para construir la guía están organizadas por tipo de documento: reportes institucionales, libros, papers académicos, guías prácticas, artículos de divulgación y materiales audiovisuales. Cada referencia abre en una pestaña nueva con su URL original.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section biblio-section biblio-section--reportes" id="reportes">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">Reportes e investigaciones <span class="biblio-count">31 fuentes</span></div>
+      <h2 class="section-title reveal">Reportes e investigaciones</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Whitepapers, estudios anuales y reportes institucionales de centros de investigación, fundaciones y asociaciones internacionales.</p>
+    </div>
+    <div class="biblio-grid">
+      <a class="biblio-item" href="https://www.aspendigital.org/wp-content/uploads/2024/07/Aspen-Digital_Here-Come-the-Robots_July-2024.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Aspen Digital</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">Here Come the Robots: A.I. and the Future of News</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.aspendigital.org/wp-content/uploads/2025/06/Aspen-Digital_No-Turning-Back_June-2025.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Aspen Digital</span><span class="biblio-item-country">2025</span></div>
+  <p class="biblio-item-desc">No Turning Back: AI’s Growing Role in News</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.aspendigital.org/wp-content/uploads/2026/01/ad_mind-the-gap_01-15-English-Final.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Aspen Digital</span><span class="biblio-item-country">2026</span></div>
+  <p class="biblio-item-desc">Mind the Gap: AI and the Future of News in Latin America</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://fcic.periodistes.cat/wp-content/uploads/2022/03/algorismes_a_les_redaccions_ESP_.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Consell de la Informació de Catalunya</span><span class="biblio-item-country">2021</span></div>
+  <p class="biblio-item-desc">Algoritmos en las redacciones: Retos y recomendaciones para dotar a la inteligencia artificial de los valores éticos del periodismo</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.inma.org/report/10-problems-genai-solves-for-news-media-companies" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">INMA</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">10 Problems GenAI Solves for News Media Companies</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.inma.org/report/6-emerging-genai-trends-for-media-to-watch-in-2025" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">INMA</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">6 Emerging GenAI Trends for Media to Watch in 2025</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.inma.org/report/how-news-publishers-are-using-genai-right-now" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">INMA</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">How News Publishers Are Using GenAI Right Now</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.inma.org/report/how-news-organisations-should-work-with-ai-companies" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">INMA</span><span class="biblio-item-country">2025</span></div>
+  <p class="biblio-item-desc">How News Organisations Should Work With AI Companies</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.journalismai.info/research/2023-generating-change" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">JournalismAI</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">Generating Change. A global survey of what news organisations are doing with artificial intelligence</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.journalismai.info/s/2024-JournalismAI-Innovation-Challenge-Report.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">JournalismAI</span><span class="biblio-item-country">2025</span></div>
+  <p class="biblio-item-desc">AI and the newsroom next door: Experiments and best practices for small publishers</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.journalismai.info/s/Editorial-Identity-report.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">JournalismAI</span><span class="biblio-item-country">2025</span></div>
+  <p class="biblio-item-desc">Editorial identity and AI: How AI, Algorithms and Social Platforms Are Shaping Journalistic Voice and Visibility</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://knightfoundation.org/articles/the-present-and-potential-of-ai-in-journalism/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Knight Foundation</span><span class="biblio-item-country">2021</span></div>
+  <p class="biblio-item-desc">The present and potential of AI in journalism</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.newsmediaalliance.org/generative-ai-white-paper/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">News Media Alliance</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">How the pervasive copying of expressive works to train and fuel generative artificial intelligence systems is copyright infringement and not a fair use</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.udg.edu/ca/Portals/57/OContent_Docs/Informe_OEIAC_2021_cast.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Observatori d&#x27;Ètica en Intel·ligència Artificial</span><span class="biblio-item-country">2021</span></div>
+  <p class="biblio-item-desc">Inteligencia artificial, ética y sociedad</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://partnershiponai.org/ai-for-newsrooms/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Partnership on AI</span><span class="biblio-item-country">2022</span></div>
+  <p class="biblio-item-desc">AI Adoption for Newsrooms: A 10-Step Guide</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.journalists.org/news/powering-trusted-news-with-ai-navigating-the-present-and-shaping-the-future" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Reuters Agency</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">Powering Trusted News With AI: Navigating the present and shaping the future</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2024-01/Newman%20-%20Trends%20and%20Predictions%202024%20FINAL.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Reuters Institute for the Study of Journalism</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">Journalism, Media, and Technology Trends and Predictions 2024</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2024-07/RISJ%20-%20OK%20Computer%20-%20News%20and%20AI%20-%20Report%20from%20CRAFT.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Reuters Institute for the Study of Journalism</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">OK Computer? Public attitudes to the uses of generative AI in newsreutersinstitute.politics.ox.ac.uk/sites/default/files/2024-07/RISJ%20-%20OK%20Computer%20-%20News%20and%20AI%20-%20Report%20from%20CRAFT.pdf</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2024-05/Fletcher_and_Nielsen_Generative_AI_and_News_Audiences.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Reuters Institute for the Study of Journalism</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">What Does the Public in Six Countries Think of Generative AI in News? reutersinstitute.politics.ox.ac.uk/sites/default/files/2024-05/Fletcher_and_Nielsen_Generative_AI_and_News_Audiences.pdf</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2025-10/Gen_AI_and_News_Report_2025.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Reuters Institute for the Study of Journalism</span><span class="biblio-item-country">2025</span></div>
+  <p class="biblio-item-desc">Generative AI and News Report 2025: How people think about AI’s role in journalism and society</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://reutersinstitute.politics.ox.ac.uk/sites/default/files/2025-01/Trends_and_Predictions_2025.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Reuters Institute for the Study of Journalism</span><span class="biblio-item-country">2025</span></div>
+  <p class="biblio-item-desc">Journalism and Technology Trends and Predictions 2025</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://reutersinstitute.politics.ox.ac.uk/journalism-media-and-technology-trends-and-predictions-2026" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Reuters Institute for the Study of Journalism</span><span class="biblio-item-country">2026</span></div>
+  <p class="biblio-item-desc">Journalism, media, and technology trends and predictions 2026</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.cjr.org/tow_center_reports/artificial-intelligence-in-the-news.php/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Tow Center for Digital Journalism</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">Artificial Intelligence in the News: How AI Retools, Rationalizes, and Reshapes Journalism and the Public Arena</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.cjr.org/tow_center_reports/journalism-zero-how-platforms-and-publishers-are-navigating-ai.php/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Tow Center for Digital Journalism</span><span class="biblio-item-country">2025</span></div>
+  <p class="biblio-item-desc">Journalism Zero: How Platforms and Publishers are Navigating AI</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://wan-ifra.org/2023/05/new-genai-survey/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">WAN-IFRA</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">Gauging Generative AI’s Impact in Newsrooms</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://wan-ifra.org/insight/innovation-in-news-media-world-report-2024-25/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">WAN-IFRA</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">Innovation in News Media World Report 2024-25</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://wan-ifra.org/insight/wan-ifras-fifth-ai-report-10-use-cases/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">WAN-IFRA</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">WAN-IFRA’s fifth AI report: 10 use cases</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://wan-ifra.org/insight/innovation-in-news-media-world-report-2025-26/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">WAN-IFRA</span><span class="biblio-item-country">2025</span></div>
+  <p class="biblio-item-desc">Innovation in News Media World Report 2025-26</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://wan-ifra.org/insight/world-press-trends-outlook-2025-2026/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">WAN-IFRA</span><span class="biblio-item-country">2026</span></div>
+  <p class="biblio-item-desc">World Press Trends Outlook 2025-2026</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://womeninnews.org/wp-content/uploads/2025/05/The-Age-of-AI-in-the-newsroom-Report_EN.pdf" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">WAN-IFRA Women in News</span><span class="biblio-item-country">2025</span></div>
+  <p class="biblio-item-desc">The Age of AI in the Newsroom</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://unesdoc.unesco.org/ark:/48223/pf0000388124" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Zuazo, N</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">Periodismo e inteligencia artificial en América Latina</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+    </div>
+  </div>
+</section>
+
+<section class="section biblio-section biblio-section--libros" id="libros">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">Libros y volúmenes <span class="biblio-count">3 fuentes</span></div>
+      <h2 class="section-title reveal">Libros y volúmenes</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Obras de referencia publicadas por editoriales académicas y comerciales sobre inteligencia artificial, ética y tecnología.</p>
+    </div>
+    <div class="biblio-grid">
+      <a class="biblio-item" href="https://katecrawford.net/atlas" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Crawford, K</span><span class="biblio-item-country">2021</span></div>
+  <p class="biblio-item-desc">Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence. Yale University Press, Londres</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://tecnohumanismo.es/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Sanguinetti, P</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">Tecnohumanismo. Por un diseño narrativo y estético de la inteligencia artificial. La Huerta Grande, S.L., Madrid</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.penguinlibros.com/es/ciencia-y-tecnologia/330161-libro-artificial-9788419642677" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Sigman, M &amp; Bilinkis, S</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">Artificial: La nueva inteligencia y el contorno de lo humano. Debate, Buenos Aires</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+    </div>
+  </div>
+</section>
+
+<section class="section biblio-section biblio-section--papers" id="papers">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">Artículos académicos <span class="biblio-count">4 fuentes</span></div>
+      <h2 class="section-title reveal">Artículos académicos</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Papers revisados por pares y trabajos publicados en revistas o repositorios científicos.</p>
+    </div>
+    <div class="biblio-grid">
+      <a class="biblio-item" href="https://www.researchgate.net/publication/379668724_Generative_AI_in_Journalism_The_Evolution_of_Newswork_and_Ethics_in_a_Generative_Information_Ecosystem" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Diakopoulos, N, Cools, H, Li, C &amp; Helberger N</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">Generative AI in Journalism: The Evolution of Newswork and Ethics in a Generative Information Ecosystem</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.researchgate.net/publication/363475725_Artificial_Intelligence_in_Local_News_A_survey_of_US_newsrooms'_AI_readiness" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Rinehart, A &amp; Kung E</span><span class="biblio-item-country">2022</span></div>
+  <p class="biblio-item-desc">Artificial Intelligence in Local News: A survey of US newsrooms&#x27; AI readiness</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://academic.oup.com/mind/article/LIX/236/433/986238?login=false" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Turing, A</span><span class="biblio-item-country">1950</span></div>
+  <p class="biblio-item-desc">Computing Machinery and Intelligence</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://revistas.unav.edu/index.php/communication-and-society/article/view/39878/34923" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Túñez-López, J, Fieiras Ceide, C &amp; Vaz-Álvarez, M</span><span class="biblio-item-country">2020</span></div>
+  <p class="biblio-item-desc">Impacto de la Inteligencia Artificial en el Periodismo: transformaciones en la empresa, los productos, los contenidos y el perfil profesional</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+    </div>
+  </div>
+</section>
+
+<section class="section biblio-section biblio-section--guias" id="guias">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">Guías y manuales prácticos <span class="biblio-count">5 fuentes</span></div>
+      <h2 class="section-title reveal">Guías y manuales prácticos</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Documentos operativos, starter packs y handbooks pensados para acompañar la integración de IA en redacciones.</p>
+    </div>
+    <div class="biblio-grid">
+      <a class="biblio-item" href="https://jamditis.notion.site/Beginner-s-prompt-handbook-ChatGPT-for-local-news-publishers-15d1f07d5b194265a41fdd42955679b4#072045110d5c433a8b2a38a04b29f674" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Amditis, J</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">Beginner’s prompt handbook: ChatGPT for local news publishers</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://newsinitiative.withgoogle.com/es-mx/resources/trainings/introduction-to-machine-learning/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Google News Initiative</span><span class="biblio-item-country">2019</span></div>
+  <p class="biblio-item-desc">Introduction to Machine Learning</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://docs.google.com/document/d/1pWwbqPERg0bUbMHMbYYDWmFQmWJYvK8N2Dmbenp4Qu0/edit" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">JournalismAI</span><span class="biblio-item-country">2021</span></div>
+  <p class="biblio-item-desc">AI journalism Starter Pack</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://docs.google.com/document/d/19D0SRo7jDYhyWJu2ylkEutJM-zQmKVzFn1ifLhqrdCU/edit" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Partnership on AI</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">AI Procurement and Use Guidebook for Newsrooms</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://blogs.lse.ac.uk/polis/2019/12/12/7-things-to-consider/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Peretti, M</span><span class="biblio-item-country">2019</span></div>
+  <p class="biblio-item-desc">7 things to consider before adopting AI in your news organisation: A training module for newsrooms</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+    </div>
+  </div>
+</section>
+
+<section class="section biblio-section biblio-section--articulos" id="articulos">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">Artículos y análisis <span class="biblio-count">15 fuentes</span></div>
+      <h2 class="section-title reveal">Artículos y análisis</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Publicaciones en blogs, columnas de opinión y notas editoriales de referentes del campo.</p>
+    </div>
+    <div class="biblio-grid">
+      <a class="biblio-item" href="https://www.bbc.com/mundo/resources/idt-74697280-e684-43c5-a782-29e9d11fecf3" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">BBC</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">Una guía sencilla para entender la IA</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://lab.cccb.org/es/las-otras-revoluciones-de-la-ia-sintesis-y-conclusiones/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Carrión, J</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">Las otras revoluciones de la IA: síntesis y conclusiones</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.enriquedans.com/2024/03/robando-periodicos-o-llegando-a-acuerdos-con-ellos.html" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Dans, E</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">¿Robando periódicos o llegando a acuerdos con ellos?</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://fundaciongabo.org/es/blog/laboratorios-periodismo-innovador/la-inteligencia-artificial-en-los-medios-que-se-enfrentan-los" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Fundación Gabo</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">La inteligencia artificial en los medios: a qué se enfrentan los periodistas con una tecnología que llega para quedarse</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://zapier.com/blog/what-is-ai/#what" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Guinness, H</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">What is AI?: A human guide to artificial intelligence</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.niemanlab.org/2024/01/which-rights-do-ai-and-journalists-have-in-common/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Jarvis, J</span><span class="biblio-item-country">2024</span></div>
+  <p class="biblio-item-desc">Which rights do AI and journalists have in common?</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.prodigiosovolcan.com/sismogramas/ia-periodistas/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Prodigioso Volcán</span><span class="biblio-item-country">2022</span></div>
+  <p class="biblio-item-desc">Inteligencia artificial para periodistas. Una herramienta por explotar</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://hipermediaciones.com/2023/12/20/10-textos-sobre-inteligencias-artificiales/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Scolari, C</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">10 Textos sobre inteligencias artificiales</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://hipermediaciones.com/2023/05/14/10-tesis-sobre-la-ia/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Scolari, C</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">10 Tesis sobre la IA</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://hipermediaciones.com/2023/04/01/baricco-turing-chatgpt/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Scolari, C</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">ChatGPT: Del test de Turing al test de Baricco</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://lab.cccb.org/es/inteligencia-artificial-entre-el-deseo-y-el-miedo/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Scolari, C</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">Inteligencia artificial, entre el deseo y el miedo</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://emerj.com/ai-sector-overviews/automated-journalism-applications/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Underwood, C</span><span class="biblio-item-country">2019</span></div>
+  <p class="biblio-item-desc">Automated Journalism – AI Applications at New York Times, Reuters, and Other Media Giants</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://medium.com/jsk-class-of-2019/how-to-make-your-newsroom-ai-ready-74b4bc441b76" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Van de Weghe, T</span><span class="biblio-item-country">2019</span></div>
+  <p class="biblio-item-desc">How to make your newsroom AI-ready</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://mip.umh.es/blog/2022/02/08/retos-eticos-de-la-inteligencia-artificial-en-los-medios-de-comunicacion/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Ventura, P</span><span class="biblio-item-country">2022</span></div>
+  <p class="biblio-item-desc">Retos éticos de la Inteligencia Artificial en los medios de comunicación</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://www.washingtonpost.com/technology/2023/05/07/ai-beginners-guide/" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Verma, P &amp; Lerman, R</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">A curious person’s guide to artificial intelligence: Everything you wanted to know about the AI boom but were too afraid to ask</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+    </div>
+  </div>
+</section>
+
+<section class="section biblio-section biblio-section--videos" id="videos">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">Videos y charlas <span class="biblio-count">5 fuentes</span></div>
+      <h2 class="section-title reveal">Videos y charlas</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Conferencias, paneles y materiales audiovisuales que aportan contexto y debate sobre IA en periodismo.</p>
+    </div>
+    <div class="biblio-grid">
+      <a class="biblio-item" href="https://youtu.be/sJZXZd5ejb8" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Fundación Gabo</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">‘Lo que debes saber sobre Inteligencia Artificial y su impacto en el periodismo’</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://youtu.be/VBvhU_9URyk" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Marconi, F</span><span class="biblio-item-country">2021</span></div>
+  <p class="biblio-item-desc">AI – What’s next for journalists and communicators?</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://youtu.be/6NRudShA1-c" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">RadioMorfosis</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">El ritmo de las noticias: voz y periodismo en la actualidad</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://youtu.be/mcDdukao3WM" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">Sánchez, JC</span><span class="biblio-item-country">2022</span></div>
+  <p class="biblio-item-desc">Inteligencia artificial para periodistas. Aproximación, contexto, usos, casos</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+      <a class="biblio-item" href="https://youtu.be/6aZqdZMeUjk" target="_blank" rel="noopener noreferrer">
+  <div class="biblio-item-head"><span class="biblio-item-name">TVMorfosis</span><span class="biblio-item-country">2023</span></div>
+  <p class="biblio-item-desc">IA ¿Al servicio de los noticieros?</p>
+  <span class="biblio-item-go">Ver link <svg width="11" height="11" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4v4"/><path d="M18 4L9 13"/><path d="M14 12v6H4V8h6"/></svg></span>
+</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></div>
+  </div>
+  <div style="display:flex;gap:2rem">
+    <a href="index.html">← Inicio</a>
+    <a href="recursos.html" style="color:var(--cyan)">Recursos →</a>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" aria-label="Volver arriba">↑</button>
+<script src="assets/js/app.js"></script>
+<script>
+  var pb = document.getElementById('progressBar');
+  var tt = document.getElementById('toTop');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    if (pb) pb.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    if (tt) tt.classList.toggle('show', h.scrollTop > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  if (tt) tt.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  var burger = document.querySelector('.nav-burger');
+  if(burger){
+    burger.addEventListener('click', function(){
+      var open = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!open));
+      var links = document.querySelector('.nav-links');
+      if(!open){ links.style.display='flex'; links.style.position='absolute'; links.style.flexDirection='column'; links.style.top='100%'; links.style.right='1.5rem'; links.style.background='var(--navy)'; links.style.padding='1.2rem 1.6rem'; links.style.borderRadius='0 0 10px 10px'; links.style.border='1px solid rgba(255,255,255,.1)'; links.style.gap='1.1rem'; links.style.zIndex='200'; }
+      else { links.style.display='none'; }
+    });
+  }
+</script>
+
+</body>
+</html>

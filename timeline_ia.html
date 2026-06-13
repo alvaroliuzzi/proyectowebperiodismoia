@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Línea de Tiempo IA | PeriodismoIA 2026</title>
+<meta name="description" content="Línea de tiempo interactiva de la inteligencia artificial: desde el Test de Turing en 1950 hasta la consolidación de la IA soberana en 2026. Setenta años de ideas, personas y decisiones que explican el presente.">
+<meta name="author" content="Álvaro Liuzzi">
+<meta name="theme-color" content="#0D1B3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://periodismoia.com/timeline_ia.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PeriodismoIA 2026">
+<meta property="og:title" content="Línea de Tiempo IA | PeriodismoIA 2026">
+<meta property="og:description" content="Desde el Test de Turing en 1950 hasta la IA soberana en 2026, setenta años de historia condensados en una línea de tiempo interactiva.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="assets/css/chapter.css">
+<style>
+:root{
+  --bg-deep:#0D1B3E;
+  --bg-mid:#15224A;
+  --bg-card:#1A2856;
+  --accent:#00B4D8;
+  --accent-soft:#29B8F0;
+  --violet:#5B2D8E;
+  --violet-soft:#8B6FBE;
+  --lila:#C4B0DC;
+  --text-body:#D8DCEC;
+  --text-muted:rgba(216,220,236,.6);
+}
+*{box-sizing:border-box;}
+body.timeline-body{background:var(--bg-deep);color:var(--text-body);font-family:'DM Sans',system-ui,sans-serif;overflow-x:hidden;}
+
+/* HERO */
+.tl-hero{position:relative;padding:8rem clamp(1.5rem,7vw,5rem) 4rem;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;min-height:auto;}
+.tl-hero-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;width:100%;}
+.tl-hero-bg-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,180,216,.14) 1px,transparent 1px);background-size:32px 32px;-webkit-mask:radial-gradient(120% 110% at 0% 100%,#000 0%,#000 24%,transparent 78%);mask:radial-gradient(120% 110% at 0% 100%,#000 0%,#000 24%,transparent 78%);z-index:0;pointer-events:none;}
+.tl-hero-bg-dots-2{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.22) 1.2px,transparent 1.5px);background-size:24px 24px;-webkit-mask:radial-gradient(90% 90% at 100% 0%,#000 0%,#000 16%,transparent 62%);mask:radial-gradient(90% 90% at 100% 0%,#000 0%,#000 16%,transparent 62%);z-index:0;pointer-events:none;}
+.tl-hero-svg{position:absolute;top:50%;right:-120px;transform:translateY(-50%);width:520px;height:520px;z-index:0;pointer-events:none;}
+.tl-badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:.4rem 1rem;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:1.75rem;width:fit-content;position:relative;z-index:1;animation:fadeUp .6s ease both;}
+.tl-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+.tl-label{font-size:.72rem;font-weight:600;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:1rem;position:relative;z-index:1;animation:fadeUp .6s .1s ease both;}
+.tl-title{position:relative;z-index:1;line-height:.95;margin-bottom:1.5rem;animation:fadeUp .7s .15s ease both;}
+.tl-title .l1{display:block;font-family:'DM Sans',sans-serif;font-size:clamp(56px,8vw,110px);letter-spacing:-.03em;}
+.tl-title .l1 .light{font-weight:300;color:#fff;}
+.tl-title .l1 .bold{font-weight:700;color:var(--accent);}
+.tl-title .l2{display:block;font-size:clamp(20px,2.8vw,36px);font-weight:300;color:var(--text-body);letter-spacing:-.01em;margin-top:.4rem;}
+.tl-title .tl-ver{display:inline-block;vertical-align:middle;font-size:.75rem;font-weight:600;letter-spacing:.1em;color:var(--accent);border:1.5px solid rgba(0,180,216,.5);border-radius:99px;padding:.25rem .7rem;margin-left:1rem;text-transform:lowercase;line-height:1;position:relative;top:-.6em;}
+.tl-sub{position:relative;z-index:1;max-width:580px;font-size:1rem;font-weight:300;line-height:1.7;color:var(--text-body);margin-bottom:2.5rem;animation:fadeUp .7s .25s ease both;}
+.tl-sub strong{color:var(--accent);font-weight:600;}
+.tl-stats{position:relative;z-index:1;display:flex;gap:2.5rem;animation:fadeUp .7s .35s ease both;flex-wrap:wrap;}
+.tl-stat{display:flex;flex-direction:column;gap:.25rem;}
+.tl-stat-num{font-family:'DM Sans',sans-serif;font-size:2.4rem;font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1;}
+.tl-stat-num span{color:var(--accent);}
+.tl-stat-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);}
+.tl-arrow-deco{position:absolute;right:7%;bottom:8%;display:flex;flex-direction:column;align-items:center;gap:.3rem;opacity:.4;z-index:0;}
+.tl-arrow-deco .ln{display:block;width:1px;height:50px;background:linear-gradient(to bottom,var(--accent),transparent);}
+.tl-arrow-deco svg{width:12px;height:12px;}
+
+/* FILTROS */
+.tl-filters-wrap{padding:0 clamp(1.5rem,5vw,2.5rem) 3rem;position:relative;max-width:880px;margin:0 auto;}
+.tl-filters{display:flex;gap:.55rem;flex-wrap:wrap;border-top:1px solid rgba(41,184,240,.18);padding-top:2rem;}
+.fpill{font-family:'DM Sans',sans-serif;background:transparent;border:1px solid rgba(255,255,255,.18);color:var(--text-body);font-size:.72rem;font-weight:600;padding:.55rem 1.1rem;border-radius:99px;cursor:pointer;transition:all .2s;letter-spacing:.06em;text-transform:uppercase;}
+.fpill:hover{border-color:var(--accent);color:var(--accent);}
+.fpill.on{background:var(--accent);border-color:var(--accent);color:var(--bg-deep);font-weight:800;}
+
+/* ERAS */
+.tl-eras{padding:0 clamp(1.5rem,5vw,2.5rem) 5rem;display:flex;flex-direction:column;gap:4rem;max-width:880px;margin:0 auto;}
+.era{position:relative;}
+.era.hidden{display:none;}
+.era-header{display:flex;align-items:flex-start;gap:1.4rem;margin-bottom:2rem;}
+.era-num{font-family:'DM Sans',sans-serif;font-size:5.5rem;font-weight:900;line-height:.9;letter-spacing:-.05em;opacity:.12;color:var(--accent);min-width:5rem;user-select:none;}
+.era-info{flex:1;}
+.era-tag{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.3rem .85rem;border-radius:4px;margin-bottom:.55rem;}
+.era--inicio .era-num{color:var(--accent);}
+.era--inicio .era-tag{background:rgba(0,180,216,.14);color:var(--accent);}
+.era--invierno .era-num{color:var(--violet-soft);}
+.era--invierno .era-tag{background:rgba(139,111,190,.16);color:var(--violet-soft);}
+.era--avances .era-num{color:#5B8EF0;}
+.era--avances .era-tag{background:rgba(91,142,240,.14);color:#5B8EF0;}
+.era--moderna .era-num{color:var(--lila);}
+.era--moderna .era-tag{background:rgba(196,176,220,.14);color:var(--lila);}
+.era--madurez .era-num{background:linear-gradient(135deg,var(--accent) 0%,var(--violet-soft) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:.18;}
+.era--madurez .era-tag{background:linear-gradient(135deg,rgba(0,180,216,.14) 0%,rgba(139,111,190,.14) 100%);color:#fff;}
+.era-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:400;color:#fff;letter-spacing:-.01em;line-height:1.15;display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;}
+.era-years-inline{font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+
+/* TRACK */
+.track{position:relative;padding-left:2.25rem;border-left:none;}
+.track::before{content:'';position:absolute;left:8px;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(180deg,rgba(0,180,216,.45) 0%,rgba(91,45,142,.18) 100%);border-radius:2px;}
+.item{position:relative;margin-bottom:.85rem;}
+.item-dot{position:absolute;left:-2.25rem;top:1.1rem;width:18px;height:18px;border-radius:50%;border:2px solid var(--accent);background:var(--bg-deep);z-index:2;box-shadow:0 0 0 4px rgba(0,180,216,.1);}
+.era--invierno .item-dot{border-color:var(--violet-soft);box-shadow:0 0 0 4px rgba(139,111,190,.12);}
+.era--avances .item-dot{border-color:#5B8EF0;box-shadow:0 0 0 4px rgba(91,142,240,.12);}
+.era--moderna .item-dot{border-color:var(--lila);box-shadow:0 0 0 4px rgba(196,176,220,.12);}
+
+/* CARD */
+.card{background:var(--bg-mid);border:1px solid rgba(255,255,255,.06);border-radius:12px;overflow:hidden;transition:border-color .2s ease,transform .2s ease;position:relative;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);}
+.era--invierno .card::before{background:linear-gradient(90deg,var(--violet-soft),transparent);}
+.era--avances .card::before{background:linear-gradient(90deg,#5B8EF0,transparent);}
+.era--moderna .card::before{background:linear-gradient(90deg,var(--lila),transparent);}
+.era--madurez .card::before{background:linear-gradient(90deg,var(--accent),var(--violet-soft));}
+.card:hover{border-color:rgba(41,184,240,.3);transform:translateY(-1px);}
+.card-head{display:flex;align-items:center;gap:.85rem;padding:1rem 1.25rem;cursor:pointer;user-select:none;}
+.cy{font-family:'DM Serif Display',Georgia,serif;font-size:.95rem;color:var(--accent);min-width:44px;flex-shrink:0;font-weight:400;}
+.era--invierno .cy{color:var(--violet-soft);}
+.era--avances .cy{color:#5B8EF0;}
+.era--moderna .cy{color:var(--lila);}
+.cico{font-size:18px;color:var(--text-muted);flex-shrink:0;width:22px;text-align:center;}
+.ctitle{font-size:.86rem;font-weight:500;color:#fff;flex:1;line-height:1.4;}
+.ctag{font-size:.55rem;font-weight:700;border-radius:99px;padding:.25rem .65rem;flex-shrink:0;letter-spacing:.08em;text-transform:uppercase;line-height:1;}
+.tag-tech{background:rgba(0,180,216,.12);color:var(--accent);border:1px solid rgba(0,180,216,.25);}
+.tag-film{background:rgba(139,111,190,.15);color:var(--violet-soft);border:1px solid rgba(139,111,190,.3);}
+.tag-law{background:rgba(196,176,220,.12);color:var(--lila);border:1px solid rgba(196,176,220,.28);}
+.cchev{font-size:14px;color:var(--accent);transition:transform .25s ease;flex-shrink:0;transform:rotate(180deg);}
+.item.closed .cchev{transform:rotate(0deg);color:var(--text-muted);}
+.card-body{overflow:hidden;transition:max-height .32s ease;}
+.item.closed .card-body{max-height:0!important;}
+.card-inner{padding:0 1.25rem 1.1rem;border-top:1px solid rgba(255,255,255,.06);}
+.cdesc{font-size:.83rem;line-height:1.7;color:var(--text-body);opacity:.88;margin:.85rem 0 .85rem;}
+.clink{display:inline-flex;align-items:center;gap:.4rem;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.04em;color:var(--accent);background:rgba(0,180,216,.1);border:1px solid rgba(0,180,216,.25);text-decoration:none;border-radius:99px;padding:.45rem .9rem;transition:background .2s,color .2s;}
+.clink:hover{background:var(--accent);color:var(--bg-deep);}
+
+/* FOOTER del recurso (oscuro propio) */
+.tl-footer{padding:2.5rem clamp(1.5rem,5vw,2.5rem);border-top:1px solid rgba(41,184,240,.12);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;background:var(--bg-deep);max-width:880px;margin:0 auto;}
+.tl-footer .footer-brand{font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;color:#fff;display:inline-flex;align-items:baseline;gap:0;letter-spacing:-.01em;}
+.tl-footer .footer-brand span{color:var(--accent);}
+.tl-footer .footer-brand .ver{font-size:.55rem;font-weight:600;letter-spacing:.12em;color:var(--accent);border:1px solid rgba(0,180,216,.4);border-radius:99px;padding:.1rem .45rem;margin-left:.5rem;}
+.tl-footer-links{display:flex;gap:1.5rem;}
+.tl-footer-links a{font-size:.82rem;color:var(--text-muted);text-decoration:none;transition:color .2s;}
+.tl-footer-links a:hover{color:var(--accent);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+
+/* TOTOP en tema dark */
+.totop{background:var(--bg-mid);border-color:rgba(255,255,255,.15);}
+.totop:hover{background:var(--accent);color:var(--bg-deep);}
+
+/* Responsive */
+@media(max-width:760px){
+  .tl-hero{padding:6rem 5% 4rem;}
+  .tl-filters-wrap,.tl-eras{padding-left:5%;padding-right:5%;}
+  .tl-footer{padding-left:5%;padding-right:5%;}
+  .ctag{display:none;}
+  .ctitle{font-size:.82rem;}
+  .era-header{gap:1rem;}
+  .era-num{font-size:4rem;min-width:3.5rem;}
+}
+</style>
+</head>
+<body class="timeline-body">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- BARRA DE PROGRESO -->
+<div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+
+<!-- NAV FIJA -->
+<nav class="site-nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html#top" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="introduccion.html">Introducción</a></li>
+        <li><a href="index.html#capitulos">Capítulos</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="sobre-metodologia.html">Metodología</a></li>
+        <li><a href="sobre-programa.html">Programa</a></li>
+        <li><a href="sobre-alvaro.html">Autor</a></li>
+      </ul>
+      <a href="descargar.html" class="nav-cta">Descargar guía</a>
+      <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="tl-hero" id="top">
+  <div class="tl-hero-bg-dots" aria-hidden="true"></div>
+  <div class="tl-hero-bg-dots-2" aria-hidden="true"></div>
+  <svg class="tl-hero-svg" viewBox="0 0 520 520" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="260" cy="260" r="240" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <circle cx="260" cy="260" r="180" stroke="rgba(0,180,216,0.28)" stroke-width="1.4"/>
+    <circle cx="260" cy="260" r="115" stroke="rgba(139,111,190,0.35)" stroke-width="1.2"/>
+    <circle cx="260" cy="260" r="60" fill="rgba(91,45,142,0.18)" stroke="rgba(91,45,142,0.5)" stroke-width="1"/>
+    <path id="tl-orb" d="M260 80 A180 180 0 1 1 259.9 80" fill="none"/>
+    <circle r="7" fill="#00B4D8">
+      <animate attributeName="opacity" values="0.55;1;0.55" dur="3s" repeatCount="indefinite"/>
+      <animateMotion dur="24s" repeatCount="indefinite"><mpath href="#tl-orb"/></animateMotion>
+    </circle>
+    <circle r="4" fill="#8B6FBE">
+      <animate attributeName="opacity" values="0.4;.85;0.4" dur="4s" repeatCount="indefinite"/>
+      <animateMotion dur="18s" repeatCount="indefinite" begin="3s">
+        <mpath href="#tl-orb-inner"/>
+      </animateMotion>
+    </circle>
+    <path id="tl-orb-inner" d="M260 145 A115 115 0 1 0 259.9 145" fill="none"/>
+  </svg>
+
+  <div class="tl-hero-inner">
+    <div class="tl-badge">
+      <span class="tl-badge-dot"></span>
+      Capítulo 1 — Recorrido histórico
+    </div>
+
+    <h1 class="tl-title">
+      <span class="l1"><span class="light">Línea de </span><span class="bold">Tiempo</span><span class="tl-ver">v2.0</span></span>
+    </h1>
+    <p class="tl-sub">Desde los albores hasta la vanguardia: la evolución de la inteligencia artificial.</p>
+  </div>
+
+  <div class="tl-arrow-deco" aria-hidden="true">
+    <span class="ln"></span>
+    <svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 7l5 5 5-5" stroke="#00B4D8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</section>
+
+<main id="contenido">
+<section class="tl-filters-wrap">
+  <div class="tl-filters" id="filters"></div>
+</section>
+
+<section class="tl-eras" id="main"></section>
+</main>
+
+<!-- FOOTER -->
+<footer class="tl-footer">
+  <div class="footer-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></div>
+  <div class="tl-footer-links">
+    <a href="index.html">← Inicio</a>
+    <a href="index.html#capitulos">Capítulos →</a>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" aria-label="Volver arriba">↑</button>
+
+<script>
+const DATA=[
+  {era:'El inicio',years:'1950–1970',eid:'inicio',items:[
+    {y:'1950',ico:'ti-brain',tag:'tech',t:'Test de Turing: definiendo la IA',d:'En un hito sin precedentes, el matemático británico Alan Turing propuso un test para evaluar la capacidad de las máquinas para imitar el comportamiento del cerebro humano. El Test de Turing sentó las bases filosóficas y técnicas del campo, planteando por primera vez de manera formal la posibilidad de que las máquinas pudieran pensar.',url:'https://es.wikipedia.org/wiki/Prueba_de_Turing'},
+    {y:'1950',ico:'ti-book',tag:'film',t:'"I, Robot" de Isaac Asimov: Las Tres Leyes de la Robótica',d:'Libro que presenta una serie de cuentos cortos que introducen las famosas Tres Leyes de la Robótica, explorando los dilemas éticos y sociales en la interacción entre humanos y robots.',url:'https://es.wikipedia.org/wiki/Yo,_robot'},
+    {y:'1951',ico:'ti-cpu',tag:'tech',t:'Ferranti Mark I: innovación en computación',d:'Con la introducción de la Ferranti Mark I, el mundo vio por primera vez una computadora comercialmente disponible, capaz de realizar cálculos complejos.',url:'https://es.wikipedia.org/wiki/Ferranti_Mark_I'},
+    {y:'1956',ico:'ti-school',tag:'tech',t:'Conferencia de Dartmouth: el nacimiento de un campo',d:'La Conferencia de Dartmouth marcó el inicio de los estudios y proyectos académicos sobre IA. McCarthy, Minsky, Shannon y Newell establecieron las directrices para la investigación, acuñando el término "inteligencia artificial".',url:'https://es.wikipedia.org/wiki/Conferencia_de_Dartmouth'},
+    {y:'1961',ico:'ti-robot',tag:'tech',t:'Unimate: la robótica toma forma',d:'Unimate fue el primer robot industrial que comenzó a operar en una línea de montaje de General Motors en Nueva Jersey, demostrando la aplicabilidad práctica de la robótica.',url:'https://es.wikipedia.org/wiki/Unimate'},
+    {y:'1965',ico:'ti-messages',tag:'tech',t:'ELIZA: conversaciones con máquinas',d:'Desarrollada en el MIT por Joseph Weizenbaum, ELIZA fue una de las primeras formas de IA en simular la conversación humana. Demostró el "efecto ELIZA": los usuarios atribuyen comprensión genuina a programas que solo manipulan símbolos.',url:'https://www.bbc.com/mundo/noticias-44290222'},
+    {y:'1968',ico:'ti-movie',tag:'film',t:'"2001: A Space Odyssey": HAL 9000 y la conciencia artificial',d:'Película de Stanley Kubrick que presenta a HAL 9000, una IA que opera una nave espacial y eventualmente entra en conflicto con su tripulación, anticipando debates sobre alineación de valores y riesgos existenciales.',url:'https://www.imdb.com/title/tt0062622/'},
+    {y:'1969',ico:'ti-direction',tag:'tech',t:'Shakey the Robot: explorando el mundo',d:'Shakey, el primer robot móvil controlado por IA capaz de razonar sobre su entorno, integraba visión por computadora, procesamiento de lenguaje natural y planificación automatizada en un solo sistema.',url:'https://www.eldiario.es/hojaderouter/tecnologia/shakey-robot-inteligencia-artificial-coche-autonomo_1_3466717.html'},
+  ]},
+  {era:'El invierno de la IA',years:'1970–2000',eid:'invierno',items:[
+    {y:'1972',ico:'ti-code',tag:'tech',t:'PROLOG: programando la inteligencia',d:'La introducción de PROLOG ofreció un lenguaje de programación esencial para sistemas expertos y procesamiento del lenguaje natural, permitiendo expresar conocimiento y reglas de inferencia de manera declarativa.',url:'https://es.wikipedia.org/wiki/Prolog'},
+    {y:'1979',ico:'ti-car',tag:'tech',t:'Stanford Cart: movilidad autónoma',d:'El Stanford Cart, un pequeño vehículo capaz de navegar de manera autónoma a través de una habitación llena de obstáculos, allanó el camino para los vehículos autónomos.',url:'https://web.stanford.edu/~learnest/sail/oldcart.html'},
+    {y:'1982',ico:'ti-movie',tag:'film',t:'"Blade Runner": humanidad y conciencia artificial',d:'Basada en la novela de Philip K. Dick, explora temas de conciencia artificial y ética. Los replicantes plantearon preguntas filosóficas sobre qué define la humanidad.',url:'https://www.imdb.com/title/tt0083658/'},
+    {y:'1984',ico:'ti-movie',tag:'film',t:'"Terminator": IA y amenaza existencial',d:'"Terminator" se convirtió en referente cultural sobre IA. La franquicia popularizó el concepto de Skynet, consolidando el arquetipo de la IA como amenaza existencial.',url:'https://www.imdb.com/title/tt0088247/'},
+    {y:'1999',ico:'ti-movie',tag:'film',t:'"The Matrix": realidad simulada por IA',d:'Una trilogía que presenta un futuro en el que la humanidad está sumergida en una realidad simulada por IA, anticipando debates sobre entornos sintéticos.',url:'https://www.imdb.com/title/tt0133093/'},
+  ]},
+  {era:'Avances y desafíos',years:'2000–2020',eid:'avances',items:[
+    {y:'2004',ico:'ti-car',tag:'tech',t:'DARPA Grand Challenge: vehículos que piensan',d:'Punto de inflexión para la industria automotriz, demostró el potencial de la IA en vehículos autónomos y catalizó la inversión en investigación de conducción autónoma.',url:'https://es.wikipedia.org/wiki/DARPA_Grand_Challenge'},
+    {y:'2011',ico:'ti-bulb',tag:'tech',t:'IBM Watson en Jeopardy: compitiendo con la mente humana',d:'IBM Watson ganó contra campeones humanos en "Jeopardy", mostrando el poder de la IA en procesamiento del lenguaje natural y análisis de datos en tiempo real.',url:'https://www.ibm.com/watson/jeopardy/'},
+    {y:'2013',ico:'ti-heart',tag:'film',t:'"Her": relación humano-IA',d:'Una película que explora la relación entre un hombre y una inteligencia artificial, planteando preguntas sobre la conciencia y las emociones.',url:'https://www.imdb.com/title/tt1798709/'},
+    {y:'2015',ico:'ti-chess',tag:'tech',t:'AlphaGo: estrategia a nivel maestro',d:'AlphaGo de DeepMind venció al campeón mundial Lee Sedol, demostrando que la IA podía dominar juegos de estrategia complejos que requieren intuición y creatividad.',url:'https://www.deepmind.com/research/highlighted-research/alphago'},
+    {y:'2019',ico:'ti-file-text',tag:'tech',t:'GPT-2: la nueva era de la generación de texto',d:'OpenAI presentó GPT-2, un salto cuantitativo y cualitativo en generación de texto con coherencia y versatilidad sorprendentes.',url:'https://openai.com/index/better-language-models/'},
+    {y:'2020',ico:'ti-sparkles',tag:'tech',t:'GPT-3 de OpenAI: abriendo el lenguaje natural',d:'GPT-3 representó una revolución en generación de lenguaje natural con 175 mil millones de parámetros, produciendo capacidades emergentes como razonamiento matemático y traducción multilingüe.',url:'https://en.wikipedia.org/wiki/GPT-3'},
+  ]},
+  {era:'La era moderna de la IA',years:'2021–2024',eid:'moderna',items:[
+    {y:'2021',ico:'ti-terminal',tag:'tech',t:'OpenAI Codex: programación en lenguaje natural',d:'OpenAI Codex transformó la programación al generar automáticamente código a partir de descripciones en lenguaje natural.',url:'https://openai.com/blog/openai-codex'},
+    {y:'2021',ico:'ti-git-branch',tag:'tech',t:'GitHub Copilot: programación asistida',d:'GitHub lanzó Copilot, asistente de programación que autocompleta código en tiempo real, transformando los flujos de trabajo de millones de programadores.',url:'https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/'},
+    {y:'2021',ico:'ti-photo',tag:'tech',t:'DALL-E: creación de imágenes desde texto',d:'OpenAI lanzó DALL-E, primer modelo ampliamente difundido capaz de generar imágenes a partir de descripciones textuales.',url:'https://openai.com/research/dall-e'},
+    {y:'2022',ico:'ti-photo-ai',tag:'tech',t:'DALL-E 2: la imaginación visual automatizada',d:'OpenAI lanzó DALL-E 2, sistema capaz de crear imágenes realistas y arte a partir de descripciones en lenguaje natural con resolución y calidad significativamente mejoradas.',url:'https://openai.com/dall-e-2'},
+    {y:'2022',ico:'ti-brain',tag:'tech',t:'El "incidente LaMDA": debate sobre la conciencia',d:'Un ingeniero de Google afirmó que el modelo LaMDA había desarrollado sintiencia. El evento encendió un debate filosófico global sobre la naturaleza de la inteligencia.',url:'https://www.bbc.com/mundo/noticias-61803565'},
+    {y:'2022',ico:'ti-palette',tag:'tech',t:'Midjourney: arte generativo accesible',d:'Midjourney se lanzó públicamente como servicio de generación de imágenes a través de Discord, democratizando el acceso a herramientas de creación visual con IA.',url:'https://www.midjourney.com/'},
+    {y:'2022',ico:'ti-lock-open',tag:'tech',t:'Stable Diffusion: la revolución del código abierto',d:'Stability AI liberó Stable Diffusion, un modelo de generación de imágenes de código abierto que podía ejecutarse en computadoras personales.',url:'https://stability.ai/news/stable-diffusion-public-release'},
+    {y:'2022',ico:'ti-microphone',tag:'tech',t:'Whisper: transcripción de audio robusta',d:'OpenAI lanzó Whisper, sistema de reconocimiento de voz de código abierto entrenado con 680.000 horas de audio multilingüe.',url:'https://openai.com/research/whisper'},
+    {y:'2022',ico:'ti-message-circle',tag:'tech',t:'ChatGPT: el momento "iPhone" de la IA',d:'ChatGPT alcanzó 1 millón de usuarios en 5 días y 100 millones en 2 meses, convirtiéndose en la aplicación de consumo con el crecimiento más rápido de la historia.',url:'https://openai.com/blog/chatgpt'},
+    {y:'2023',ico:'ti-eye',tag:'tech',t:'GPT-4: el salto a la multimodalidad',d:'OpenAI lanzó GPT-4, modelo capaz de procesar texto e imágenes con razonamiento muy superior, demostrando habilidades de nivel humano en exámenes profesionales.',url:'https://openai.com/research/gpt-4'},
+    {y:'2023',ico:'ti-alert-triangle',tag:'tech',t:'La carta de la pausa: debate público sobre riesgos',d:'Más de 1000 referentes en tecnología firmaron una carta pidiendo una pausa en el entrenamiento de modelos gigantes. Geoffrey Hinton abandonó Google para advertir libremente sobre riesgos.',url:'https://futureoflife.org/open-letter/pause-giant-ai-experiments/'},
+    {y:'2023',ico:'ti-brand-google',tag:'tech',t:'Google Bard: la respuesta de Google a ChatGPT',d:'Google lanzó Bard, su chatbot conversacional basado inicialmente en LaMDA, marcando la entrada formal de Google en la competencia de IA conversacional.',url:'https://blog.google/technology/ai/bard-google-ai-search-updates/'},
+    {y:'2023',ico:'ti-search',tag:'tech',t:'Microsoft integra GPT-4 en Bing: búsqueda conversacional',d:'Microsoft integró GPT-4 en Bing y Edge, desafiando el dominio de Google en búsqueda web mediante IA conversacional y generativa.',url:'https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/'},
+    {y:'2023',ico:'ti-shield-check',tag:'tech',t:'Claude de Anthropic: énfasis en seguridad',d:'Anthropic lanzó Claude, un asistente de IA enfocado en seguridad, reducción de sesgos y respuestas más confiables mediante Constitutional AI.',url:'https://www.anthropic.com/index/introducing-claude'},
+    {y:'2023',ico:'ti-share',tag:'tech',t:'Llama 2 de Meta: impulso al ecosistema abierto',d:'Meta lanzó Llama 2 con licencia comercial permitida, impulsando significativamente el desarrollo de IAs privadas y locales y democratizando el acceso a modelos de frontera.',url:'https://ai.meta.com/llama/'},
+    {y:'2023',ico:'ti-scale',tag:'law',t:'AI Act de la UE: la primera regulación integral',d:'La UE alcanzó un acuerdo histórico sobre la Ley de IA, primera legislación completa del mundo en clasificar sistemas por niveles de riesgo y exigir transparencia a modelos generativos.',url:'https://www.europarl.europa.eu/news/en/press-room/20231206IPR15699/artificial-intelligence-act-deal-on-comprehensive-rules-for-trustworthy-ai'},
+    {y:'2023',ico:'ti-photo',tag:'tech',t:'Midjourney v5: fotorrealismo generativo',d:'Midjourney lanzó v5, logrando niveles de realismo que dificultaron distinguir entre fotografías reales y creaciones sintéticas.',url:'https://docs.midjourney.com/'},
+    {y:'2023',ico:'ti-file-description',tag:'tech',t:'Claude 2: conversaciones largas y documentos extensos',d:'Anthropic presentó Claude 2 con capacidad de procesar hasta 100.000 tokens, permitiendo analizar documentos completos y libros.',url:'https://www.anthropic.com/index/claude-2'},
+    {y:'2023',ico:'ti-robot',tag:'tech',t:'AutoGPT y el nacimiento de los agentes autónomos',d:'La comunidad open source desarrolló AutoGPT, permitiendo a GPT-4 ejecutar tareas complejas planificando pasos, ejecutando código y autocorrigiéndose.',url:'https://github.com/Significant-Gravitas/AutoGPT'},
+    {y:'2023',ico:'ti-notebook',tag:'tech',t:'NotebookLM de Google: asistente de investigación personalizado',d:'Google lanzó NotebookLM, herramienta que permite crear bases de conocimiento personalizadas a partir de documentos propios.',url:'https://notebooklm.google/'},
+    {y:'2023',ico:'ti-brand-google',tag:'tech',t:'Google Gemini: integración nativa multimodal',d:'Google consolidó sus esfuerzos bajo Gemini, lanzando modelos multimodales nativos diseñados desde cero para entender video, audio y texto simultáneamente.',url:'https://blog.google/technology/ai/google-gemini-ai/'},
+    {y:'2024',ico:'ti-video',tag:'tech',t:'Sora: simulación del mundo físico en video',d:'OpenAI presentó Sora, modelo capaz de generar videos de hasta 1 minuto con alta fidelidad visual y comprensión emergente de la física.',url:'https://openai.com/sora'},
+    {y:'2024',ico:'ti-trophy',tag:'tech',t:'Premio Nobel a la IA: reconocimiento científico',d:'Nobel de Física a Hopfield y Hinton por redes neuronales, y Química a Hassabis y Jumper por AlphaFold y plegamiento de proteínas.',url:'https://www.nobelprize.org/prizes/'},
+    {y:'2024',ico:'ti-stack',tag:'tech',t:'Claude 3: tres niveles de capacidad',d:'Anthropic lanzó Claude 3 (Haiku, Sonnet, Opus), modelos diferenciados por velocidad, costo y capacidad. Opus igualó o superó a GPT-4.',url:'https://www.anthropic.com/index/claude-3-family'},
+    {y:'2024',ico:'ti-bolt',tag:'tech',t:'OpenAI GPT-4o: velocidad y accesibilidad',d:'GPT-4o (omni) optimizado para velocidad y costos, procesa texto, audio e imagen nativamente con latencia tan baja como 232ms.',url:'https://openai.com/index/hello-gpt-4o/'},
+    {y:'2024',ico:'ti-award',tag:'tech',t:'Claude 3.5 Sonnet: nuevo estándar de rendimiento',d:'Anthropic lanzó Claude 3.5 Sonnet, modelo de rango medio que superó al anterior Opus en múltiples benchmarks, récord en codificación con 64% en SWE-bench.',url:'https://www.anthropic.com/news/claude-3-5-sonnet'},
+    {y:'2024',ico:'ti-search',tag:'tech',t:'Google AI Overviews y Project Astra',d:'Google lanzó AI Overviews para resúmenes generados en búsqueda, y avanzó con Project Astra en interpretación de contenido multimedia.',url:'https://blog.google/products/search/generative-ai-google-search-may-2024/'},
+    {y:'2024',ico:'ti-share',tag:'tech',t:'Meta Llama 3: código abierto competitivo',d:'Meta liberó Llama 3 (8B y 70B) y posteriormente Llama 3.1 (405B), compitiendo directamente con GPT-4 en varios benchmarks.',url:'https://ai.meta.com/blog/meta-llama-3/'},
+    {y:'2024',ico:'ti-flag',tag:'tech',t:'Mistral Large 2: Europa en la competencia',d:'Mistral AI, startup francesa, lanzó Mistral Large 2 con eficiencia, menor costo y cumplimiento con regulaciones europeas.',url:'https://mistral.ai/news/mistral-large-2407/'},
+    {y:'2024',ico:'ti-search',tag:'tech',t:'Perplexity AI: búsqueda conversacional con citas',d:'Perplexity consolidó su motor de búsqueda conversacional que cita fuentes directamente, alternativa al modelo tradicional de Google.',url:'https://www.perplexity.ai/'},
+    {y:'2024',ico:'ti-video',tag:'tech',t:'Runway Gen-3: video generativo profesional',d:'Runway lanzó Gen-3, su modelo de generación de video más avanzado, usado en producciones cinematográficas y publicitarias.',url:'https://runwayml.com/'},
+    {y:'2024',ico:'ti-microphone',tag:'tech',t:'ElevenLabs: clonación de voz multilingüe',d:'ElevenLabs perfeccionó su tecnología de clonación y síntesis de voz, permitiendo generar audio realista a partir de pocos segundos de muestra.',url:'https://elevenlabs.io/'},
+    {y:'2024',ico:'ti-users',tag:'tech',t:'ChatGPT alcanza 200 millones de usuarios semanales',d:'ChatGPT superó los 200 millones de usuarios activos semanales, consolidándose como la aplicación de IA más utilizada globalmente.',url:'https://www.reuters.com/technology/artificial-intelligence/openai-says-chatgpts-weekly-users-have-grown-200-million-2024-08-29/'},
+    {y:'2024',ico:'ti-brain',tag:'tech',t:'OpenAI o1: el auge del razonamiento',d:'OpenAI lanzó o1-preview, marcando un viraje hacia el razonamiento profundo con cadena de pensamiento. 83% en AIME vs 13% de GPT-4o.',url:'https://openai.com/index/introducing-openai-o1-preview/'},
+    {y:'2024',ico:'ti-device-desktop',tag:'tech',t:'Anthropic Computer Use: IA que controla interfaces',d:'Anthropic presentó Computer Use con Claude 3.5 Sonnet actualizado, capacidad experimental de controlar computadoras directamente.',url:'https://www.anthropic.com/news/3-5-models-and-computer-use'},
+    {y:'2024',ico:'ti-flag',tag:'tech',t:'DeepSeek-V3: China alcanza paridad técnica',d:'DeepSeek lanzó V3, modelo de 671B parámetros que igualó GPT-4o en benchmarks principales con costos significativamente menores.',url:'https://www.deepseek.com/'},
+    {y:'2024',ico:'ti-brand-google',tag:'tech',t:'Gemini 2.0 Flash: siguiente generación de Google',d:'Google lanzó Gemini 2.0 Flash experimental con capacidades multimodales nativas mejoradas y prototipos agénticos.',url:'https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/'},
+  ]},
+  {era:'Madurez y consolidación',years:'2025–2026',eid:'madurez',items:[
+    {y:'2025',ico:'ti-rocket',tag:'tech',t:'DeepSeek R1 y la eficiencia algorítmica',d:'DeepSeek lanzó R1, modelo de razonamiento que iguala el rendimiento de OpenAI o1 a una fracción del costo operativo. Desafió la narrativa de que solo laboratorios con recursos masivos podían liderar.',url:'https://www.bbc.com/mundo/articles/cqx93d7e1weo'},
+    {y:'2025',ico:'ti-sparkles',tag:'tech',t:'Claude Sonnet 4: nuevo estándar de calidad',d:'Anthropic lanzó Claude Sonnet 4 con capacidades mejoradas de razonamiento, contexto extendido a 200.000 tokens y reducción significativa de alucinaciones.',url:'https://www.anthropic.com/'},
+    {y:'2025',ico:'ti-brand-google',tag:'tech',t:'Gemini 2.0: disponibilidad general',d:'Google lanzó Gemini 2.0 en disponibilidad general, consolidando capacidades multimodales nativas con Deep Research y Gemini 2.0 Flash Thinking.',url:'https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-updates-february-2025/'},
+    {y:'2025',ico:'ti-share',tag:'tech',t:'Llama 4 de Meta: código abierto multimodal nativo',d:'Meta lanzó Llama 4 (Maverick 400B y Scout 109B) con arquitectura nativa multimodal y ventana de contexto de hasta 1 millón de tokens.',url:'https://ai.meta.com/blog/llama-4-multimodal-intelligence/'},
+    {y:'2025',ico:'ti-robot',tag:'tech',t:'GPT-5.2: agentes de largo horizonte',d:'OpenAI presentó GPT-5.2 con mejoras sustanciales en razonamiento de largo horizonte, optimizado para Connectors con servicios de terceros.',url:'https://openai.com/research/'},
+    {y:'2025',ico:'ti-world',tag:'tech',t:'OpenAI Operator: navegación web autónoma',d:'OpenAI lanzó Operator, agente capaz de navegar la web de manera autónoma, completar formularios y gestionar tareas complejas en múltiples sitios.',url:'https://openai.com/es-419/index/introducing-operator/'},
+    {y:'2025',ico:'ti-robot',tag:'tech',t:'Agentes autónomos: de asistentes a ejecutores',d:'Se consolidó la transición de chatbots pasivos a agentes de IA capaces de ejecutar tareas complejas con mínima supervisión.',url:'https://claude.com/solutions/agents'},
+    {y:'2025',ico:'ti-shield',tag:'law',t:'C2PA se expande: metadatos de autenticidad',d:'El estándar C2PA para autenticación de contenido digital alcanzó adopción crítica, con cámaras y plataformas implementando metadatos de procedencia para combatir deepfakes.',url:'https://c2pa.org/'},
+    {y:'2026',ico:'ti-building',tag:'tech',t:'IA como infraestructura cotidiana',d:'La IA generativa se consolidó como componente estructural en múltiples industrias, con más de mil millones de usuarios activos globalmente.',url:'#'},
+    {y:'2026',ico:'ti-world',tag:'law',t:'Diálogo Global sobre Gobernanza de IA — ONU',d:'Naciones Unidas estableció el Diálogo Global sobre la Gobernanza de la IA mediante la Resolución A/RES/79/325.',url:'https://www.un.org/global-dialogue-ai-governance/en'},
+    {y:'2026',ico:'ti-building-factory',tag:'law',t:'Centros de Datos Soberanos de Canadá',d:'Canadá lanzó una iniciativa para financiar centros de datos de IA soberanos a gran escala como pilar de la política económica nacional.',url:'https://ised-isde.canada.ca/site/ised/en/enabling-large-scale-sovereign-ai-data-centres'},
+    {y:'2026',ico:'ti-users',tag:'tech',t:'Claude Opus 4.6: agentes de equipo',d:'Anthropic lanzó Claude Opus 4.6 con Agent Teams que permite asignar una tarea general y desplegar múltiples sub-agentes en paralelo.',url:'https://www.anthropic.com/news/claude-opus-4-6'},
+    {y:'2026',ico:'ti-flag',tag:'tech',t:'LatamGPT: primer modelo soberano de América Latina',d:'Chile lideró el lanzamiento de LatamGPT, primer LLM desarrollado para América Latina con 16 países colaboradores, entrenado con 70 mil millones de palabras en español y portugués.',url:'https://latamgpt.org/'},
+    {y:'2026',ico:'ti-terminal',tag:'tech',t:'GPT-5.3-Codex: agente de programación autónomo',d:'OpenAI lanzó GPT-5.3-Codex, primer agente de programación verdaderamente autónomo capaz de diagnosticar errores en producción y gestionar despliegues en nube.',url:'https://openai.com/'},
+    {y:'2026',ico:'ti-shield',tag:'law',t:'Compromiso REAIM sobre IA militar',d:'En la cumbre REAIM en España, 35 países firmaron compromiso operativo para uso responsable de IA en dominio militar con 20 principios críticos.',url:'https://mexicobusiness.news/cloudanddata/news/thirty-five-nations-back-military-ai-rules-us-china-opt-out'},
+    {y:'2026',ico:'ti-scale',tag:'law',t:'Marco regulatorio de IA en Brasil',d:'El Senado de Brasil avanzó en el Proyecto de Ley 2338/2023, posicionando al país como líder latinoamericano en regulación de IA.',url:'https://www.montaury.com.br/en/digital-law-in-brazil'},
+    {y:'2026',ico:'ti-trending-down',tag:'tech',t:'Crisis bursátil global por agentes de IA',d:'El SaaS Apocalypse: el índice Nifty IT de India sufre su peor caída en seis años. La contratación de recién graduados cae más de 50% en EE.UU. y 35% en Europa.',url:'https://es.wired.com/articulos/la-eficiencia-de-claude-ia-de-anthropic-desata-panico-laboral-y-hunde-la-bolsa-india'},
+  ]}
+];
+
+const tagL={tech:'Tecnología',film:'Cultura',law:'Regulación'};
+const tagC={tech:'tag-tech',film:'tag-film',law:'tag-law'};
+const FILTERS=[
+  {id:'all',label:'Todas las eras'},
+  {id:'inicio',label:'El inicio'},
+  {id:'invierno',label:'El invierno'},
+  {id:'avances',label:'Avances'},
+  {id:'moderna',label:'Era moderna'},
+  {id:'madurez',label:'Madurez 25–26'},
+];
+
+let active='all';
+
+function matchesFilter(era){
+  if(active==='all') return true;
+  return era.eid===active;
+}
+
+function buildFilters(){
+  const f=document.getElementById('filters');
+  f.innerHTML=FILTERS.map(fi=>`<button class="fpill${fi.id===active?' on':''}" data-f="${fi.id}">${fi.label}</button>`).join('');
+  f.querySelectorAll('.fpill').forEach(b=>b.addEventListener('click',()=>{active=b.dataset.f;render()}));
+}
+
+function render(){
+  buildFilters();
+  const main=document.getElementById('main');
+  main.innerHTML='';
+  let nIdx=0;
+  DATA.forEach((era,i)=>{
+    if(!matchesFilter(era)) return;
+    nIdx++;
+    const total=era.items.length;
+    const tags=new Set(era.items.map(it=>it.tag));
+    const tagSummary=[...tags].map(t=>tagL[t]).join(' · ');
+    const sec=document.createElement('div');
+    sec.className=`era era--${era.eid}`;
+    sec.innerHTML=`
+      <div class="era-header">
+        <div class="era-info">
+          <h2 class="era-title">${era.era} <span class="era-years-inline">${era.years}</span></h2>
+        </div>
+      </div>`;
+    const track=document.createElement('div');track.className='track';
+    era.items.forEach(item=>{
+      const div=document.createElement('div');div.className='item closed';
+      const dot=document.createElement('div');dot.className='item-dot';
+      div.appendChild(dot);
+      const card=document.createElement('div');card.className='card';
+      card.innerHTML=`
+        <div class="card-head">
+          <span class="cy">${item.y}</span>
+          <i class="ti ${item.ico} cico" aria-hidden="true"></i>
+          <span class="ctitle">${item.t}</span>
+          <span class="ctag ${tagC[item.tag]}">${tagL[item.tag]}</span>
+          <i class="ti ti-chevron-down cchev" aria-hidden="true"></i>
+        </div>
+        <div class="card-body" style="max-height:800px">
+          <div class="card-inner">
+            <p class="cdesc">${item.d}</p>
+            ${item.url&&item.url!='#'?`<a class="clink" href="${item.url}" target="_blank" rel="noopener noreferrer"><i class="ti ti-external-link" style="font-size:12px" aria-hidden="true"></i> Ver fuente</a>`:''}
+          </div>
+        </div>`;
+      card.querySelector('.card-head').addEventListener('click',()=>div.classList.toggle('closed'));
+      div.appendChild(card);
+      track.appendChild(div);
+    });
+    sec.appendChild(track);
+    main.appendChild(sec);
+  });
+}
+
+render();
+
+// Site chrome
+(function(){
+  var pb=document.getElementById('progressBar');
+  var tt=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    if(pb)pb.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';
+    if(tt)tt.classList.toggle('show',h.scrollTop>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  if(tt)tt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  var burger=document.querySelector('.nav-burger');
+  if(burger){
+    burger.addEventListener('click',function(){
+      var open=this.getAttribute('aria-expanded')==='true';
+      this.setAttribute('aria-expanded',String(!open));
+      var links=document.querySelector('.nav-links');
+      if(!open){links.style.display='flex';links.style.position='absolute';links.style.flexDirection='column';links.style.top='100%';links.style.right='1.5rem';links.style.background='var(--bg-deep)';links.style.padding='1.2rem 1.6rem';links.style.borderRadius='0 0 10px 10px';links.style.border='1px solid rgba(255,255,255,.1)';links.style.gap='1.1rem';links.style.zIndex='200';}
+      else{links.style.display='none';}
+    });
+  }
+})();
+</script>
+</body>
+</html>

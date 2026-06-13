@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0D1B3E"/>
+  <defs>
+    <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r=".5" fill="#1a2856"/>
+    </pattern>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="url(#dots)" opacity=".65"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#00B4D8" stroke-width=".9" opacity=".55"/>
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#5B2D8E" stroke-width=".9" opacity=".6"/>
+  <circle cx="32" cy="5" r="1.6" fill="#00B4D8"/>
+  <circle cx="59" cy="32" r="1.4" fill="#00B4D8" opacity=".75"/>
+  <circle cx="12" cy="52" r="1.2" fill="#8B6FBE" opacity=".7"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Georgia, 'DM Serif Display', serif" font-size="22" font-weight="700" letter-spacing="-1.5">
+    <tspan fill="#FFFFFF">I</tspan><tspan fill="#00B4D8">A</tspan>
+  </text>
+</svg>

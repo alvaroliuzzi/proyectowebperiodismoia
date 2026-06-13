@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roles de IA en Redacciones | PeriodismoIA 2026</title>
+<meta name="description" content="Mapa de 80 funciones reales de IA en redacciones de 24 países, organizadas en cuatro familias funcionales. Recurso aplicado del capítulo 4 de la Guía PeriodismoIA 2026.">
+<meta name="author" content="Álvaro Liuzzi">
+<meta name="theme-color" content="#0D1B3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://periodismoia.com/cap4-roles-ia.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PeriodismoIA 2026">
+<meta property="og:title" content="Roles de IA en Redacciones | PeriodismoIA 2026">
+<meta property="og:description" content="80 funciones reales en medios de 24 países, organizadas en cuatro familias funcionales.">
+<meta property="og:url" content="https://periodismoia.com/cap4-roles-ia.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/chapter.css">
+<style>
+  :root {
+    --bg-deep: #0D1B3E;
+    --bg-mid: #15224A;
+    --accent: #00AEEF;
+    --accent2: #29B8F0;
+    --blue-ui: #2D6BE4;
+    --violet: #8B6FBE;
+    --violet-light: #9B7FD4;
+    --lila: #C4B0DC;
+    --white: #FFFFFF;
+    --text-body: #E0E4F0;
+    --text-em: #29B8F0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: var(--bg-deep) !important;
+  }
+  body {
+    color: var(--text-body);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  main { background: var(--bg-deep); }
+
+  /* === HERO === */
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    padding: 8rem clamp(1.5rem, 7vw, 5rem) 4rem;
+    overflow: hidden;
+    background: transparent;
+    min-height: auto;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-bg-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(0,180,216,0.14) 1px, transparent 1px);
+    background-size: 32px 32px;
+    -webkit-mask: radial-gradient(120% 110% at 0% 100%, #000 0%, #000 24%, transparent 78%);
+    mask: radial-gradient(120% 110% at 0% 100%, #000 0%, #000 24%, transparent 78%);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-bg-dots-2 {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,.22) 1.2px, transparent 1.5px);
+    background-size: 24px 24px;
+    -webkit-mask: radial-gradient(90% 90% at 100% 0%, #000 0%, #000 16%, transparent 62%);
+    mask: radial-gradient(90% 90% at 100% 0%, #000 0%, #000 16%, transparent 62%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero-bg-svg {
+    position: absolute;
+    top: 50%;
+    right: -120px;
+    transform: translateY(-50%);
+    width: 520px;
+    height: 520px;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 28px;
+    width: fit-content;
+    position: relative; z-index: 1;
+    animation: fadeUp 0.6s ease both;
+  }
+  .badge-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent2);
+  }
+
+  .hero-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--accent2);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    position: relative; z-index: 1;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .hero-title {
+    position: relative; z-index: 1;
+    line-height: 1.0;
+    margin-bottom: 24px;
+    animation: fadeUp 0.7s 0.15s ease both;
+  }
+  .line-main {
+    display: block;
+    font-size: clamp(56px, 8vw, 110px);
+    letter-spacing: -0.03em;
+  }
+  .line-sub {
+    display: block;
+    font-size: clamp(20px, 2.8vw, 36px);
+    font-weight: 300;
+    color: var(--text-body);
+    letter-spacing: -0.01em;
+    margin-top: 6px;
+  }
+  .t-light {
+    font-weight: 300;
+    color: var(--white);
+  }
+  .t-bold {
+    font-weight: 700;
+    color: var(--accent2);
+  }
+
+  .hero-sub {
+    position: relative; z-index: 1;
+    max-width: 560px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-body);
+    margin-bottom: 40px;
+    animation: fadeUp 0.7s 0.25s ease both;
+  }
+  .hero-sub strong { color: var(--accent2); font-weight: 700; }
+
+  .hero-stats {
+    position: relative; z-index: 1;
+    display: flex;
+    gap: 40px;
+    animation: fadeUp 0.7s 0.35s ease both;
+    flex-wrap: wrap;
+  }
+  .stat-item { display: flex; flex-direction: column; gap: 4px; }
+  .stat-num {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .stat-num span { color: var(--accent2); }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-body);
+    opacity: 0.7;
+  }
+
+  /* === FILTERS === */
+  .section-filters {
+    padding: 0 7% 48px;
+    position: relative;
+  }
+  .filter-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(41,184,240,0.15);
+    padding-top: 32px;
+  }
+  .filter-btn {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--text-body);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.06em;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg-deep);
+    font-weight: 700;
+  }
+  .filter-btn.f1.active { background: #29B8F0; border-color: #29B8F0; }
+  .filter-btn.f2.active { background: #2D6BE4; border-color: #2D6BE4; }
+  .filter-btn.f3.active { background: #8B6FBE; border-color: #8B6FBE; }
+  .filter-btn.f4.active { background: #9B7FD4; border-color: #9B7FD4; color: #fff; }
+
+  /* === FAMILY SECTIONS === */
+  .families {
+    padding: 0 7% 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .family-block { opacity: 1; transition: opacity 0.3s; }
+  .family-block.hidden { display: none; }
+
+  .family-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  .family-num {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    opacity: 0.1;
+    color: var(--accent2);
+    min-width: 80px;
+    user-select: none;
+  }
+  .family-info { flex: 1; }
+  .family-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .f1-tag { background: rgba(41,184,240,0.15); color: var(--accent2); }
+  .f2-tag { background: rgba(45,107,228,0.15); color: #5B8EF0; }
+  .f3-tag { background: rgba(139,111,190,0.15); color: var(--violet-light); }
+  .f4-tag { background: rgba(155,127,212,0.15); color: var(--lila); }
+
+  .family-title {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .family-count {
+    font-size: 13px;
+    color: var(--text-body);
+    opacity: 0.6;
+    margin-top: 4px;
+  }
+
+  /* === TABLE REEMPLAZADA POR CARDS === */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    background: var(--bg-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 20px 22px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+    cursor: default;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+  .f1 .card::before { background: linear-gradient(90deg, var(--accent2), transparent); }
+  .f2 .card::before { background: linear-gradient(90deg, var(--blue-ui), transparent); }
+  .f3 .card::before { background: linear-gradient(90deg, var(--violet), transparent); }
+  .f4 .card::before { background: linear-gradient(90deg, var(--lila), transparent); }
+
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(41,184,240,0.25);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 12px;
+  }
+  .card-org {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    flex: 1;
+  }
+  .card-country {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    background: rgba(0,174,239,0.1);
+    border: 1px solid rgba(0,174,239,0.2);
+    padding: 3px 8px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .card-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-em);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .card-mandate {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  /* === FOOTER === */
+  .footer {
+    padding: 32px 7%;
+    border-top: 1px solid rgba(41,184,240,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-brand {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--text-body);
+    opacity: 0.4;
+    letter-spacing: 0.08em;
+  }
+
+  /* ARROW DECO */
+  .arrow-deco {
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .arrow-deco span {
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--accent2), transparent);
+  }
+  .arrow-deco svg { width: 12px; height: 12px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SCROLL */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg-deep); }
+  ::-webkit-scrollbar-thumb { background: var(--blue-ui); border-radius: 4px; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- NAV FIJA -->
+<nav class="site-nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html#top" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="introduccion.html">Introducción</a></li>
+        <li><a href="index.html#capitulos">Capítulos</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="sobre-metodologia.html">Metodología</a></li>
+        <li><a href="sobre-programa.html">Programa</a></li>
+        <li><a href="sobre-alvaro.html">Autor</a></li>
+      </ul>
+      <a href="descargar.html" class="nav-cta">Descargar guía</a>
+      <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-dots" aria-hidden="true"></div>
+  <div class="hero-bg-dots-2" aria-hidden="true"></div>
+  <svg class="hero-bg-svg" viewBox="0 0 520 520" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="260" cy="260" r="240" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <circle cx="260" cy="260" r="180" stroke="rgba(0,180,216,0.28)" stroke-width="1.4"/>
+    <circle cx="260" cy="260" r="115" stroke="rgba(139,111,190,0.35)" stroke-width="1.2"/>
+    <circle cx="260" cy="260" r="60" fill="rgba(91,45,142,0.18)" stroke="rgba(91,45,142,0.5)" stroke-width="1"/>
+    <path id="roles-orb" d="M260 80 A180 180 0 1 1 259.9 80" fill="none"/>
+    <circle r="7" fill="#00B4D8">
+      <animate attributeName="opacity" values="0.55;1;0.55" dur="3s" repeatCount="indefinite"/>
+      <animateMotion dur="24s" repeatCount="indefinite"><mpath href="#roles-orb"/></animateMotion>
+    </circle>
+    <circle r="4" fill="#8B6FBE">
+      <animate attributeName="opacity" values="0.4;.85;0.4" dur="4s" repeatCount="indefinite"/>
+      <animateMotion dur="18s" repeatCount="indefinite" begin="3s">
+        <mpath href="#roles-orb-inner"/>
+      </animateMotion>
+    </circle>
+    <path id="roles-orb-inner" d="M260 145 A115 115 0 1 0 259.9 145" fill="none"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Capítulo 4 — Cuadro de referencia
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line-main"><span class="t-light">Roles de </span><span class="t-bold">IA</span></span>
+      <span class="line-sub">en Redacciones del Mundo</span>
+    </h1>
+
+    <p class="hero-sub">
+      Un mapa de <strong>80 posiciones reales</strong> en medios de 24 países, organizadas en cuatro familias funcionales: liderazgo estratégico, producción editorial, infraestructura y producto, y formación y gobernanza.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">80</div>
+        <div class="stat-label">Roles relevados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24</div>
+        <div class="stat-label">Países</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Familias funcionales</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span>+</span>60</div>
+        <div class="stat-label">Organizaciones</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow-deco">
+    <span></span>
+    <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 1v10M1 7l5 5 5-5" stroke="#29B8F0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<main id="contenido">
+<section class="section-filters">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-family="all" onclick="setFilter('all', this)">Todas las familias</button>
+    <button class="filter-btn f1" data-family="f1" onclick="setFilter('f1', this)">F1 — Liderazgo estratégico</button>
+    <button class="filter-btn f2" data-family="f2" onclick="setFilter('f2', this)">F2 — Producción editorial</button>
+    <button class="filter-btn f3" data-family="f3" onclick="setFilter('f3', this)">F3 — Infraestructura y producto</button>
+    <button class="filter-btn f4" data-family="f4" onclick="setFilter('f4', this)">F4 — Formación, gobernanza y ética</button>
+  </div>
+</section>
+
+<!-- FAMILIES -->
+<section class="families" id="familiesContainer">
+
+  <!-- FAMILIA 1 -->
+  <div class="family-block f1" id="block-f1">
+    <div class="family-header">
+      <div class="family-num">01</div>
+      <div class="family-info">
+        <span class="family-tag f1-tag">Familia 1</span>
+        <h2 class="family-title">Liderazgo Estratégico</h2>
+        <p class="family-count">30 roles · 15 países</p>
+      </div>
+    </div>
+    <div class="cards-grid" id="cards-f1">
+      <!-- Generadas por JS -->
+    </div>
+  </div>
+
+  <!-- FAMILIA 2 -->
+  <div class="family-block f2" id="block-f2">
+    <div class="family-header">
+      <div class="family-num">02</div>
+      <div class="family-info">
+        <span class="family-tag f2-tag">Familia 2</span>
+        <h2 class="family-title">Producción Editorial</h2>
+        <p class="family-count">11 roles · 6 países</p>
+      </div>
+    </div>
+    <div class="cards-grid" id="cards-f2"></div>
+  </div>
+
+  <!-- FAMILIA 3 -->
+  <div class="family-block f3" id="block-f3">
+    <div class="family-header">
+      <div class="family-num">03</div>
+      <div class="family-info">
+        <span class="family-tag f3-tag">Familia 3</span>
+        <h2 class="family-title">Infraestructura y Producto</h2>
+        <p class="family-count">27 roles · 9 países</p>
+      </div>
+    </div>
+    <div class="cards-grid" id="cards-f3"></div>
+  </div>
+
+  <!-- FAMILIA 4 -->
+  <div class="family-block f4" id="block-f4">
+    <div class="family-header">
+      <div class="family-num">04</div>
+      <div class="family-info">
+        <span class="family-tag f4-tag">Familia 4</span>
+        <h2 class="family-title">Formación, Gobernanza y Ética</h2>
+        <p class="family-count">12 roles · 7 países</p>
+      </div>
+    </div>
+    <div class="cards-grid" id="cards-f4"></div>
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></div>
+  </div>
+  <div style="display:flex;gap:2rem">
+    <a href="index.html">← Inicio</a>
+    <a href="capitulo-4.html" style="color:var(--cyan)">Capítulo 4 →</a>
+  </div>
+</footer>
+
+<script>
+const data = {
+  f1: [
+    { org: 'Axel Springer', pais: 'Alemania', rol: 'Head of AI', mandato: 'Liderar la estrategia de IA del grupo editorial con mandato transversal desde 2019' },
+    { org: 'Frankfurter Allgemeine Zeitung', pais: 'Alemania', rol: 'Deputy Head Team GenAI', mandato: 'Liderar el equipo de IA generativa del principal diario alemán' },
+    { org: 'Infobae', pais: 'Argentina', rol: 'Director de Estrategia de IA y Operaciones Editoriales Regionales', mandato: 'Liderar la estrategia de IA y las operaciones editoriales regionales' },
+    { org: 'Mediahuis', pais: 'Bélgica', rol: 'Head of AI Strategy', mandato: 'Liderar la estrategia de IA para el grupo editorial belga' },
+    { org: 'CBC / Radio-Canada', pais: 'Canadá', rol: 'Head of AI', mandato: 'Liderar la estrategia de IA de la radiotelevisión pública canadiense' },
+    { org: 'La Silla Vacía', pais: 'Colombia', rol: 'AI Lead', mandato: 'Liderar la estrategia de IA en el medio digital colombiano' },
+    { org: 'JP/Politikens Media Group', pais: 'Dinamarca', rol: 'Head of AI', mandato: 'Liderar la integración de IA en el principal grupo mediático danés' },
+    { org: 'Business Insider', pais: 'EE.UU.', rol: 'Newsroom AI Lead', mandato: 'Coordinar la integración de IA en la redacción con foco en procesos editoriales' },
+    { org: 'McClatchy', pais: 'EE.UU.', rol: 'Lead Editor, AI Innovation in Journalism', mandato: 'Definir la estrategia de IA para la red de publicaciones regionales' },
+    { org: 'NPR', pais: 'EE.UU.', rol: 'Vice President, AI Labs', mandato: 'Liderar el laboratorio de IA con decisión sobre investigación aplicada y adopción editorial' },
+    { org: 'Semafor', pais: 'EE.UU.', rol: 'Executive Editor, AI integration', mandato: 'Liderar la integración de IA desde la conducción editorial fundadora del medio' },
+    { org: 'The New York Times', pais: 'EE.UU.', rol: 'Editorial Director of AI Initiatives', mandato: 'Coordinar la estrategia de IA desde la redacción; alcanzar al 93% de los 2.000 periodistas con formación' },
+    { org: 'The Washington Post', pais: 'EE.UU.', rol: 'Chief AI Officer', mandato: 'Liderar desde el C-suite toda la infraestructura de IA; reportar al CTO' },
+    { org: 'Helsingin Sanomat', pais: 'Finlandia', rol: 'Senior Editor-in-Chief, AI transformation', mandato: 'Conducir la transformación de IA desde la dirección editorial del principal diario finlandés' },
+    { org: 'NRK', pais: 'Noruega', rol: 'Head of Editorial Innovation, AI lead', mandato: 'Liderar la innovación editorial con IA en la radiotelevisión pública noruega' },
+    { org: 'VG / Schibsted', pais: 'Noruega', rol: 'Director of Editorial AI', mandato: 'Dirigir la integración de IA en la redacción del principal diario noruego' },
+    { org: 'RNZ', pais: 'Nueva Zelanda', rol: 'Director of AI Strategy & Implementation', mandato: 'Definir e implementar la estrategia de IA en la radiotelevisión pública neozelandesa' },
+    { org: 'NPO', pais: 'Países Bajos', rol: 'Strategy and Innovation Director', mandato: 'Definir la estrategia de IA en la radiotelevisión pública neerlandesa' },
+    { org: 'BBC', pais: 'Reino Unido', rol: 'Director, AI, Innovation and Growth', mandato: 'Integrar la estrategia de IA en el News Board combinando audiencias, producto e innovación' },
+    { org: 'BBC', pais: 'Reino Unido', rol: 'Editorial Executive, Generative AI Programme', mandato: 'Liderar el programa de IA generativa con autoridad transversal en todas las divisiones' },
+    { org: 'BBC', pais: 'Reino Unido', rol: 'Executive News Editor, Digital Development and AI', mandato: 'Liderar el desarrollo digital y de IA en el departamento de Crecimiento e Innovación' },
+    { org: 'BBC', pais: 'Reino Unido', rol: 'Programme Director, Generative AI', mandato: 'Dirigir el programa transversal de IA generativa en todas las divisiones' },
+    { org: 'BBC', pais: 'Reino Unido', rol: 'Senior News Editor / Head of News AI', mandato: 'Liderar la integración de IA en la estructura editorial senior de BBC News' },
+    { org: 'Reach plc', pais: 'Reino Unido', rol: 'Delivery Director, AI', mandato: 'Liderar la estrategia de IA para el grupo editorial multiplataforma' },
+    { org: 'Reuters', pais: 'Reino Unido', rol: 'Global Editor, Newsroom AI and Financial News Strategy', mandato: 'Liderar la estrategia editorial de IA y de noticias financieras a escala global' },
+    { org: 'Reuters', pais: 'Reino Unido', rol: 'Head of AI Strategy', mandato: 'Definir la estrategia de adopción de IA entre los 2.500 periodistas; coordinar una estructura de tres niveles' },
+    { org: 'The Guardian', pais: 'Reino Unido', rol: 'Head of Editorial Innovation', mandato: 'Liderar la innovación editorial con IA desde la dirección' },
+    { org: 'CNA / Mediacorp', pais: 'Singapur', rol: 'Editor-in-Chief, AI transformation mandate', mandato: 'Dirigir la transformación de IA con responsabilidad extendida sobre innovación editorial' },
+    { org: 'Daily Maverick', pais: 'Sudáfrica', rol: 'Head of Operations, AI innovation leadership', mandato: 'Liderar la adopción de IA desde la dirección de operaciones' },
+    { org: 'Aftonbladet / Schibsted', pais: 'Suecia', rol: 'Head of AI', mandato: 'Definir la estrategia de IA del tabloide sueco más leído' }
+  ],
+  f2: [
+    { org: 'La Nación', pais: 'Argentina', rol: 'Editor en Jefe / AI Adoption Leader', mandato: 'Liderar la adopción de IA desde la conducción editorial' },
+    { org: 'News Corp Australia', pais: 'Australia', rol: 'Editorial AI Development Editor', mandato: 'Supervisar el sistema de generación de más de 3.000 artículos hiperlocales semanales' },
+    { org: 'Folha de S.Paulo', pais: 'Brasil', rol: 'Editora de Inteligência Artificial', mandato: 'Coordinar la producción asistida por IA y la cobertura periodística del tema' },
+    { org: 'Grupo Globo', pais: 'Brasil', rol: 'Diretor de Inteligência Artificial', mandato: 'Supervisar más de 130 proyectos de IA generativa en el mayor grupo mediático latinoamericano' },
+    { org: 'Bloomberg', pais: 'EE.UU.', rol: 'AI Editor', mandato: 'Cubrir la IA como beat de tecnología desde el desk principal' },
+    { org: 'Gannett / USA Today Network', pais: 'EE.UU.', rol: 'AI Sports Editor; AI-Assisted Reporter', mandato: 'Integrar IA en la cobertura deportiva y en la producción general de contenidos' },
+    { org: 'The Connecticut Mirror', pais: 'EE.UU.', rol: 'AI Data Reporter and Product Developer', mandato: 'Combinar reporteo de datos asistido por IA con desarrollo de producto editorial' },
+    { org: 'OEM / Organización Editorial Mexicana', pais: 'México', rol: 'Coordinador de la Unidad de IA', mandato: 'Coordinar la unidad de IA del mayor grupo de diarios regionales de México' },
+    { org: 'Bureau of Investigative Journalism', pais: 'Reino Unido', rol: 'AI Reporter', mandato: 'Cubrir la inteligencia artificial como beat periodístico especializado' },
+    { org: 'Financial Times', pais: 'Reino Unido', rol: 'AI Editor', mandato: 'Liderar la cobertura de IA como primera posición de AI Editor en un gran medio internacional' },
+    { org: 'Newsquest', pais: 'Reino Unido', rol: 'AI-Assisted Reporters (36 posiciones)', mandato: 'Producir contenido regional con IA como herramienta central en más de 150 publicaciones' }
+  ],
+  f3: [
+    { org: 'DPA', pais: 'Alemania', rol: 'AI Team Lead', mandato: 'Construir y operar una base de datos de recuperación en tiempo real para la agencia' },
+    { org: 'Süddeutsche Zeitung', pais: 'Alemania', rol: 'Lead for Generative AI', mandato: 'Liderar el desarrollo de herramientas de IA generativa para la redacción' },
+    { org: 'Süddeutsche Zeitung', pais: 'Alemania', rol: 'Managing Editor and Senior Editor for AI', mandato: 'Coordinar la integración editorial de IA en el diario' },
+    { org: 'Süddeutsche Zeitung', pais: 'Alemania', rol: 'Managing Editor of AI and Product', mandato: 'Coordinar la integración de IA en los productos editoriales del diario' },
+    { org: 'ABC Australia', pais: 'Australia', rol: 'Editor, Innovation Lab', mandato: 'Liderar el laboratorio de innovación con foco en aplicaciones editoriales de IA' },
+    { org: 'News Corp Australia', pais: 'Australia', rol: 'AI Technical Product Lead', mandato: 'Liderar el desarrollo tecnológico de productos de IA para las publicaciones del grupo' },
+    { org: 'g1 / Grupo Globo', pais: 'Brasil', rol: 'Head of AI Initiatives', mandato: 'Gestionar iniciativas de IA con foco en producto editorial' },
+    { org: 'Associated Press', pais: 'EE.UU.', rol: 'AI Product Manager', mandato: 'Gestionar productos de IA para redacciones locales en el marco de la iniciativa Local News AI' },
+    { org: 'Associated Press', pais: 'EE.UU.', rol: 'Senior Product Manager, AI Strategy', mandato: 'Liderar la estrategia de producto de IA con foco en redacciones locales desde 2021' },
+    { org: 'CNN', pais: 'EE.UU.', rol: 'Director, AI Innovation', mandato: 'Liderar la innovación con IA en la redacción' },
+    { org: 'Forbes', pais: 'EE.UU.', rol: 'Chief Business and Strategy Officer, AI & Strategic Platforms Group', mandato: 'Dirigir un grupo de 24 personas dedicado a IA y plataformas estratégicas' },
+    { org: 'Forbes', pais: 'EE.UU.', rol: 'Chief Innovation Officer', mandato: 'Liderar la estrategia de innovación del grupo editorial' },
+    { org: 'The Washington Post', pais: 'EE.UU.', rol: 'Senior Editor for AI Strategy and Innovation', mandato: 'Establecer marcos de uso de IA con foco en producto editorial' },
+    { org: 'Wall Street Journal', pais: 'EE.UU.', rol: 'Director of Newsroom Data and AI', mandato: 'Supervisar la estrategia de datos e IA de la redacción' },
+    { org: 'Scroll.in', pais: 'India', rol: 'Head of AI Lab', mandato: 'Desarrollar productos de lectura adaptativa mediante IA' },
+    { org: 'The Hindu Group', pais: 'India', rol: 'VP Data & Analytics / AI Officer', mandato: 'Definir la estrategia de datos e IA del grupo editorial' },
+    { org: 'Nikkei', pais: 'Japón', rol: 'Engineering Manager, AI Chatbot', mandato: 'Desarrollar el chatbot propietario Ask! NIKKEI adaptado al japonés' },
+    { org: 'Nikkei', pais: 'Japón', rol: 'Product Manager, AI Tools', mandato: 'Gestionar productos de IA orientados a lectores jóvenes incluyendo Minutes by Nikkei' },
+    { org: 'Al Jazeera', pais: 'Qatar', rol: 'AI Expert + modelo The Core', mandato: 'Desarrollar e implementar el modelo de redacción con IA integrada sobre infraestructura Google Cloud' },
+    { org: 'BBC', pais: 'Reino Unido', rol: 'Head of AI Research', mandato: 'Dirigir la investigación de IA en R&D incluyendo ajuste fino de modelos de lenguaje abierto' },
+    { org: 'Financial Times', pais: 'Reino Unido', rol: 'Director of Product, AI and Editorial Tech', mandato: 'Liderar la integración de IA en los productos editoriales del FT' },
+    { org: 'Newsquest', pais: 'Reino Unido', rol: 'Head of AI', mandato: 'Coordinar la integración tecnológica y editorial de IA en más de 150 publicaciones regionales' },
+    { org: 'Reuters', pais: 'Reino Unido', rol: 'Global Managing Editor, AI and Automation', mandato: 'Gestionar la automatización de flujos informativos a escala global' },
+    { org: 'Reuters', pais: 'Reino Unido', rol: 'Newsroom AI Editor', mandato: 'Supervisar operativamente la IA en la redacción articulando trayectoria periodística y tecnología' },
+    { org: 'The Telegraph', pais: 'Reino Unido', rol: 'Director of Technology, AI & Personalisation', mandato: 'Liderar la estrategia tecnológica de IA y personalización del diario' },
+    { org: 'MediaCorp', pais: 'Singapur', rol: 'Deputy Chief Editor, AI focus', mandato: 'Liderar la transformación editorial con IA en el grupo mediático singapurense' },
+    { org: 'The Straits Times', pais: 'Singapur', rol: 'Newsroom Strategy Editor, AI & Innovation', mandato: 'Liderar la estrategia de producto e innovación editorial' }
+  ],
+  f4: [
+    { org: 'Bayerischer Rundfunk', pais: 'Alemania', rol: 'Chief AI Officer', mandato: 'Liderar la estrategia de IA con mandato explícito sobre ética algorítmica y marcos de uso responsable' },
+    { org: 'APA Austria', pais: 'Austria', rol: 'Deputy Editor-in-Chief, AI Task Force', mandato: 'Coordinar el AI Task Force con foco en gobernanza editorial y criterios de uso ético' },
+    { org: 'Business Insider', pais: 'EE.UU.', rol: 'Editorial Director of AI Innovation', mandato: 'Liderar la formación y adopción interna de IA en la redacción' },
+    { org: 'Chicago Public Media', pais: 'EE.UU.', rol: 'AI Fellow, Lenfest AI Collaborative', mandato: 'Liderar la adopción de IA desde adentro de la redacción como fellow embebido' },
+    { org: 'Minnesota Star Tribune', pais: 'EE.UU.', rol: 'AI Fellow, Lenfest AI Collaborative', mandato: 'Liderar la adopción de IA desde adentro de la redacción como fellow embebido' },
+    { org: 'Newsday', pais: 'EE.UU.', rol: 'AI Fellow, Lenfest AI Collaborative', mandato: 'Liderar la adopción de IA desde adentro de la redacción como fellow embebido' },
+    { org: 'The Philadelphia Inquirer', pais: 'EE.UU.', rol: 'AI Fellow, Lenfest AI Collaborative', mandato: 'Liderar la adopción de IA desde adentro de la redacción como fellow embebido' },
+    { org: 'The Seattle Times', pais: 'EE.UU.', rol: 'AI Fellow, Lenfest AI Collaborative', mandato: 'Liderar la adopción de IA desde adentro de la redacción como fellow embebido' },
+    { org: 'AFP', pais: 'Francia', rol: 'Deputy Global News Director, Editorial Innovation and AI', mandato: 'Hacer de la formación de la redacción global uno de los tres ejes centrales de la misión' },
+    { org: 'iTromsø', pais: 'Noruega', rol: 'Head of AI', mandato: 'Liderar la integración de IA con foco en formación interna' },
+    { org: 'Schibsted Media', pais: 'Noruega/Suecia', rol: 'Head of IN/LAB and Trust Initiatives', mandato: 'Liderar las iniciativas de confianza y transparencia algorítmica del grupo nórdico' },
+    { org: 'Sveriges Radio', pais: 'Suecia', rol: 'Head of AI & News Strategy', mandato: 'Liderar la estrategia de IA en la radio pública sueca' }
+  ]
+};
+
+const FLAGS = {
+  'Alemania': '🇩🇪',
+  'Argentina': '🇦🇷',
+  'Australia': '🇦🇺',
+  'Austria': '🇦🇹',
+  'Bélgica': '🇧🇪',
+  'Brasil': '🇧🇷',
+  'Canadá': '🇨🇦',
+  'Colombia': '🇨🇴',
+  'Dinamarca': '🇩🇰',
+  'EE.UU.': '🇺🇸',
+  'Finlandia': '🇫🇮',
+  'Francia': '🇫🇷',
+  'India': '🇮🇳',
+  'Japón': '🇯🇵',
+  'México': '🇲🇽',
+  'Noruega': '🇳🇴',
+  'Noruega/Suecia': '🇳🇴🇸🇪',
+  'Nueva Zelanda': '🇳🇿',
+  'Países Bajos': '🇳🇱',
+  'Qatar': '🇶🇦',
+  'Reino Unido': '🇬🇧',
+  'Singapur': '🇸🇬',
+  'Sudáfrica': '🇿🇦',
+  'Suecia': '🇸🇪',
+};
+
+function buildCard(item) {
+  const flag = FLAGS[item.pais] || '🌐';
+  return `
+    <div class="card" data-org="${item.org.toLowerCase()}" data-pais="${item.pais.toLowerCase()}" data-rol="${item.rol.toLowerCase()}">
+      <div class="card-header">
+        <div class="card-org">${item.org}</div>
+        <span class="card-country">${flag} ${item.pais}</span>
+      </div>
+      <div class="card-role">${item.rol}</div>
+      <div class="card-mandate">${item.mandato}</div>
+    </div>
+  `;
+}
+
+function render() {
+  ['f1','f2','f3','f4'].forEach(fam => {
+    document.getElementById('cards-' + fam).innerHTML =
+      data[fam].map(buildCard).join('');
+  });
+}
+
+let activeFilter = 'all';
+
+function setFilter(family, btn) {
+  activeFilter = family;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  ['f1','f2','f3','f4'].forEach(f => {
+    const block = document.getElementById('block-' + f);
+    if (family === 'all' || family === f) {
+      block.classList.remove('hidden');
+    } else {
+      block.classList.add('hidden');
+    }
+  });
+}
+
+render();
+
+</script>
+</body>
+</html>

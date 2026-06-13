@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursos | PeriodismoIA 2026</title>
+<meta name="description" content="Recursos de la Guía PeriodismoIA 2026: línea de tiempo interactiva de la IA, los 80 roles de IA en redacciones, el asistente de gobernanza sobre +90 directrices y tres hojas de trabajo descargables en PDF.">
+<meta name="author" content="Álvaro Liuzzi">
+<meta name="theme-color" content="#0D1B3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://periodismoia.com/recursos.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PeriodismoIA 2026">
+<meta property="og:title" content="Recursos | PeriodismoIA 2026">
+<meta property="og:description" content="Herramientas para llevar la guía a la redacción: línea de tiempo interactiva, los 80 roles de IA, el asistente de directrices y tres hojas de trabajo descargables.">
+<meta property="og:url" content="https://periodismoia.com/recursos.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/chapter.css">
+<link rel="stylesheet" href="assets/css/a11y.css">
+<style>
+/* ════════════════════════════════════════════════════════════
+   RECURSOS — capa sobre el sistema (solo tokens del sistema).
+   Componentes propios de esta página, prefijo .rsc / .pdf / .cat
+   ════════════════════════════════════════════════════════════ */
+section[id]{ scroll-margin-top:84px; }
+
+/* ── ÍNDICE DE CATEGORÍAS (navegabilidad) ── */
+.cat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2.5rem; }
+.cat{ display:flex; flex-direction:column; gap:.55rem; padding:1.4rem 1.5rem 1.3rem; background:#fff; border:1px solid var(--g200); border-radius:14px; text-decoration:none; color:inherit; transition:transform .2s, border-color .2s, box-shadow .2s; position:relative; }
+.cat:hover{ transform:translateY(-3px); border-color:var(--violet); box-shadow:0 14px 30px -18px rgba(13,27,62,.3); }
+.cat-top{ display:flex; align-items:center; justify-content:space-between; }
+.cat-n{ font-family:'DM Serif Display',Georgia,serif; font-size:1.5rem; color:var(--violet); line-height:1; }
+.cat:nth-child(2) .cat-n{ color:var(--cyan); }
+.cat-count{ font-family:'DM Sans',sans-serif; font-size:.62rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--g400); border:1px solid var(--g200); border-radius:99px; padding:.26rem .6rem; }
+.cat-t{ font-family:'DM Sans',sans-serif; font-weight:600; font-size:.98rem; color:var(--navy); line-height:1.25; }
+.cat-d{ font-size:.82rem; color:var(--g700); line-height:1.5; margin:0; }
+.cat-go{ margin-top:.2rem; font-family:'DM Sans',sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--violet); transition:gap .2s; display:inline-flex; gap:.35rem; align-items:center; }
+.cat:hover .cat-go{ color:var(--cyan); }
+
+/* ── PÁGINAS INTERACTIVAS (cards oscuras, preview del interior dark) ── */
+.rsc-feature-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; margin-top:.5rem; }
+.rsc-feature{ position:relative; overflow:hidden; display:flex; flex-direction:column; background:linear-gradient(157deg,#0D1B3E 0%,#15183c 100%); border:1px solid rgba(0,180,216,.28); border-radius:18px; padding:clamp(1.7rem,2.6vw,2.3rem); text-decoration:none; color:#fff; transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; min-height:340px; }
+.rsc-feature::before{ content:''; position:absolute; inset:0; background-image:radial-gradient(circle, rgba(0,180,216,.16) 1px, transparent 1px); background-size:24px 24px; -webkit-mask:radial-gradient(80% 80% at 100% 0%,#000 0%,transparent 62%); mask:radial-gradient(80% 80% at 100% 0%,#000 0%,transparent 62%); pointer-events:none; }
+.rsc-feature .arc{ position:absolute; top:-46px; right:-46px; width:190px; height:190px; opacity:.5; pointer-events:none; }
+.rsc-feature:hover{ transform:translateY(-4px); border-color:rgba(0,180,216,.6); box-shadow:0 26px 54px -26px rgba(0,180,216,.5); }
+.rsc-feature > *{ position:relative; z-index:1; }
+.rsc-top{ display:flex; align-items:center; gap:.6rem; margin-bottom:1.3rem; }
+.rsc-tag{ font-family:'DM Sans',sans-serif; font-size:.6rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--cyan); }
+.rsc-cap{ font-family:'DM Sans',sans-serif; font-size:.6rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.6); border:1px solid rgba(255,255,255,.18); border-radius:99px; padding:.22rem .6rem; margin-left:auto; }
+.rsc-title{ font-family:'DM Serif Display',Georgia,serif; font-size:clamp(1.4rem,2.2vw,1.85rem); color:#fff; line-height:1.18; letter-spacing:-.01em; margin:0 0 .7rem; }
+.rsc-desc{ font-size:.9rem; line-height:1.65; color:rgba(255,255,255,.74); margin:0; }
+
+/* mini-visual del interior */
+.rsc-viz{ margin:1.5rem 0 .3rem; }
+/* timeline rail */
+.rsc-rail{ position:relative; height:2px; background:linear-gradient(90deg,#5B2D8E 0%,#00B4D8 100%); border-radius:2px; margin:1.1rem .3rem 0; }
+.rsc-rail i{ position:absolute; top:50%; width:9px; height:9px; border-radius:50%; transform:translate(-50%,-50%); background:#0D1B3E; }
+.rsc-rail i:nth-child(1){ left:0; border:2px solid #8A50C4; }
+.rsc-rail i:nth-child(2){ left:28%; border:2px solid #6E5BC0; }
+.rsc-rail i:nth-child(3){ left:55%; border:2px solid #3D8BD8; }
+.rsc-rail i:nth-child(4){ left:80%; border:2px solid #00B4D8; }
+.rsc-rail i:nth-child(5){ left:100%; border:2px solid #00B4D8; box-shadow:0 0 0 4px rgba(0,180,216,.2); }
+.rsc-years{ display:flex; justify-content:space-between; font-family:'DM Serif Display',Georgia,serif; font-size:1rem; color:#fff; margin-top:.65rem; padding:0 .1rem; }
+.rsc-years span:last-child{ color:var(--cyan); }
+.rsc-eralabel{ font-family:'DM Sans',sans-serif; font-size:.6rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.45); text-align:center; margin-top:.5rem; }
+/* roles families grid */
+.rsc-fams{ display:grid; grid-template-columns:1fr 1fr; gap:.55rem; }
+.rsc-fam{ display:flex; align-items:center; gap:.55rem; padding:.6rem .75rem; background:rgba(0,180,216,.06); border:1px solid rgba(0,180,216,.2); border-radius:9px; }
+.rsc-fam .fdot{ width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.rsc-fam .fname{ font-family:'DM Sans',sans-serif; font-size:.72rem; font-weight:500; color:rgba(255,255,255,.86); line-height:1.2; }
+
+.rsc-foot{ margin-top:auto; padding-top:1.4rem; display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; }
+.rsc-meta{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.rsc-chip{ font-family:'DM Sans',sans-serif; font-size:.64rem; font-weight:600; letter-spacing:.03em; color:rgba(255,255,255,.7); border:1px solid rgba(255,255,255,.16); border-radius:99px; padding:.28rem .65rem; white-space:nowrap; }
+.rsc-open{ display:inline-flex; align-items:center; gap:.45rem; flex-shrink:0; font-family:'DM Sans',sans-serif; font-size:.78rem; font-weight:700; color:var(--cyan); transition:gap .25s ease; }
+.rsc-open svg{ transition:transform .25s ease; }
+.rsc-feature:hover .rsc-open{ gap:.65rem; }
+.rsc-feature:hover .rsc-open svg{ transform:translateX(3px); }
+
+/* ── PDFs DESCARGABLES (3 cards) ── */
+.pdf-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.3rem; margin-top:.5rem; }
+.pdf-card{ --acc:var(--cyan); display:flex; flex-direction:column; background:#fff; border:1px solid var(--g200); border-radius:16px; overflow:hidden; text-decoration:none; color:inherit; transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.pdf-card:hover{ transform:translateY(-4px); border-color:var(--acc); box-shadow:0 20px 40px -22px rgba(13,27,62,.32); }
+.pdf-card--violet{ --acc:var(--violet); }
+.pdf-preview{ position:relative; height:168px; display:flex; align-items:center; justify-content:center; background:var(--off); border-bottom:1px solid var(--g100); overflow:hidden; }
+.pdf-preview::after{ content:''; position:absolute; inset:0; background-image:radial-gradient(rgba(13,27,62,.05) 1.1px,transparent 1.4px); background-size:18px 18px; -webkit-mask:radial-gradient(80% 90% at 0% 100%,#000 0%,transparent 60%); mask:radial-gradient(80% 90% at 0% 100%,#000 0%,transparent 60%); pointer-events:none; }
+.pdf-card--dual .pdf-preview{ background:linear-gradient(135deg,rgba(91,45,142,.07),rgba(0,180,216,.07)); }
+.sheet{ position:relative; width:104px; height:134px; background:#fff; border:1px solid var(--g200); border-radius:5px; box-shadow:0 12px 26px -12px rgba(13,27,62,.32); transform:rotate(-4deg); transition:transform .3s ease; overflow:hidden; z-index:1; }
+.pdf-card:hover .sheet{ transform:rotate(0deg) translateY(-3px); }
+.sheet-band{ height:30px; background:var(--acc); display:flex; align-items:center; padding:0 11px; }
+.pdf-card--dual .sheet-band{ background:linear-gradient(90deg,var(--violet),var(--cyan)); }
+.sheet-band span{ font-family:'DM Sans',sans-serif; font-size:7px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#fff; opacity:.95; }
+.sheet-lines{ padding:11px; display:flex; flex-direction:column; gap:6px; }
+.sheet-lines i{ display:block; height:4px; border-radius:2px; background:var(--g100); }
+.sheet-lines i.s{ width:55%; } .sheet-lines i.m{ width:80%; } .sheet-lines i.l{ width:100%; }
+.sheet-lines i.acc{ background:color-mix(in srgb, var(--acc) 45%, var(--g100)); width:38%; }
+.pdf-fmt{ position:absolute; bottom:11px; right:11px; font-family:'DM Sans',sans-serif; font-size:8px; font-weight:700; letter-spacing:.08em; color:var(--acc); border:1px solid var(--acc); border-radius:4px; padding:1.5px 5px; background:#fff; }
+.pdf-body{ display:flex; flex-direction:column; flex:1; padding:1.3rem 1.4rem 1.45rem; }
+.pdf-tag{ font-family:'DM Sans',sans-serif; font-size:.62rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--acc); margin-bottom:.55rem; }
+.pdf-card--dual .pdf-tag{ color:var(--violet); }
+.pdf-title{ font-family:'DM Serif Display',Georgia,serif; font-size:1.18rem; color:var(--navy); line-height:1.25; margin:0 0 .55rem; }
+.pdf-desc{ font-size:.84rem; color:var(--g700); line-height:1.6; margin:0; }
+.pdf-dl{ margin-top:1.1rem; padding-top:1.05rem; border-top:1px solid var(--g100); display:inline-flex; align-items:center; gap:.5rem; font-family:'DM Sans',sans-serif; font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--acc); transition:gap .2s ease; }
+.pdf-card--dual .pdf-dl{ color:var(--violet); }
+.pdf-card:hover .pdf-dl{ gap:.75rem; }
+.pdf-dl svg{ flex-shrink:0; }
+
+/* ── índice de fuente (de qué capítulo viene) — cierre ── */
+.src-list{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--g200); border:1px solid var(--g200); border-radius:14px; overflow:hidden; margin-top:2.4rem; }
+.src{ background:#fff; padding:1.2rem 1.4rem; display:flex; flex-direction:column; gap:.3rem; text-decoration:none; transition:background .16s; }
+.src:hover{ background:var(--off); }
+.src-cap{ font-family:'DM Sans',sans-serif; font-size:.62rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--cyan); }
+.src-name{ font-family:'DM Sans',sans-serif; font-size:.88rem; font-weight:600; color:var(--navy); line-height:1.3; }
+.src-rsc{ font-size:.76rem; color:var(--g700); }
+
+@media(max-width:860px){
+  .cat-grid{ grid-template-columns:1fr; }
+  .rsc-feature-grid{ grid-template-columns:1fr; }
+  .pdf-grid{ grid-template-columns:1fr; max-width:420px; }
+  .src-list{ grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- BARRA DE PROGRESO -->
+<div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+
+<!-- NAV FIJA -->
+<nav class="site-nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html#top" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="introduccion.html">Introducción</a></li>
+        <li><a href="index.html#capitulos">Capítulos</a></li>
+        <li><a href="recursos.html" aria-current="page">Recursos</a></li>
+        <li><a href="sobre-metodologia.html">Metodología</a></li>
+        <li><a href="sobre-programa.html">Programa</a></li>
+        <li><a href="sobre-alvaro.html">Autor</a></li>
+      </ul>
+      <a href="descargar.html" class="nav-cta">Descargar guía</a>
+      <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero hero--dual">
+  <div class="hero-geo" aria-hidden="true">
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);background-size:40px 40px;-webkit-mask:radial-gradient(135% 125% at 0% 100%,#000 0%,#000 24%,transparent 82%);mask:radial-gradient(135% 125% at 0% 100%,#000 0%,#000 24%,transparent 82%);"></div>
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.28) 1.4px,transparent 1.7px);background-size:22px 22px;-webkit-mask:radial-gradient(92% 92% at 100% 0%,#000 0%,#000 18%,transparent 64%);mask:radial-gradient(92% 92% at 100% 0%,#000 0%,#000 18%,transparent 64%);"></div>
+    <svg viewBox="0 0 340 340" fill="none" style="position:absolute;top:-100px;right:-80px;width:340px;height:340px;">
+      <circle cx="170" cy="170" r="140" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+      <circle cx="170" cy="170" r="85" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+      <circle cx="170" cy="170" r="40" fill="rgba(91,45,142,0.22)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+      <path id="orb" d="M170 40 A130 130 0 1 1 169.9 40" fill="none"/>
+      <circle r="5.5" fill="#FFFFFF"><animate attributeName="opacity" values="0.55;1;0.55" dur="3s" repeatCount="indefinite"/><animateMotion dur="22s" repeatCount="indefinite"><mpath href="#orb"/></animateMotion></circle>
+    </svg>
+  </div>
+
+  <div class="hero-center">
+    <div class="hero-logo anim-word" style="animation-delay:.05s">
+      <span class="hero-logo-personal">Periodismo<span>IA</span></span>
+    </div>
+    <div class="hero-sep anim-word" style="animation-delay:.2s"></div>
+    <div class="hero-chapter anim-word" style="animation-delay:.3s">Caja de herramientas</div>
+    <div class="hero-movement-pill anim-word" style="animation-delay:.4s">6 recursos · 3 formatos</div>
+    <div class="hero-divider anim-line" style="animation-delay:.5s"></div>
+    <h1 class="hero-title anim-word" style="animation-delay:.65s">Recursos</h1>
+    <p class="hero-tagline anim-word" style="animation-delay:.85s">Las piezas vivas de la guía para llevar a la redacción: explorar, consultar y descargar.</p>
+  </div>
+</section>
+
+<main id="contenido">
+
+<!-- INTRO + ÍNDICE DE CATEGORÍAS -->
+<section class="section section--white">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">Caja de herramientas de la guía</div>
+      <h2 class="section-title reveal">Seis recursos para llevar la guía a la redacción</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Además de los siete capítulos, PeriodismoIA reúne herramientas hechas a medida del relevamiento: dos piezas interactivas con diseño propio, un asistente conversacional entrenado sobre el corpus de directrices y tres hojas de trabajo imprimibles. Cada recurso nace de un capítulo y se puede usar por separado.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat reveal" href="#interactivas">
+        <div class="cat-top"><span class="cat-n">01</span><span class="cat-count">2 piezas</span></div>
+        <div class="cat-t">Páginas interactivas</div>
+        <p class="cat-d">Recorridos navegables con diseño propio: la línea de tiempo de la IA y los 80 roles en redacciones.</p>
+        <span class="cat-go">Ver interactivas →</span>
+      </a>
+      <a class="cat reveal" href="#asistente" style="transition-delay:.08s">
+        <div class="cat-top"><span class="cat-n">02</span><span class="cat-count">1 asistente</span></div>
+        <div class="cat-t">Asistente conversacional</div>
+        <p class="cat-d">Un GPT entrenado sobre +90 directrices editoriales para consultar criterios de gobernanza de IA.</p>
+        <span class="cat-go">Ver asistente →</span>
+      </a>
+      <a class="cat reveal" href="#descargables" style="transition-delay:.16s">
+        <div class="cat-top"><span class="cat-n">03</span><span class="cat-count">3 PDFs</span></div>
+        <div class="cat-t">Descargables</div>
+        <p class="cat-d">Hojas de trabajo imprimibles: el sprint de integración, las 9 orientaciones y la matriz de 44 casos.</p>
+        <span class="cat-go">Ver descargables →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 01 · PÁGINAS INTERACTIVAS -->
+<section class="section section--gray" id="interactivas">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">01 · Piezas interactivas</div>
+      <h2 class="section-title reveal">Para explorar con diseño propio</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Las dos piezas más fuertes de la guía tienen su propia interfaz oscura y se abren en pantalla completa. Funcionan como anexos vivos de los capítulos 1 y 4.</p>
+    </div>
+    <div class="rsc-feature-grid">
+      <!-- Línea de tiempo -->
+      <a class="rsc-feature reveal" href="timeline_ia.html" target="_blank" rel="noopener noreferrer">
+        <svg class="arc" viewBox="0 0 190 190" fill="none" aria-hidden="true">
+          <path d="M180 10 A170 170 0 0 1 10 180" stroke="#00B4D8" stroke-width="1.2"/>
+          <path d="M150 10 A140 140 0 0 1 10 150" stroke="#5B2D8E" stroke-width=".8"/>
+        </svg>
+        <div class="rsc-top">
+          <span class="rsc-tag">Línea de tiempo</span>
+          <span class="rsc-cap">Anclada al cap. 01</span>
+        </div>
+        <h3 class="rsc-title">La evolución de la IA, de 1950 a 2026</h3>
+        <p class="rsc-desc">Un recorrido cronológico interactivo con más de 80 hitos —técnicos, culturales y regulatorios— organizados en cinco eras, con filtros y fichas desplegables.</p>
+        <div class="rsc-viz" aria-hidden="true">
+          <div class="rsc-rail"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="rsc-years"><span>1950</span><span>2026</span></div>
+          <div class="rsc-eralabel">5 eras · 80+ hitos</div>
+        </div>
+        <div class="rsc-foot">
+          <div class="rsc-meta"><span class="rsc-chip">Filtros por tipo</span><span class="rsc-chip">Fichas con fuentes</span></div>
+          <span class="rsc-open">Abrir <svg width="15" height="15" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h12"/><path d="m12 5 6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <!-- Roles de IA -->
+      <a class="rsc-feature reveal" href="cap4-roles-ia.html" target="_blank" rel="noopener noreferrer" style="transition-delay:.08s">
+        <svg class="arc" viewBox="0 0 190 190" fill="none" aria-hidden="true">
+          <path d="M180 10 A170 170 0 0 1 10 180" stroke="#00B4D8" stroke-width="1.2"/>
+          <path d="M150 10 A140 140 0 0 1 10 150" stroke="#5B2D8E" stroke-width=".8"/>
+        </svg>
+        <div class="rsc-top">
+          <span class="rsc-tag">Roles de IA</span>
+          <span class="rsc-cap">Anclada al cap. 04</span>
+        </div>
+        <h3 class="rsc-title">Los 80 roles de IA en las redacciones</h3>
+        <p class="rsc-desc">El listado completo de los 80 roles relevados en medios de 24 países, organizados en cuatro familias funcionales y filtrables para encontrar el que corresponde a cada equipo.</p>
+        <div class="rsc-viz" aria-hidden="true">
+          <div class="rsc-fams">
+            <div class="rsc-fam"><span class="fdot" style="background:#00B4D8"></span><span class="fname">Liderazgo estratégico</span></div>
+            <div class="rsc-fam"><span class="fdot" style="background:#5B2D8E"></span><span class="fname">Infraestructura y producto</span></div>
+            <div class="rsc-fam"><span class="fdot" style="background:#8B6FBE"></span><span class="fname">Formación y gobernanza</span></div>
+            <div class="rsc-fam"><span class="fdot" style="background:#0E6FA8"></span><span class="fname">Producción editorial</span></div>
+          </div>
+        </div>
+        <div class="rsc-foot">
+          <div class="rsc-meta"><span class="rsc-chip">4 familias</span><span class="rsc-chip">24 países</span></div>
+          <span class="rsc-open">Abrir <svg width="15" height="15" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h12"/><path d="m12 5 6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · ASISTENTE CONVERSACIONAL -->
+<section class="section section--white" id="asistente">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">02 · Asistente conversacional</div>
+      <h2 class="section-title reveal">Consultá las directrices, en lenguaje natural</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Un asistente que ancla el capítulo 2: entrenado sobre el corpus de más de 90 directrices editoriales relevadas en 25 países.</p>
+    </div>
+    <a class="roles-cta reveal" href="https://chatgpt.com/g/g-6a299bf5ef54819193e4b478b306aa3e-directrices-ia-periodismoia" target="_blank" rel="noopener noreferrer" style="max-width:72ch;margin:2.5rem auto 0;">
+      <div class="roles-cta-body">
+        <div class="roles-cta-tag">Asistente · ChatGPT</div>
+        <h3 class="roles-cta-title">Asistente de gobernanza y directrices IA</h3>
+        <p class="roles-cta-desc">Un GPT personalizado, disponible en ChatGPT, entrenado sobre el corpus de directrices editoriales de la guía. Consultá cómo distintos medios resuelven transparencia, atribución, verificación o uso de IA generativa, y contrastá criterios para construir la política de tu redacción.</p>
+        <span class="roles-cta-btn">
+          <svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11h14"/><path d="m13 5 6 6-6 6"/></svg>
+          Abrir asistente en ChatGPT
+        </span>
+      </div>
+      <div class="roles-cta-visual" aria-hidden="true">
+        <div class="roles-bar">
+          <span class="roles-seg roles-seg--violet-deep" style="flex:22"></span>
+          <span class="roles-seg roles-seg--violet-mid" style="flex:18"></span>
+          <span class="roles-seg roles-seg--violet-light" style="flex:15"></span>
+          <span class="roles-seg roles-seg--cyan-light" style="flex:13"></span>
+          <span class="roles-seg roles-seg--cyan-mid" style="flex:12"></span>
+          <span class="roles-seg roles-seg--cyan-deep" style="flex:10"></span>
+        </div>
+        <ul class="roles-legend">
+          <li><span class="roles-dot roles-dot--violet-deep"></span><b>01</b> Supervisión humana</li>
+          <li><span class="roles-dot roles-dot--violet-mid"></span><b>02</b> Transparencia</li>
+          <li><span class="roles-dot roles-dot--violet-light"></span><b>03</b> Integridad y ética</li>
+          <li><span class="roles-dot roles-dot--cyan-light"></span><b>04</b> Innovación responsable</li>
+          <li><span class="roles-dot roles-dot--cyan-mid"></span><b>05</b> Formación</li>
+          <li><span class="roles-dot roles-dot--cyan-deep"></span><b>06</b> Colaboración</li>
+        </ul>
+        <div class="roles-total">+90 directrices · 25 países · 6 principios</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- 03 · DESCARGABLES -->
+<section class="section section--gray" id="descargables">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">03 · Descargables</div>
+      <h2 class="section-title reveal">Tres hojas de trabajo imprimibles</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Documentos en PDF pensados para imprimir y trabajar en equipo. Cada uno baja un capítulo a una herramienta concreta para la redacción.</p>
+    </div>
+    <div class="pdf-grid">
+      <!-- Sprint (cap 3) -->
+      <a class="pdf-card reveal" href="assets/pdf/sprint-periodismoia.pdf" target="_blank" rel="noopener" download>
+        <div class="pdf-preview">
+          <div class="sheet">
+            <div class="sheet-band"><span>Sprint PeriodismoIA</span></div>
+            <div class="sheet-lines"><i class="acc"></i><i class="l"></i><i class="m"></i><i class="l"></i><i class="s"></i><i class="m"></i></div>
+            <span class="pdf-fmt">PDF</span>
+          </div>
+        </div>
+        <div class="pdf-body">
+          <div class="pdf-tag">Hoja de trabajo · Cap. 03</div>
+          <h3 class="pdf-title">Sprint PeriodismoIA</h3>
+          <p class="pdf-desc">Hoja de ruta operativa con los siete campos para arrancar la integración de IA, lista para completar en equipo.</p>
+          <span class="pdf-dl"><svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3v11"/><path d="m6 10 5 5 5-5"/><path d="M4 19h14"/></svg> Descargar PDF</span>
+        </div>
+      </a>
+      <!-- 9 orientaciones (cap 5) -->
+      <a class="pdf-card pdf-card--violet reveal" href="assets/pdf/nueve-orientaciones-periodismoia.pdf" target="_blank" rel="noopener" download style="transition-delay:.08s">
+        <div class="pdf-preview">
+          <div class="sheet">
+            <div class="sheet-band"><span>9 orientaciones</span></div>
+            <div class="sheet-lines"><i class="acc"></i><i class="m"></i><i class="l"></i><i class="s"></i><i class="l"></i><i class="m"></i></div>
+            <span class="pdf-fmt">A4</span>
+          </div>
+        </div>
+        <div class="pdf-body">
+          <div class="pdf-tag">Hoja de trabajo · Cap. 05</div>
+          <h3 class="pdf-title">9 orientaciones para tu redacción</h3>
+          <p class="pdf-desc">Hoja A4 imprimible: una página por orientación, con descripción, preguntas guía y espacio para tomar notas.</p>
+          <span class="pdf-dl"><svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3v11"/><path d="m6 10 5 5 5-5"/><path d="M4 19h14"/></svg> Descargar PDF</span>
+        </div>
+      </a>
+      <!-- Matriz 44 casos (cap 6) -->
+      <a class="pdf-card pdf-card--dual reveal" href="assets/pdf/matriz-44-casos-periodismoia.pdf" target="_blank" rel="noopener" download style="transition-delay:.16s">
+        <div class="pdf-preview">
+          <div class="sheet">
+            <div class="sheet-band"><span>Matriz · 44 casos</span></div>
+            <div class="sheet-lines"><i class="acc"></i><i class="l"></i><i class="l"></i><i class="m"></i><i class="l"></i><i class="s"></i></div>
+            <span class="pdf-fmt">PDF</span>
+          </div>
+        </div>
+        <div class="pdf-body">
+          <div class="pdf-tag">Hoja de consulta · Cap. 06</div>
+          <h3 class="pdf-title">Matriz de 44 casos editoriales</h3>
+          <p class="pdf-desc">Documento de consulta con los 44 casos organizados por eje, medio, país y año, para acompañar la planificación.</p>
+          <span class="pdf-dl"><svg width="14" height="14" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3v11"/><path d="m6 10 5 5 5-5"/><path d="M4 19h14"/></svg> Descargar PDF</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE · DE DÓNDE VIENE CADA RECURSO -->
+<section class="section section--white">
+  <div class="container">
+    <div class="prose-head">
+      <div class="section-label reveal">Cada recurso nace de un capítulo</div>
+      <h2 class="section-title reveal">Volver a la fuente</h2>
+      <p class="lead reveal" style="transition-delay:.1s">Los recursos amplían y aterrizan lo que cada capítulo desarrolla. Para entender el porqué de cada herramienta, conviene leer el capítulo del que surge.</p>
+    </div>
+    <div class="src-list reveal">
+      <a class="src" href="capitulo-1.html"><span class="src-cap">Capítulo 01</span><span class="src-name">Fundamentos de la IA</span><span class="src-rsc">→ Línea de tiempo</span></a>
+      <a class="src" href="capitulo-2.html"><span class="src-cap">Capítulo 02</span><span class="src-name">Ética, transparencia y confianza</span><span class="src-rsc">→ Asistente de directrices</span></a>
+      <a class="src" href="capitulo-3.html"><span class="src-cap">Capítulo 03</span><span class="src-name">Itinerarios para la integración</span><span class="src-rsc">→ Sprint PeriodismoIA</span></a>
+      <a class="src" href="capitulo-4.html"><span class="src-cap">Capítulo 04</span><span class="src-name">Una nueva morfología</span><span class="src-rsc">→ Los 80 roles de IA</span></a>
+      <a class="src" href="capitulo-5.html"><span class="src-cap">Capítulo 05</span><span class="src-name">Más allá del tráfico</span><span class="src-rsc">→ 9 orientaciones</span></a>
+      <a class="src" href="capitulo-6.html"><span class="src-cap">Capítulo 06</span><span class="src-name">Casos de uso en medios</span><span class="src-rsc">→ Matriz de 44 casos</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></div>
+  </div>
+  <div style="display:flex;gap:2rem">
+    <a href="index.html">← Inicio</a>
+    <a href="index.html#capitulos" style="color:var(--cyan)">Explorar la guía →</a>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" aria-label="Volver arriba">↑</button>
+<script src="assets/js/app.js"></script>
+<script>
+  var pb = document.getElementById('progressBar');
+  var tt = document.getElementById('toTop');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    if (pb) pb.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    if (tt) tt.classList.toggle('show', h.scrollTop > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  if (tt) tt.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  var burger = document.querySelector('.nav-burger');
+  if(burger){
+    burger.addEventListener('click', function(){
+      var open = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!open));
+      var links = document.querySelector('.nav-links');
+      if(!open){ links.style.display='flex'; links.style.position='absolute'; links.style.flexDirection='column'; links.style.top='100%'; links.style.right='1.5rem'; links.style.background='var(--navy)'; links.style.padding='1.2rem 1.6rem'; links.style.borderRadius='0 0 10px 10px'; links.style.border='1px solid rgba(255,255,255,.1)'; links.style.gap='1.1rem'; links.style.zIndex='200'; }
+      else { links.style.display='none'; }
+    });
+  }
+</script>
+
+</body>
+</html>
