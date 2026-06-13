@@ -937,7 +937,7 @@ html.hide-index .ruta, html.hide-index .ruta-caption { display: none; }
 
 /* ─── RUTA DE LECTURA (mapa 3 movimientos → 7 capítulos) ─── */
 .ruta-caption { margin-top: 2.4rem; font-size: .82rem; color: var(--g400); }
-.ruta { display: grid; grid-template-columns: 2fr 2fr 3fr; margin-top: 1rem; background: #fff; border: 1px solid var(--g200); border-radius: 16px; overflow: hidden; }
+.ruta { display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 1rem; background: #fff; border: 1px solid var(--g200); border-radius: 16px; overflow: hidden; }
 .ruta-seg { position: relative; padding: 1.5rem 1.6rem 1.7rem; border-left: 1px solid var(--g100); }
 .ruta-seg:first-child { border-left: 0; }
 .ruta-seg::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--segc, var(--violet)); }
@@ -1008,15 +1008,15 @@ html.hide-index .ruta, html.hide-index .ruta-caption { display: none; }
 .ruta-seg--dual .ruta-bar-seg:hover .ruta-bar-title { color: var(--violet); }
 
 /* Variante violet (M1 — Fundamentos): todos los segmentos en violeta */
-.ruta-seg--violet .ruta-bar-seg { background: linear-gradient(135deg, rgba(91,45,142,.14) 0%, rgba(91,45,142,.06) 100%); }
+.ruta-seg--violet .ruta-bar-seg { background: linear-gradient(135deg, rgba(91,45,142,.22) 0%, rgba(91,45,142,.08) 100%); }
 .ruta-seg--violet .ruta-bar-num { color: var(--violet); }
 
 /* Variante cyan (M2 — Integración): todos los segmentos en cian */
-.ruta-seg--cyan .ruta-bar-seg { background: linear-gradient(135deg, rgba(0,180,216,.14) 0%, rgba(0,180,216,.06) 100%); }
+.ruta-seg--cyan .ruta-bar-seg { background: linear-gradient(135deg, rgba(0,180,216,.22) 0%, rgba(0,180,216,.08) 100%); }
 .ruta-seg--cyan .ruta-bar-num { color: var(--cyan); }
 
-/* Variante dual (M3 — Expansión): todos los segmentos con gradient violet→cyan */
-.ruta-seg--dual .ruta-bar-seg { background: linear-gradient(135deg, rgba(91,45,142,.12) 0%, rgba(0,180,216,.12) 100%); }
+/* Variante dual (M3 — Expansión): gradient horizontal violet→cyan, cyan dominante para distinguirlo claramente de Fundamentos */
+.ruta-seg--dual .ruta-bar-seg { background: linear-gradient(90deg, rgba(91,45,142,.10) 0%, rgba(0,180,216,.22) 100%); }
 .ruta-seg--dual .ruta-bar-num { background: linear-gradient(135deg, var(--violet), var(--cyan)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
 
 /* Stack vertical (mantenido por si volvemos a usarlo): nodos con número serif grande + título corto */
