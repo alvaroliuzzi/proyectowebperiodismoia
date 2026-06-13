@@ -4,516 +4,1015 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PeriodismoIA 2026 — Guía para la integración de IA en el periodismo</title>
-<meta name="description" content="Guía PeriodismoIA 2026: integración de inteligencia artificial en el periodismo. Siete capítulos sobre fundamentos, ética, flujos de trabajo y criterios editoriales, por Álvaro Liuzzi en el marco del programa Redacciones5G de Personal Argentina.">
-<meta name="author" content="Álvaro Liuzzi">
-<meta name="theme-color" content="#0D1B3E">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="canonical" href="https://periodismoia.com/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="PeriodismoIA 2026">
-<meta property="og:title" content="PeriodismoIA 2026 — Guía para la integración de IA en el periodismo">
-<meta property="og:description" content="Una guía en siete capítulos para integrar la IA en redacciones con criterio editorial. Por Álvaro Liuzzi — Redacciones5G de Personal Argentina.">
-<meta property="og:url" content="https://periodismoia.com/">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/index.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "PeriodismoIA 2026",
-  "description": "Guía para la integración de inteligencia artificial en el periodismo.",
-  "author": { "@type": "Person", "name": "Álvaro Liuzzi" },
-  "publisher": { "@type": "Organization", "name": "Redacciones5G · Personal Argentina" },
-  "inLanguage": "es"
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0D1B3E;
+  --violet:#5B2D8E;
+  --violet-hero:#4B2E8E;
+  --violet-l:#EDE5F7;
+  --cyan:#00B4D8;
+  --cyan-l:#E4F7FC;
+  --white:#FFFFFF;
+  --off:#F7F8FA;
+  --g100:#F0F1F5;
+  --g200:#DDE0EA;
+  --g400:#8891AA;
+  --g700:#3A3F52;
+  --text:#1A1F36;
 }
-</script>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--off);color:var(--text);font-size:16px;line-height:1.7;}
+
+/* ─── HERO ─────────────────────────────────────────── */
+.hero{
+  background:var(--violet-hero);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.15;z-index:0;}
+.hero-geo{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.hero-arc-top{position:absolute;top:0;right:0;width:320px;height:320px;}
+.hero-circles-bg{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:420px;height:420px;animation:rotateSlow 50s linear infinite;}
+@keyframes rotateSlow{from{transform:translateY(-50%) rotate(0deg);}to{transform:translateY(-50%) rotate(360deg);}}
+.hero-arc-bottom{position:absolute;bottom:0;left:0;width:260px;height:190px;}
+.hero-dots{position:absolute;bottom:4rem;left:50%;transform:translateX(-30%);width:160px;}
+
+/* Centro del hero */
+.hero-center{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+  padding:2rem 1rem;
+  max-width:900px;
+  width:100%;
+}
+
+/* Logo */
+.hero-logo{margin-bottom:1.5rem;}
+.hero-logo-mark{
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  font-family:'DM Sans',sans-serif;
+  font-weight:700;
+  font-size:1.6rem;
+  color:var(--white);
+  letter-spacing:.01em;
+}
+.hero-logo-mark span{color:var(--cyan);}
+.hero-logo-sub{
+  display:block;
+  font-size:.75rem;
+  color:rgba(255,255,255,.5);
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-top:.4rem;
+}
+
+/* Separador */
+.hero-sep{width:1px;height:2rem;background:rgba(255,255,255,.2);margin-bottom:1.5rem;}
+
+/* Versión pill */
+.hero-version{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:rgba(0,180,216,.15);
+  border:1px solid rgba(0,180,216,.4);
+  border-radius:2rem;
+  padding:.35rem 1.1rem;
+  font-size:.78rem;
+  color:var(--cyan);
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-bottom:1.8rem;
+}
+.hero-version-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);}
+
+/* Título */
+.hero-title{
+  font-family:'DM Sans',sans-serif;
+  font-size:clamp(2.8rem,7vw,5.5rem);
+  color:var(--white);
+  font-weight:300;
+  line-height:1.0;
+  letter-spacing:-.02em;
+  margin-bottom:.4rem;
+}
+.hero-title strong{
+  font-weight:700;
+  color:var(--cyan);
+}
+
+/* Bajada */
+.hero-subtitle{
+  font-family:'DM Sans',sans-serif;
+  font-weight:300;
+  font-size:clamp(1rem,2vw,1.2rem);
+  color:rgba(255,255,255,.65);
+  max-width:52ch;
+  line-height:1.6;
+  margin-bottom:2.5rem;
+}
+
+/* Divisor animado */
+.hero-divider{
+  width:3rem;
+  height:2px;
+  background:var(--cyan);
+  margin-bottom:2.5rem;
+  animation:drawLine .6s ease .9s both;
+}
+@keyframes drawLine{from{width:0;opacity:0;}to{width:3rem;opacity:1;}}
+
+/* Estadísticas hero */
+.hero-stats{
+  display:flex;
+  align-items:center;
+  gap:2rem;
+  margin-bottom:3rem;
+}
+.hero-stat{text-align:center;}
+.hero-stat-num{
+  font-family:'DM Serif Display',serif;
+  font-size:2.2rem;
+  color:var(--cyan);
+  line-height:1;
+  display:block;
+}
+.hero-stat-label{
+  font-size:.72rem;
+  color:rgba(255,255,255,.5);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  display:block;
+  margin-top:.2rem;
+}
+.hero-stat-divider{width:1px;height:40px;background:rgba(255,255,255,.15);}
+
+/* CTA */
+.hero-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  background:var(--cyan);
+  color:var(--navy);
+  font-weight:700;
+  font-size:.9rem;
+  letter-spacing:.03em;
+  padding:.85rem 2rem;
+  border-radius:4px;
+  text-decoration:none;
+  transition:background .2s, transform .2s;
+  margin-bottom:1rem;
+}
+.hero-cta:hover{background:#00caf0;transform:translateY(-2px);}
+.hero-cta-arrow{font-size:1.1rem;}
+
+/* Scroll arrow */
+.hero-scroll{
+  position:absolute;
+  bottom:2.5rem;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:2;
+  animation:bounce 2s ease-in-out 2s infinite;
+  color:rgba(255,255,255,.4);
+  font-size:1.4rem;
+  cursor:pointer;
+}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(8px);}}
+
+/* Animaciones hero */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+.anim-1{opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .05s forwards;}
+.anim-2{opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .2s forwards;}
+.anim-3{opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .35s forwards;}
+.anim-4{opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .5s forwards;}
+.anim-5{opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .7s forwards;}
+.anim-6{opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .9s forwards;}
+.anim-7{opacity:0;animation:fadeUp .7s cubic-bezier(.22,1,.36,1) 1.1s forwards;}
+
+/* ─── LAYOUT GENERAL ────────────────────────────────── */
+.section{padding:5rem 0;}
+.section--gray{background:var(--g100);}
+.section--white{background:var(--white);}
+.section--dark{background:var(--navy);color:var(--white);}
+.section--violet{background:#1A0A2E;}
+.container{max-width:1180px;margin:0 auto;padding:0 4rem;}
+
+/* ─── LABELS ────────────────────────────────────────── */
+.section-label{
+  display:inline-flex;
+  align-items:center;
+  gap:.75rem;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--cyan);
+  margin-bottom:1.5rem;
+}
+.section-label::before{content:'';display:block;width:24px;height:2px;background:var(--cyan);}
+
+/* ─── TIPOGRAFÍA ─────────────────────────────────────── */
+.section-title{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(1.8rem,3.5vw,2.8rem);
+  line-height:1.15;
+  color:var(--navy);
+  margin-bottom:1.25rem;
+}
+.section-title--light{color:var(--white);}
+.lead{
+  font-size:1.05rem;
+  font-weight:300;
+  line-height:1.8;
+  color:var(--g700);
+  max-width:72ch;
+  margin-bottom:1.5rem;
+}
+.lead--light{color:rgba(255,255,255,.7);}
+p{margin-bottom:1.1rem;color:var(--g700);line-height:1.8;}
+p:last-child{margin-bottom:0;}
+strong{font-weight:600;color:var(--navy);}
+
+/* ─── INTRO SECTION ─────────────────────────────────── */
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+  align-items:center;
+}
+.intro-text{}
+.intro-pull{
+  background:var(--violet-l);
+  border-radius:12px;
+  padding:2.5rem;
+  position:relative;
+}
+.intro-pull::before{
+  content:'\201C';
+  font-family:'DM Serif Display',serif;
+  font-size:5rem;
+  color:var(--violet);
+  line-height:0;
+  position:absolute;
+  top:2.5rem;
+  left:2rem;
+  opacity:.25;
+}
+.intro-pull p{
+  font-family:'DM Serif Display',serif;
+  font-size:1.15rem;
+  line-height:1.6;
+  color:var(--navy);
+  font-style:italic;
+  padding-left:1rem;
+}
+.intro-pull cite{
+  display:block;
+  margin-top:1rem;
+  font-size:.8rem;
+  color:var(--g400);
+  font-style:normal;
+  letter-spacing:.05em;
+  padding-left:1rem;
+}
+
+/* ─── CARDS DE CAPÍTULOS ─────────────────────────────── */
+.chapters-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  margin-top:3rem;
+}
+.chapter-card{
+  background:var(--white);
+  border-radius:12px;
+  overflow:hidden;
+  transition:transform .25s, box-shadow .25s;
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--g200);
+}
+.chapter-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 40px rgba(91,45,142,.12);
+}
+.chapter-card:hover .chapter-card-img-overlay{opacity:1;}
+
+/* Imagen de portada */
+.chapter-card-img{
+  height:180px;
+  background:var(--violet-hero);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+}
+.chapter-card-img-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(0,180,216,.2) 0%,transparent 60%);
+  opacity:0;
+  transition:opacity .3s;
+}
+/* Placeholder visual para capítulos sin imagen */
+.chapter-card-num-bg{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'DM Serif Display',serif;
+  font-size:8rem;
+  color:rgba(255,255,255,.05);
+  line-height:1;
+  user-select:none;
+}
+.chapter-card-badge{
+  position:relative;
+  z-index:1;
+  padding:.75rem 1rem .5rem;
+  display:flex;
+  align-items:baseline;
+  gap:.4rem;
+}
+.chapter-card-badge-label{
+  font-size:.68rem;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.6);
+}
+.chapter-card-badge-num{
+  font-size:.9rem;
+  font-weight:700;
+  color:var(--cyan);
+}
+
+/* Contenido */
+.chapter-card-body{
+  padding:1.5rem;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+.chapter-card-title{
+  font-family:'DM Serif Display',serif;
+  font-size:1.05rem;
+  color:var(--navy);
+  line-height:1.3;
+  margin-bottom:.6rem;
+  flex:1;
+}
+.chapter-card-desc{
+  font-size:.82rem;
+  color:var(--g400);
+  line-height:1.5;
+  margin-bottom:1rem;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.chapter-card-chapter-label{
+  font-family:'DM Sans',sans-serif;
+  font-size:clamp(1rem,1.8vw,1.3rem);
+  font-weight:300;
+  color:var(--g400);
+  line-height:1;
+  margin-bottom:.6rem;
+}
+.chapter-card-chapter-label em{
+  font-style:normal;
+  font-weight:700;
+  color:var(--cyan);
+}
+.chapter-card-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  font-size:.78rem;
+  font-weight:600;
+  color:var(--violet);
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  transition:color .2s;
+}
+.chapter-card:hover .chapter-card-cta{color:var(--cyan);}
+
+/* Card intro ancha */
+.chapter-card--intro{flex-direction:row !important;}
+.chapter-card--intro .chapter-card-img{width:260px;flex-shrink:0;height:auto !important;min-height:130px;}
+@media(max-width:700px){
+  .chapter-card--intro{flex-direction:column !important;}
+  .chapter-card--intro .chapter-card-img{width:100% !important;height:120px !important;}
+}
+
+/* Card "próximamente" */
+.chapter-card--soon{opacity:.65;pointer-events:none;}
+.chapter-card--soon .chapter-card-cta{color:var(--g400);}
+.soon-badge{
+  display:inline-block;
+  background:var(--g200);
+  color:var(--g400);
+  font-size:.65rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:.2rem .6rem;
+  border-radius:2px;
+  margin-bottom:.75rem;
+}
+
+/* Altura imagen cards */
+.chapter-card-img{height:180px;}
+
+/* ─── BLOQUE ABOUT ───────────────────────────────────── */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+  align-items:start;
+}
+.about-program{}
+.about-author{}
+.about-divider{
+  width:1px;
+  background:var(--g200);
+}
+
+.program-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:var(--violet-l);
+  border-radius:2rem;
+  padding:.3rem .9rem;
+  margin-bottom:1.5rem;
+}
+.program-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--violet);}
+.program-badge span{font-size:.75rem;font-weight:600;color:var(--violet);letter-spacing:.08em;text-transform:uppercase;}
+
+.stat-row{
+  display:flex;
+  gap:2rem;
+  margin:2rem 0;
+  flex-wrap:wrap;
+}
+.stat-item{text-align:center;}
+.stat-item-num{
+  font-family:'DM Serif Display',serif;
+  font-size:2rem;
+  color:var(--violet);
+  display:block;
+  line-height:1;
+}
+.stat-item-label{
+  font-size:.73rem;
+  color:var(--g400);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  display:block;
+  margin-top:.2rem;
+}
+
+.award-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  background:var(--cyan-l);
+  border:1px solid rgba(0,180,216,.3);
+  border-radius:4px;
+  padding:.5rem 1rem;
+  font-size:.78rem;
+  color:var(--navy);
+  margin-top:1.5rem;
+}
+.award-pill-icon{font-size:1.1rem;}
+
+.author-name{
+  font-family:'DM Serif Display',serif;
+  font-size:1.6rem;
+  color:var(--navy);
+  margin-bottom:.3rem;
+}
+.author-role{
+  font-size:.82rem;
+  color:var(--cyan);
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-bottom:1.5rem;
+}
+.author-orgs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin-top:1.5rem;
+}
+.org-tag{
+  background:var(--g100);
+  border:1px solid var(--g200);
+  border-radius:3px;
+  font-size:.72rem;
+  color:var(--g700);
+  padding:.25rem .7rem;
+  font-weight:500;
+}
+
+/* ─── CALLOUT ─────────────────────────────────────────── */
+.callout{
+  background:var(--violet);
+  border-radius:12px;
+  padding:3rem;
+  margin-top:4rem;
+}
+.callout p{
+  font-family:'DM Serif Display',serif;
+  font-size:1.25rem;
+  font-style:italic;
+  line-height:1.6;
+  color:var(--white);
+}
+
+/* ─── METODOLOGÍA STRIP ──────────────────────────────── */
+.method-strip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  margin-top:2.5rem;
+}
+.method-item{
+  text-align:center;
+  padding:2rem 1.5rem;
+  background:var(--white);
+  border-radius:10px;
+  border:1px solid var(--g200);
+  transition:border-color .2s;
+}
+.method-item:hover{border-color:var(--cyan);}
+.method-icon{
+  font-size:2rem;
+  margin-bottom:.75rem;
+  display:block;
+}
+.method-label{
+  font-family:'DM Serif Display',serif;
+  font-size:.95rem;
+  color:var(--navy);
+  margin-bottom:.4rem;
+}
+.method-desc{
+  font-size:.78rem;
+  color:var(--g400);
+  line-height:1.5;
+}
+
+/* ─── REVEAL ─────────────────────────────────────────── */
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1);
+}
+.reveal.visible{opacity:1;transform:none;}
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+footer{
+  background:var(--navy);
+  padding:3rem 4rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:1.5rem;
+}
+.footer-brand{
+  font-family:'DM Sans',sans-serif;
+  font-weight:700;
+  font-size:1.2rem;
+  color:var(--white);
+}
+.footer-brand span{color:var(--cyan);}
+.footer-meta{
+  font-size:.8rem;
+  color:var(--g400);
+  margin-top:.2rem;
+}
+.footer-links{
+  display:flex;
+  gap:2rem;
+  flex-wrap:wrap;
+}
+.footer-links a{
+  font-size:.82rem;
+  color:var(--g400);
+  text-decoration:none;
+  transition:color .2s;
+}
+.footer-links a:hover{color:var(--cyan);}
+.footer-credits{
+  font-size:.75rem;
+  color:rgba(255,255,255,.25);
+  text-align:right;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────── */
+@media(max-width:900px){
+  .container{padding:0 1.5rem;}
+  .chapters-grid{grid-template-columns:1fr 1fr;}
+  .intro-grid,.about-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .method-strip{grid-template-columns:1fr 1fr;}
+  footer{padding:2rem 1.5rem;flex-direction:column;align-items:flex-start;}
+}
+@media(max-width:580px){
+  .chapters-grid{grid-template-columns:1fr;}
+  .hero-stats{gap:1.2rem;}
+  .method-strip{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
-<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-
-
-<!-- BARRA DE PROGRESO -->
-<div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
-
-<!-- NAV FIJA -->
-<nav class="site-nav" aria-label="Navegación principal">
-  <div class="nav-inner">
-    <a href="#top" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#intro" data-spy="intro">Introducción</a></li>
-        <li><a href="#capitulos" data-spy="capitulos">Capítulos</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
-        <li><a href="bibliografia.html">Bibliografía</a></li>
-        <li><a href="sobre-metodologia.html" data-spy="metodologia">Metodología</a></li>
-        <li><a href="#about" data-spy="about">Programa y autor</a></li>
-      </ul>
-      <a href="descargar.html" class="nav-cta">Descargar guía</a>
-      <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</nav>
-
-<!-- ═══════════════ HERO ═══════════════ -->
+<!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
 <section class="hero" id="top">
-  <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none;">
-    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,180,216,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,180,216,.07) 1px,transparent 1px);background-size:48px 48px;-webkit-mask:radial-gradient(120% 100% at 0% 100%,#000 0%,#000 16%,transparent 76%);mask:radial-gradient(120% 100% at 0% 100%,#000 0%,#000 16%,transparent 76%);"></div>
-    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.18) 1.2px,transparent 1.5px);background-size:28px 28px;-webkit-mask:radial-gradient(85% 85% at 8% 45%,#000 0%,#000 12%,transparent 62%);mask:radial-gradient(85% 85% at 8% 45%,#000 0%,#000 12%,transparent 62%);"></div>
-  </div>
-  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;" viewBox="0 0 680 420" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g opacity=".10" fill="#00B4D8">
-      <circle cx="460" cy="40" r="1.5"></circle><circle cx="490" cy="40" r="1.5"></circle><circle cx="520" cy="40" r="1.5"></circle><circle cx="550" cy="40" r="1.5"></circle><circle cx="580" cy="40" r="1.5"></circle><circle cx="610" cy="40" r="1.5"></circle><circle cx="640" cy="40" r="1.5"></circle>
-      <circle cx="460" cy="70" r="1.5"></circle><circle cx="490" cy="70" r="1.5"></circle><circle cx="520" cy="70" r="1.5"></circle><circle cx="550" cy="70" r="1.5"></circle><circle cx="580" cy="70" r="1.5"></circle><circle cx="610" cy="70" r="1.5"></circle><circle cx="640" cy="70" r="1.5"></circle>
-      <circle cx="460" cy="100" r="1.5"></circle><circle cx="490" cy="100" r="1.5"></circle><circle cx="520" cy="100" r="1.5"></circle><circle cx="550" cy="100" r="1.5"></circle><circle cx="580" cy="100" r="1.5"></circle><circle cx="610" cy="100" r="1.5"></circle><circle cx="640" cy="100" r="1.5"></circle>
-    </g>
-    <circle cx="540" cy="210" r="118" stroke="rgba(255,255,255,0.06)" stroke-width="1"></circle>
-    <circle cx="540" cy="210" r="83" stroke="rgba(0,180,216,0.30)" stroke-width="1.5"></circle>
-    <circle cx="540" cy="210" r="48" stroke="rgba(0,180,216,0.45)" stroke-width="1.5"></circle>
-    <circle cx="540" cy="210" r="48" fill="rgba(91,45,142,0.10)"></circle>
-    <circle r="4" fill="#00B4D8"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"></animate><animateMotion dur="22s" repeatCount="indefinite"><mpath href="#orbit-hero"></mpath></animateMotion></circle>
-    <path id="orbit-hero" d="M623 210 A83 83 0 1 0 622.99 210"></path>
-  </svg>
 
-  <div class="hero-left">
-    <div class="hero-bracket anim-2">
-      <div class="hero-bracket-line"></div>
-      <div>
-        <h1 class="hero-title">Periodismo<span>IA</span></h1>
-        <div class="hero-version"><span class="hero-version-dot">→</span> v2.0</div>
-      </div>
-    </div>
-    <p class="hero-subtitle anim-3">Guía para la integración de inteligencia artificial en el periodismo, desarrollada por el programa <strong>Redacciones5G de Personal Argentina</strong>.</p>
-    <a href="#capitulos" class="hero-cta anim-4">Explorar la guía <span class="hero-cta-arrow">↓</span></a>
+  <!-- Canvas binario -->
+  <canvas class="hero-canvas" id="binaryCanvas"></canvas>
+
+  <!-- Geometría SVG decorativa -->
+  <div class="hero-geo">
+    <!-- Arco cian arriba derecha -->
+    <svg class="hero-arc-top" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M260 0 A260 260 0 0 0 0 260" stroke="#00B4D8" stroke-width="1.5" opacity=".3"/>
+      <circle cx="255" cy="120" r="5" fill="#00B4D8" opacity=".5"/>
+    </svg>
+
+    <!-- Círculos concéntricos giratorios -->
+    <svg class="hero-circles-bg" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="170" cy="170" r="140" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <circle cx="170" cy="170" r="90" stroke="rgba(0,180,216,.12)" stroke-width="1.5"/>
+    </svg>
+
+    <!-- Grilla de puntos -->
+    <svg class="hero-dots" viewBox="0 0 140 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g fill="rgba(255,255,255,0.10)">
+        <circle cx="10" cy="10" r="2"/><circle cx="30" cy="10" r="2"/><circle cx="50" cy="10" r="2"/><circle cx="70" cy="10" r="2"/><circle cx="90" cy="10" r="2"/><circle cx="110" cy="10" r="2"/><circle cx="130" cy="10" r="2"/>
+        <circle cx="10" cy="30" r="2"/><circle cx="30" cy="30" r="2"/><circle cx="50" cy="30" r="2"/><circle cx="70" cy="30" r="2"/><circle cx="90" cy="30" r="2"/><circle cx="110" cy="30" r="2"/><circle cx="130" cy="30" r="2"/>
+        <circle cx="10" cy="50" r="2"/><circle cx="30" cy="50" r="2"/><circle cx="50" cy="50" r="2"/><circle cx="70" cy="50" r="2"/><circle cx="90" cy="50" r="2"/><circle cx="110" cy="50" r="2"/><circle cx="130" cy="50" r="2"/>
+      </g>
+    </svg>
   </div>
+
+  <!-- Contenido central -->
+  <div class="hero-center">
+    <div class="hero-logo anim-1">
+      <span class="hero-logo-mark">Periodismo<span>IA</span></span>
+      <span class="hero-logo-sub">Redacciones 5G · <img src="https://institucional.telecom.com.ar/assets/images/personal.svg" alt="Personal" style="height:14px;width:auto;vertical-align:middle;display:inline-block;margin-left:2px;filter:brightness(0) invert(1);opacity:.5;"></span>
+    </div>
+
+    <div class="hero-sep anim-2"></div>
+
+    <div class="hero-version anim-2">
+      <span class="hero-version-dot"></span>
+      Versión 2.0
+    </div>
+
+    <h1 class="hero-title anim-3">
+      Guía para la integración<br>de <strong>IA</strong> en el periodismo
+    </h1>
+
+    <div class="hero-divider anim-4"></div>
+
+    <p class="hero-subtitle anim-4">
+      Una hoja de ruta editorial para periodistas y responsables de medios que quieren integrar la inteligencia artificial de manera consciente, gradual y responsable.
+    </p>
+
+
+    <a href="#capitulos" class="hero-cta anim-6">
+      Explorar la guía <span class="hero-cta-arrow">↓</span>
+    </a>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="hero-scroll" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</div>
 </section>
 
-<main id="contenido">
 
-<!-- ═══════════════ INTRODUCCIÓN ═══════════════ -->
+<!-- ═══════════════════════════════════ INTRODUCCIÓN ═══════════════════════════ -->
 <section class="section section--white" id="intro">
   <div class="container">
     <div class="section-label">Introducción</div>
     <div class="intro-grid">
       <div class="intro-text">
         <h2 class="section-title reveal">Una hoja de ruta para un cambio estructural</h2>
-        <p class="lead reveal" style="transition-delay:.1s">Desde la irrupción pública de ChatGPT a fines de 2022, la inteligencia artificial pasó en muy poco tiempo de ser una tecnología exploratoria a convertirse en un componente cotidiano del trabajo periodístico. La conversación inicial fue dando paso a una pregunta más profunda: qué lugar ocupa realmente la IA en el oficio y en la vida de las redacciones.</p>
-        <p class="reveal" style="transition-delay:.15s">Su incorporación tensiona procesos editoriales, redefine roles profesionales, modifica rutinas de producción y obliga a revisar criterios históricos sobre autoría, responsabilidad, verificación y valor del trabajo periodístico.</p>
-        <a href="introduccion.html" style="display:inline-flex;align-items:center;gap:.5rem;margin-top:.5rem;font-size:.82rem;font-weight:600;color:var(--violet);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;transition:color .2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--violet)'">Leer introducción completa →</a>
+        <p class="lead reveal" style="transition-delay:.1s">
+          Desde la irrupción pública de ChatGPT a fines de 2022, la inteligencia artificial pasó en muy poco tiempo de ser una tecnología exploratoria a convertirse en un componente cotidiano del trabajo periodístico. En ese tránsito acelerado, la conversación inicial —dominada por la sorpresa, el entusiasmo y también el temor— fue dando paso a una pregunta más profunda y menos tecnológica: qué lugar ocupa realmente la inteligencia artificial en el oficio periodístico y en la vida cotidiana de las redacciones.
+        </p>
+        <p class="reveal" style="transition-delay:.15s">
+          A diferencia de transformaciones anteriores, el impacto de la IA no se limita a un nuevo canal de distribución ni a una herramienta específica. Su incorporación tensiona procesos editoriales, redefine roles profesionales, modifica rutinas de producción y obliga a revisar criterios históricos sobre autoría, responsabilidad, verificación y valor del trabajo periodístico.
+        </p>
+        <a href="introduccion.html" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:600;color:var(--violet);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;transition:color .2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--violet)'">Leer introducción completa →</a>
       </div>
       <div class="intro-pull reveal" style="transition-delay:.2s">
-        <p>La inteligencia artificial no transforma redacciones por sí sola. Son las personas, los procesos y las decisiones editoriales las que determinan su impacto real.</p>
+        <p>Esta guía parte de una premisa central: la inteligencia artificial no transforma redacciones por sí sola. Son las personas, los procesos y las decisiones editoriales las que determinan su impacto real.</p>
         <cite>— Introducción, PeriodismoIA 2026</cite>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ CABECERA CAPÍTULOS + ÍNDICE RÁPIDO ═══════════════ -->
+
+<!-- ═══════════════════════════════════ CAPÍTULOS ═════════════════════════════ -->
 <section class="section section--gray" id="capitulos">
   <div class="container">
     <div class="section-label">Contenidos de la guía</div>
-    <h2 class="section-title reveal">Siete capítulos en tres movimientos</h2>
-    <p class="lead reveal" style="transition-delay:.1s;max-width:62ch">Cada movimiento reúne capítulos atravesados por una misma lógica editorial. Fundamentos que construyen el marco conceptual, integración que organiza la adopción en las redacciones y aplicación que muestra dónde y cómo estos procesos ya están tomando forma.</p>
+    <h2 class="section-title reveal">Seis capítulos para entender y actuar</h2>
+    <p class="lead reveal" style="transition-delay:.1s">
+      Cada capítulo puede leerse de forma independiente o como parte de una secuencia que va desde los fundamentos hasta los casos concretos de implementación.
+    </p>
 
-    <!-- Arco narrativo: 3 movimientos como momentos editoriales -->
-    <div class="ruta reveal" style="transition-delay:.18s" aria-label="Arco narrativo de la guía">
-      <div class="ruta-seg ruta-seg--violet">
-        <div class="ruta-kick">Movimiento 01</div>
-        <div class="ruta-name">Fundamentos</div>
-        <div class="ruta-sub">Qué entendemos por IA antes de integrarla</div>
-        <div class="ruta-bar">
-          <div class="ruta-bar-seg">
-            <span class="ruta-bar-title">Historia y conceptos clave</span>
-          </div>
-          <div class="ruta-bar-seg">
-            <span class="ruta-bar-title">Principios y marcos éticos</span>
-          </div>
-        </div>
-      </div>
-      <div class="ruta-seg ruta-seg--cyan">
-        <div class="ruta-kick">Movimiento 02</div>
-        <div class="ruta-name">Integración</div>
-        <div class="ruta-sub">Cómo entra al oficio y reorganiza la redacción</div>
-        <div class="ruta-bar">
-          <div class="ruta-bar-seg">
-            <span class="ruta-bar-title">Etapas de adopción</span>
-          </div>
-          <div class="ruta-bar-seg">
-            <span class="ruta-bar-title">Roles y cultura editorial</span>
-          </div>
-        </div>
-      </div>
-      <div class="ruta-seg ruta-seg--dual">
-        <div class="ruta-kick">Movimiento 03</div>
-        <div class="ruta-name">Expansión</div>
-        <div class="ruta-sub">Dónde ya se nota y hacia dónde va</div>
-        <div class="ruta-bar">
-          <div class="ruta-bar-seg">
-            <span class="ruta-bar-title">Audiencias y vínculos</span>
-          </div>
-          <div class="ruta-bar-seg">
-            <span class="ruta-bar-title">Casos en redacciones</span>
-          </div>
-          <div class="ruta-bar-seg">
-            <span class="ruta-bar-title">Tensiones del próximo ciclo</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="chapters-grid">
 
-<!-- MOVIMIENTO 01 -->
-<section class="section section--white section--movement">
-  <div class="container">
-    <div class="mvgroup mvgroup--violet reveal">
-      <div class="mvgroup-head">
-        <div class="mvgroup-num">01</div>
-        <div class="mvgroup-meta">
-          <div class="mvgroup-kick">Movimiento 01 · Capítulos 01–02</div>
-          <h3 class="mvgroup-name">Fundamentos</h3>
+      <!-- Introducción — card ancha, fila propia -->
+      <a href="introduccion.html" class="chapter-card chapter-card--intro reveal" style="grid-column:1/-1;">
+        <div class="chapter-card-img" style="width:280px;flex-shrink:0;min-height:160px;overflow:hidden;position:relative;">
+          <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">
+            <rect width="300" height="180" fill="#0D1B3E"/>
+            <g stroke="#00B4D8" stroke-width=".3" opacity=".12">
+              <line x1="0" y1="45" x2="300" y2="45"/><line x1="0" y1="90" x2="300" y2="90"/><line x1="0" y1="135" x2="300" y2="135"/>
+              <line x1="75" y1="0" x2="75" y2="180"/><line x1="150" y1="0" x2="150" y2="180"/><line x1="225" y1="0" x2="225" y2="180"/>
+            </g>
+            <path d="M200 -10 A120 120 0 0 1 310 110" stroke="#00B4D8" stroke-width="1.5" fill="none" opacity=".4"/>
+            <circle cx="150" cy="90" r="50" fill="none" stroke="#5B2D8E" stroke-width="1.5" opacity=".6"/>
+            <circle cx="150" cy="90" r="60" fill="none" stroke="#00B4D8" stroke-width=".8" opacity=".25"/>
+            <text x="150" y="100" text-anchor="middle" font-family="DM Serif Display,serif" font-size="36" fill="#00B4D8" opacity=".2" font-weight="400">—</text>
+            <circle cx="240" cy="145" r="6" fill="#00B4D8" opacity=".6"/>
+          </svg>
         </div>
-        <p class="mvgroup-bajada">Toda integración seria de IA empieza por entender qué es y para qué sirve: una historia ordenada de la tecnología y un marco ético construido sobre más de 90 directrices.</p>
-      </div>
-      <div class="cap-grid">
-        <a class="cap-card" href="capitulo-1.html">
-          <div class="cap-cover cap-cover--violet cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots1" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov1-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov1-mask">
-                  <rect width="300" height="150" fill="url(#cov1-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots1)" mask="url(#cov1-mask)"/>
-            </svg>
-            <span class="cnum">01</span>
-            <span class="clabel">Capítulo 01</span>
-          </div>
-          <div class="cap-body">
-            <h3 class="cap-title">Fundamentos de la IA</h3>
-            <p class="cap-desc">Recorrido por la evolución histórica de la IA y los conceptos clave del ecosistema actual.</p>
-            <div class="cap-tags"><span class="cap-tag">Historia</span><span class="cap-tag">Conceptos clave</span></div>
-            <span class="cap-cta">Leer capítulo →</span>
-          </div>
-        </a>
-        <a class="cap-card" href="capitulo-2.html">
-          <div class="cap-cover cap-cover--violet cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots2" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov2-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov2-mask">
-                  <rect width="300" height="150" fill="url(#cov2-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots2)" mask="url(#cov2-mask)"/>
-            </svg>
-            <span class="cnum">02</span>
-            <span class="clabel">Capítulo 02</span>
-          </div>
-          <div class="cap-body">
-            <h3 class="cap-title">Ética, transparencia y confianza</h3>
-            <p class="cap-desc">Análisis de 90 directrices editoriales de medios en 25 países y una propuesta para 2026.</p>
-            <div class="cap-tags"><span class="cap-tag">90 directrices</span><span class="cap-tag">Confianza</span></div>
-            <span class="cap-cta">Leer capítulo →</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MOVIMIENTO 02 -->
-<section class="section section--gray section--movement section--movement-cyan">
-  <div class="container">
-    <div class="mvgroup mvgroup--cyan reveal">
-      <div class="mvgroup-head">
-        <div class="mvgroup-num">02</div>
-        <div class="mvgroup-meta">
-          <div class="mvgroup-kick">Movimiento 02 · Capítulos 03–04</div>
-          <h3 class="mvgroup-name">Integración</h3>
+        <div class="chapter-card-body" style="justify-content:center;">
+          <div class="chapter-card-title" style="font-size:1.15rem;">Introducción</div>
+          <p class="chapter-card-desc" style="-webkit-line-clamp:2;">Desde la irrupción pública de ChatGPT a fines de 2022, la inteligencia artificial pasó en muy poco tiempo de ser una tecnología exploratoria a convertirse en un componente cotidiano del trabajo periodístico.</p>
+          <span class="chapter-card-cta">Leer introducción →</span>
         </div>
-        <p class="mvgroup-bajada">Después de entender qué es la IA viene la decisión de cómo integrarla: una hoja de ruta para ordenar la adopción y su impacto sobre los roles editoriales de la redacción.</p>
-      </div>
-      <div class="cap-grid">
-        <a class="cap-card" href="capitulo-3.html">
-          <div class="cap-cover cap-cover--cyan cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots3" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov3-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov3-mask">
-                  <rect width="300" height="150" fill="url(#cov3-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots3)" mask="url(#cov3-mask)"/>
-            </svg>
-            <span class="cnum">03</span>
-            <span class="clabel">Capítulo 03</span>
-          </div>
-          <div class="cap-body">
-            <h3 class="cap-title">Itinerarios para la integración de IA</h3>
-            <p class="cap-desc">Fases y criterios para integrar la IA en una redacción de manera ordenada.</p>
-            <div class="cap-tags"><span class="cap-tag">Fases</span><span class="cap-tag">Adopción</span></div>
-            <span class="cap-cta">Leer capítulo →</span>
-          </div>
-        </a>
-        <a class="cap-card" href="capitulo-4.html">
-          <div class="cap-cover cap-cover--cyan cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots4" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov4-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov4-mask">
-                  <rect width="300" height="150" fill="url(#cov4-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots4)" mask="url(#cov4-mask)"/>
-            </svg>
-            <span class="cnum">04</span>
-            <span class="clabel">Capítulo 04</span>
-          </div>
-          <div class="cap-body">
-            <h3 class="cap-title">Una nueva morfología de las redacciones</h3>
-            <p class="cap-desc">Cómo la IA reconfigura estructuras, roles y culturas en las redacciones.</p>
-            <div class="cap-tags"><span class="cap-tag">Roles</span><span class="cap-tag">Cultura</span></div>
-            <span class="cap-cta">Leer capítulo →</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MOVIMIENTO 03 -->
-<section class="section section--white section--movement section--movement-dual">
-  <div class="container">
-    <div class="mvgroup mvgroup--dual reveal">
-      <div class="mvgroup-head">
-        <div class="mvgroup-num">03</div>
-        <div class="mvgroup-meta">
-          <div class="mvgroup-kick">Movimiento 03 · Capítulos 05–07</div>
-          <h3 class="mvgroup-name">Expansión</h3>
-        </div>
-        <p class="mvgroup-bajada">Cómo cambia el vínculo con las audiencias, qué hacen las redacciones que ya integran IA y qué tensiones quedan abiertas para el próximo ciclo.</p>
-      </div>
-      <div class="cap-grid">
-        <a class="cap-card" href="capitulo-5.html">
-          <div class="cap-cover cap-cover--dual cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots5" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov5-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov5-mask">
-                  <rect width="300" height="150" fill="url(#cov5-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots5)" mask="url(#cov5-mask)"/>
-            </svg>
-            <span class="cnum">05</span>
-            <span class="clabel">Capítulo 05</span>
-          </div>
-          <div class="cap-body">
-            <h3 class="cap-title">Más allá del tráfico</h3>
-            <p class="cap-desc">Personalización, formatos conversacionales y nuevas formas de vínculo con las audiencias.</p>
-            <div class="cap-tags"><span class="cap-tag">Audiencias</span><span class="cap-tag">Personalización</span></div>
-            <span class="cap-cta">Leer capítulo →</span>
-          </div>
-        </a>
-        <a class="cap-card" href="capitulo-6.html">
-          <div class="cap-cover cap-cover--dual cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots6" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov6-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov6-mask">
-                  <rect width="300" height="150" fill="url(#cov6-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots6)" mask="url(#cov6-mask)"/>
-            </svg>
-            <span class="cnum">06</span>
-            <span class="clabel">Capítulo 06</span>
-          </div>
-          <div class="cap-body">
-            <h3 class="cap-title">Casos de uso en medios</h3>
-            <p class="cap-desc">44 experiencias documentadas en redacciones de los cinco continentes.</p>
-            <div class="cap-tags"><span class="cap-tag">44 casos</span><span class="cap-tag">Cinco continentes</span></div>
-            <span class="cap-cta">Leer capítulo →</span>
-          </div>
-        </a>
-        <a class="cap-card" href="capitulo-7.html">
-          <div class="cap-cover cap-cover--dual cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots7" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov7-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov7-mask">
-                  <rect width="300" height="150" fill="url(#cov7-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots7)" mask="url(#cov7-mask)"/>
-            </svg>
-            <span class="cnum">07</span>
-            <span class="clabel">Capítulo 07</span>
-          </div>
-          <div class="cap-body">
-            <h3 class="cap-title">Reflexiones finales</h3>
-            <p class="cap-desc">Síntesis editorial y mirada estratégica para el próximo ciclo.</p>
-            <div class="cap-tags"><span class="cap-tag">Síntesis</span><span class="cap-tag">Estrategia</span></div>
-            <span class="cap-cta">Leer capítulo →</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ RECURSOS · TEASER ═══════════════ -->
-<section class="section section--rsc-teaser section--rsc-teaser--dark" id="recursos-home">
-  <div class="rsc-teaser-bg" aria-hidden="true">
-    <div class="rsc-teaser-bg-grid"></div>
-    <div class="rsc-teaser-bg-dots"></div>
-  </div>
-  <div class="container">
-    <div class="rsc-teaser-head reveal">
-      <div class="section-label">Caja de herramientas</div>
-      <h2 class="rsc-teaser-title">Seis recursos para llevar a la redacción</h2>
-      <p class="rsc-teaser-lead">Cada capítulo deriva en una herramienta concreta: dos piezas interactivas, un asistente conversacional y tres hojas de trabajo en PDF.</p>
-    </div>
-    <div class="rsc-teaser-grid">
-      <a class="rsc-mini reveal" href="recursos.html#interactivas">
-        <span class="rsc-mini-num">01</span>
-        <span class="rsc-mini-t">Páginas interactivas</span>
-        <span class="rsc-mini-d">Timeline IA y los 80 roles, con diseño propio</span>
-        <span class="rsc-mini-meta">2 piezas →</span>
       </a>
-      <a class="rsc-mini reveal" href="recursos.html#asistente" style="transition-delay:.06s">
-        <span class="rsc-mini-num">02</span>
-        <span class="rsc-mini-t">Asistente conversacional</span>
-        <span class="rsc-mini-d">GPT entrenado sobre +90 directrices editoriales</span>
-        <span class="rsc-mini-meta">1 asistente →</span>
+
+      <!-- Capítulo 1 — Fundamentos: ojo + engranajes + binarios sobre violeta -->
+      <a href="capitulo-1.html" class="chapter-card chapter-card--soon reveal">
+        <div class="chapter-card-img" style="overflow:hidden;position:relative;">
+          <img src="img/cap1.png" alt="Capítulo 1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 35%;">
+        </div>
+        <div class="chapter-card-body">
+          <div class="chapter-card-chapter-label">Capítulo <em>1</em></div>
+          <span class="soon-badge">Próximamente</span>
+          <div class="chapter-card-title">Fundamentos de la IA: historia y conceptos asociados</div>
+          <p class="chapter-card-desc">Recorrido por la evolución histórica de la inteligencia artificial y los conceptos clave para entender el ecosistema actual: machine learning, modelos de lenguaje, IA generativa y sus implicaciones para el periodismo.</p>
+          <span class="chapter-card-cta">Próximamente →</span>
+        </div>
       </a>
-      <a class="rsc-mini reveal" href="recursos.html#descargables" style="transition-delay:.12s">
-        <span class="rsc-mini-num">03</span>
-        <span class="rsc-mini-t">Descargables</span>
-        <span class="rsc-mini-d">Sprint, 9 orientaciones y matriz de 44 casos · PDF</span>
-        <span class="rsc-mini-meta">3 PDFs →</span>
+
+      <!-- Capítulo 2 ✅ — Ética: ojo + círculos concéntricos sobre azul oscuro -->
+      <a href="capitulo-2.html" class="chapter-card reveal" style="transition-delay:.08s">
+        <div class="chapter-card-img" style="overflow:hidden;position:relative;">
+          <img src="img/cap2.png" alt="Capítulo 2" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="chapter-card-body">
+          <div class="chapter-card-chapter-label">Capítulo <em>2</em></div>
+          <div class="chapter-card-title">Ética, transparencia y confianza: marcos de uso y directrices para la implementación de IA</div>
+          <p class="chapter-card-desc">Análisis de más de 30 directrices editoriales de medios de todo el mundo. Tres generaciones de políticas, principios rectores comunes y una propuesta actualizada para 2026.</p>
+          <span class="chapter-card-cta">Leer capítulo →</span>
+        </div>
       </a>
-    </div>
-    <div class="rsc-teaser-cta reveal">
-      <a href="recursos.html" class="rsc-teaser-btn">Ver caja de herramientas completa</a>
+
+      <!-- Capítulo 3 — Hoja de ruta: laberinto/nodos + flechas sobre violeta oscuro -->
+      <a href="capitulo-3.html" class="chapter-card chapter-card--soon reveal" style="transition-delay:.16s">
+        <div class="chapter-card-img" style="overflow:hidden;position:relative;">
+          <img src="img/cap3.png" alt="Capítulo 3" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="chapter-card-body">
+          <div class="chapter-card-chapter-label">Capítulo <em>3</em></div>
+          <span class="soon-badge">Próximamente</span>
+          <div class="chapter-card-title">Integración de la IA en medios: una posible hoja de ruta</div>
+          <p class="chapter-card-desc">Fases, decisiones clave y criterios para integrar la IA en una redacción de manera ordenada. Desde el diagnóstico inicial hasta la escala y la gobernanza.</p>
+          <span class="chapter-card-cta">Próximamente →</span>
+        </div>
+      </a>
+
+      <!-- Capítulo 4 — Morfología redacciones: cerebro + señal wifi -->
+      <a href="#proximamente" class="chapter-card chapter-card--soon reveal" style="transition-delay:.24s">
+        <div class="chapter-card-img" style="overflow:hidden;position:relative;">
+          <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">
+            <rect width="300" height="180" fill="#0A1F1A"/>
+            <g stroke="#00B4D8" stroke-width=".3" opacity=".12">
+              <line x1="0" y1="45" x2="300" y2="45"/><line x1="0" y1="90" x2="300" y2="90"/><line x1="0" y1="135" x2="300" y2="135"/>
+              <line x1="75" y1="0" x2="75" y2="180"/><line x1="150" y1="0" x2="150" y2="180"/><line x1="225" y1="0" x2="225" y2="180"/>
+            </g>
+            <path d="M200 -10 A120 120 0 0 1 310 110" stroke="#00B4D8" stroke-width="1.5" fill="none" opacity=".4"/>
+            <circle cx="150" cy="90" r="50" fill="none" stroke="#5B2D8E" stroke-width="1.5" opacity=".6"/>
+            <circle cx="150" cy="90" r="60" fill="none" stroke="#00B4D8" stroke-width=".8" opacity=".25"/>
+            <text x="150" y="100" text-anchor="middle" font-family="DM Serif Display,serif" font-size="36" fill="#00B4D8" opacity=".2" font-weight="400">04</text>
+            <circle cx="240" cy="145" r="6" fill="#00B4D8" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="chapter-card-body">
+          <div class="chapter-card-chapter-label">Capítulo <em>4</em></div>
+          <span class="soon-badge">Próximamente</span>
+          <div class="chapter-card-title">Una nueva morfología de las redacciones</div>
+          <p class="chapter-card-desc">Cómo la IA está reconfigurando estructuras, roles y culturas en las redacciones. Nuevos perfiles, nuevas tensiones y el debate sobre la identidad profesional del periodismo.</p>
+          <span class="chapter-card-cta">Próximamente →</span>
+        </div>
+      </a>
+
+      <!-- Capítulo 5 — Audiencias: cara fragmentada + datos -->
+      <a href="#proximamente" class="chapter-card chapter-card--soon reveal" style="transition-delay:.32s">
+        <div class="chapter-card-img" style="overflow:hidden;position:relative;">
+          <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">
+            <rect width="300" height="180" fill="#1A1000"/>
+            <g stroke="#00B4D8" stroke-width=".3" opacity=".12">
+              <line x1="0" y1="45" x2="300" y2="45"/><line x1="0" y1="90" x2="300" y2="90"/><line x1="0" y1="135" x2="300" y2="135"/>
+              <line x1="75" y1="0" x2="75" y2="180"/><line x1="150" y1="0" x2="150" y2="180"/><line x1="225" y1="0" x2="225" y2="180"/>
+            </g>
+            <path d="M200 -10 A120 120 0 0 1 310 110" stroke="#00B4D8" stroke-width="1.5" fill="none" opacity=".4"/>
+            <circle cx="150" cy="90" r="50" fill="none" stroke="#5B2D8E" stroke-width="1.5" opacity=".6"/>
+            <circle cx="150" cy="90" r="60" fill="none" stroke="#00B4D8" stroke-width=".8" opacity=".25"/>
+            <text x="150" y="100" text-anchor="middle" font-family="DM Serif Display,serif" font-size="36" fill="#00B4D8" opacity=".2" font-weight="400">05</text>
+            <circle cx="240" cy="145" r="6" fill="#00B4D8" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="chapter-card-body">
+          <div class="chapter-card-chapter-label">Capítulo <em>5</em></div>
+          <span class="soon-badge">Próximamente</span>
+          <div class="chapter-card-title">Más allá del tráfico: personalización, confianza y nuevas audiencias</div>
+          <p class="chapter-card-desc">El vínculo entre medios y audiencias en la era de la IA. Personalización, formatos conversacionales, confianza editorial y las nuevas formas de relacionarse con los lectores.</p>
+          <span class="chapter-card-cta">Próximamente →</span>
+        </div>
+      </a>
+
+      <!-- Capítulo 6 — Casos: mano + esfera digital -->
+      <a href="#proximamente" class="chapter-card chapter-card--soon reveal" style="transition-delay:.4s">
+        <div class="chapter-card-img" style="overflow:hidden;position:relative;">
+          <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">
+            <rect width="300" height="180" fill="#180A1F"/>
+            <g stroke="#00B4D8" stroke-width=".3" opacity=".12">
+              <line x1="0" y1="45" x2="300" y2="45"/><line x1="0" y1="90" x2="300" y2="90"/><line x1="0" y1="135" x2="300" y2="135"/>
+              <line x1="75" y1="0" x2="75" y2="180"/><line x1="150" y1="0" x2="150" y2="180"/><line x1="225" y1="0" x2="225" y2="180"/>
+            </g>
+            <path d="M200 -10 A120 120 0 0 1 310 110" stroke="#00B4D8" stroke-width="1.5" fill="none" opacity=".4"/>
+            <circle cx="150" cy="90" r="50" fill="none" stroke="#5B2D8E" stroke-width="1.5" opacity=".6"/>
+            <circle cx="150" cy="90" r="60" fill="none" stroke="#00B4D8" stroke-width=".8" opacity=".25"/>
+            <text x="150" y="100" text-anchor="middle" font-family="DM Serif Display,serif" font-size="36" fill="#00B4D8" opacity=".2" font-weight="400">06</text>
+            <circle cx="240" cy="145" r="6" fill="#00B4D8" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="chapter-card-body">
+          <div class="chapter-card-chapter-label">Capítulo <em>6</em></div>
+          <span class="soon-badge">Próximamente</span>
+          <div class="chapter-card-title">Casos de uso en medios: decisiones, procesos y aprendizajes</div>
+          <p class="chapter-card-desc">Experiencias concretas de redacciones que integraron IA. Qué decidieron, cómo lo implementaron y qué aprendieron en el camino. Casos de América Latina, Europa y Estados Unidos.</p>
+          <span class="chapter-card-cta">Próximamente →</span>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ METODOLOGÍA ═══════════════ -->
-<section class="section section--gray" id="metodologia">
+
+<!-- ═══════════════════════════════════ METODOLOGÍA ══════════════════════════ -->
+<section class="section section--white" id="metodologia">
   <div class="container">
     <div class="section-label">Cómo fue construida</div>
     <h2 class="section-title reveal">Metodología</h2>
-    <p class="lead reveal" style="transition-delay:.1s">La guía se construyó sobre la base de un proceso de investigación, análisis y experimentación directa con medios iberoamericanos.</p>
+    <p class="lead reveal" style="transition-delay:.1s">
+      La guía se construyó sobre la base de un proceso de investigación, análisis y experimentación directa con medios iberoamericanos.
+    </p>
+
     <div class="method-strip">
       <div class="method-item reveal">
-        <div class="method-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="10" cy="10" r="6.5" stroke="#5B2D8E" stroke-width="1.5"></circle><line x1="15" y1="15" x2="20" y2="20" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round"></line></svg></div>
+        <span class="method-icon">🔍</span>
         <div class="method-label">Análisis de directrices</div>
-        <p class="method-desc">Revisión de más de 90 políticas editoriales de medios de todo el mundo, desde la BBC hasta Chequeado.</p>
+        <p class="method-desc">Revisión de más de 30 políticas editoriales de medios de todo el mundo, desde la BBC hasta Chequeado.</p>
       </div>
       <div class="method-item reveal" style="transition-delay:.08s">
-        <div class="method-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="7" y="2" width="8" height="12" rx="4" stroke="#5B2D8E" stroke-width="1.5"></rect><path d="M4 13a7 7 0 0 0 14 0" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round"></path><line x1="11" y1="20" x2="11" y2="17" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round"></line></svg></div>
+        <span class="method-icon">🧪</span>
         <div class="method-label">Experimentación aplicada</div>
         <p class="method-desc">Pruebas y proyectos reales en redacciones como Clarín, Todo Jujuy y 0221 durante 2023–2025.</p>
       </div>
       <div class="method-item reveal" style="transition-delay:.16s">
-        <div class="method-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 4a7 7 0 0 1 7 7" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round"></path><path d="M11 7a4 4 0 0 1 4 4" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round"></path><circle cx="11" cy="11" r="1.5" fill="#5B2D8E"></circle></svg></div>
+        <span class="method-icon">📡</span>
         <div class="method-label">Fuentes especializadas</div>
         <p class="method-desc">Reuters Institute, JournalismAI, WAN-IFRA, INMA, Nieman Lab y organismos como el Consejo de Europa.</p>
       </div>
       <div class="method-item reveal" style="transition-delay:.24s">
-        <div class="method-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 6h14M4 10h10M4 14h7" stroke="#5B2D8E" stroke-width="1.5" stroke-linecap="round"></path><circle cx="17" cy="16" r="3.5" stroke="#5B2D8E" stroke-width="1.5"></circle><path d="M15.8 16l.8.8 1.6-1.6" stroke="#5B2D8E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+        <span class="method-icon">🗣️</span>
         <div class="method-label">Diálogo con la industria</div>
         <p class="method-desc">Conversaciones con periodistas, editores y equipos directivos de medios de Argentina y la región.</p>
       </div>
     </div>
-    <div class="method-cta reveal" style="text-align:center;margin-top:2.5rem;">
-      <a href="sobre-metodologia.html" style="display:inline-flex;align-items:center;gap:.5rem;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;color:var(--violet);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--violet)'">Ver metodología completa →</a>
-    </div>
   </div>
 </section>
 
-<!-- ═══════════════ PROGRAMA Y AUTOR ═══════════════ -->
-<section class="section section--white" id="about">
+
+<!-- ═══════════════════════════════════ PROGRAMA Y AUTOR ═════════════════════ -->
+<section class="section section--gray" id="about">
   <div class="container">
     <div class="section-label">Quiénes están detrás</div>
     <div class="about-grid">
+
+      <!-- Programa -->
       <div class="about-program">
-        <div class="program-badge reveal"><div class="program-badge-dot"></div><span>Programa</span></div>
-        <h2 class="section-title reveal" style="transition-delay:.05s">Redacciones5G</h2>
-        <p class="reveal" style="transition-delay:.1s">Programa de Personal Argentina que acompaña la evolución del periodismo con información, tendencias y herramientas sobre el futuro de los medios. Desde su nacimiento en 2015, se consolidó como referente en la industria periodística de habla hispana.</p>
-        <p class="reveal" style="transition-delay:.14s">Alcanzó a más de 500 medios de Argentina y la región, contribuyó a la formación de más de 10.000 profesionales del periodismo y ofrece capacitaciones, newsletter y podcast gratuitos. Fue distinguido con el Premio Gran Amigo de la Prensa de la SIP en 2025.</p>
-        <a href="sobre-programa.html" class="reveal" style="transition-delay:.2s;display:inline-flex;align-items:center;gap:.5rem;margin-top:1.5rem;font-size:.82rem;font-weight:600;color:var(--violet);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--violet)'">Programa completo →</a>
+        <div class="program-badge reveal">
+          <div class="program-badge-dot"></div>
+          <span>Programa</span>
+        </div>
+        <h2 class="section-title reveal" style="transition-delay:.05s">Redacciones 5G</h2>
+        <p class="reveal" style="transition-delay:.1s">
+          Programa de <img src="https://institucional.telecom.com.ar/assets/images/personal.svg" alt="Personal" style="height:18px;width:auto;vertical-align:middle;display:inline-block;margin:0 3px;"> que acompaña la evolución del periodismo con información, tendencias y herramientas sobre el futuro de los medios, de la mano de la innovación en tecnología.
+        </p>
+        <p class="reveal" style="transition-delay:.15s">
+          Su propósito es difundir el valor que internet y las nuevas tecnologías digitales aportan al ejercicio periodístico y a la gestión de los medios de comunicación. Desde su nacimiento en 2015, se consolidó como referente en la industria periodística de habla hispana.
+        </p>
+
+        <div class="stat-row reveal" style="transition-delay:.2s">
+          <div class="stat-item">
+            <span class="stat-item-num">+500</span>
+            <span class="stat-item-label">Medios</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item-num">+10k</span>
+            <span class="stat-item-label">Profesionales</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item-num">+5k</span>
+            <span class="stat-item-label">Estudiantes</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item-num">+1.5k</span>
+            <span class="stat-item-label">Suscriptores</span>
+          </div>
+        </div>
+
+        <div class="award-pill reveal" style="transition-delay:.25s">
+          <span class="award-pill-icon">🏆</span>
+          Premio Gran Amigo de la Prensa — Sociedad Interamericana de Prensa (SIP) 2025
+        </div>
       </div>
+
+      <!-- Autor -->
       <div class="about-author">
-        <div class="program-badge reveal"><div class="program-badge-dot" style="background:var(--cyan)"></div><span style="color:var(--cyan)">Autor</span></div>
-        <h2 class="section-title reveal" style="transition-delay:.05s">Álvaro Liuzzi</h2>
-        <p class="reveal" style="transition-delay:.12s">Periodista, docente y consultor en transformación de medios. Desde hace más de dos décadas investiga la evolución del periodismo digital y la adaptación de redacciones a entornos tecnológicos cambiantes. Docente de la UNLP y profesor invitado en universidades de Iberoamérica.</p>
-        <p class="reveal" style="transition-delay:.16s">Ha sido convocado por ICFJ, JournalismAI, WAN-IFRA, INMA, SIP y Google News Initiative para desarrollar programas de formación en innovación periodística. Desde 2023 ha liderado procesos de capacitación e integración estratégica de IA en medios como Clarín, Todo Jujuy y 0221.</p>
-        <a href="sobre-alvaro.html" class="reveal" style="transition-delay:.2s;display:inline-flex;align-items:center;gap:.5rem;margin-top:1.5rem;font-size:.82rem;font-weight:600;color:var(--cyan);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;" onmouseover="this.style.color='var(--violet)'" onmouseout="this.style.color='var(--cyan)'">Bio completa →</a>
+        <div class="program-badge reveal">
+          <div class="program-badge-dot" style="background:var(--cyan)"></div>
+          <span style="color:var(--cyan)">Autor</span>
+        </div>
+        <div class="author-name reveal" style="transition-delay:.05s">Álvaro Liuzzi</div>
+        <div class="author-role reveal" style="transition-delay:.08s">Periodista · Docente · Consultor en transformación de medios</div>
+        <p class="reveal" style="transition-delay:.12s">
+          Desde hace más de dos décadas investiga y trabaja en la evolución del periodismo digital, el desarrollo de producto editorial y la adaptación de redacciones a entornos tecnológicos cambiantes.
+        </p>
+        <p class="reveal" style="transition-delay:.16s">
+          Docente de la Especialización en Comunicación Digital de la <strong>Universidad Nacional de La Plata (UNLP)</strong> y profesor invitado en diversas universidades de Iberoamérica.
+        </p>
+        <p class="reveal" style="transition-delay:.2s">
+          En los últimos años fue convocado por el ICFJ, Deutsche Welle Akademie, JournalismAI, SIP, WAN-IFRA, INMA y Google News Initiative para desarrollar programas de formación y consultoría en innovación periodística.
+        </p>
+
+        <div class="author-orgs reveal" style="transition-delay:.25s">
+          <span class="org-tag">Nieman Lab (Harvard)</span>
+          <span class="org-tag">MIT Open Documentary Lab</span>
+          <span class="org-tag">Deutsche Welle</span>
+          <span class="org-tag">Oxford University Press</span>
+          <span class="org-tag">JournalismAI</span>
+          <span class="org-tag">WAN-IFRA</span>
+          <span class="org-tag">INMA</span>
+          <span class="org-tag">Google News Initiative</span>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
-</main>
 
-<!-- ═══════════════ FOOTER ═══════════════ -->
+<!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════ -->
 <footer>
   <div>
-    <div class="footer-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></div>
+    <div class="footer-brand">Periodismo<span>IA</span></div>
+    <div class="footer-meta">Guía PeriodismoIA 2026 · Versión 2.0 · Redacciones 5G · <img src="https://institucional.telecom.com.ar/assets/images/personal.svg" alt="Personal" style="height:13px;width:auto;vertical-align:middle;display:inline-block;margin-left:2px;filter:brightness(0) invert(1);opacity:.4;"></div>
   </div>
   <div class="footer-links">
     <a href="#intro">Introducción</a>
@@ -521,57 +1020,44 @@
     <a href="#metodologia">Metodología</a>
     <a href="#about">Programa y autor</a>
   </div>
-  <div class="footer-credits">Álvaro Liuzzi · 2026</div>
+  <div class="footer-credits">
+    Álvaro Liuzzi · 2026
+  </div>
 </footer>
 
-<!-- VOLVER ARRIBA -->
-<button class="totop" id="toTop" aria-label="Volver arriba">↑</button>
 
 <script>
-  // Reveal-on-scroll (clase del sistema original: .reveal.visible)
-  (function(){
-    var els = document.querySelectorAll('.reveal');
-    if('IntersectionObserver' in window){
-      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} }); }, {threshold:0.12});
-      els.forEach(function(el){ io.observe(el); });
-    } else { els.forEach(function(el){ el.classList.add('visible'); }); }
-  })();
-
-  // Barra de progreso + volver arriba
-  var pb = document.getElementById('progressBar');
-  var tt = document.getElementById('toTop');
-  function onScroll(){
-    var h = document.documentElement;
-    var max = h.scrollHeight - h.clientHeight;
-    pb.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-    tt.classList.toggle('show', h.scrollTop > 600);
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-  tt.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-
-  // Scrollspy
-  (function(){
-    var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[data-spy]'));
-    var map = {}; links.forEach(function(a){ map[a.getAttribute('data-spy')] = a; });
-    var sections = links.map(function(a){ return document.getElementById(a.getAttribute('data-spy')); }).filter(Boolean);
-    var spy = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){ links.forEach(function(l){ l.removeAttribute('aria-current'); }); var a = map[e.target.id]; if(a) a.setAttribute('aria-current','page'); } });
-    }, {rootMargin:'-45% 0px -50% 0px'});
-    sections.forEach(function(s){ spy.observe(s); });
-  })();
-
-  // Menú móvil
-  var burger = document.querySelector('.nav-burger');
-  if(burger){
-    burger.addEventListener('click', function(){
-      var open = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', String(!open));
-      var links = document.querySelector('.nav-links');
-      if(!open){ links.style.display='flex'; links.style.position='absolute'; links.style.flexDirection='column'; links.style.top='100%'; links.style.right='1.5rem'; links.style.background='var(--navy)'; links.style.padding='1.2rem 1.6rem'; links.style.borderRadius='0 0 10px 10px'; links.style.border='1px solid rgba(255,255,255,.1)'; links.style.gap='1.1rem'; links.style.zIndex='200'; }
-      else { links.style.display='none'; }
+// Canvas: lluvia de datos binarios
+(function(){
+  const canvas = document.getElementById('binaryCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  function resize(){ canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const cols = Math.floor(canvas.width / 18);
+  const drops = Array(cols).fill(0).map(() => Math.random() * -50);
+  function draw(){
+    ctx.fillStyle = 'rgba(75,46,142,0.10)';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = 'rgba(0,180,216,0.55)';
+    ctx.font = '11px monospace';
+    drops.forEach((y,i) => {
+      const char = Math.random() > .5 ? '1' : '0';
+      ctx.fillText(char, i*18, y*18);
+      drops[i] = (y > canvas.height/18 + Math.random()*10) ? 0 : y + 0.4;
     });
   }
-</script>
+  setInterval(draw, 80);
+})();
 
-</body></html>
+// IntersectionObserver para reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+  });
+},{threshold:0.08, rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
