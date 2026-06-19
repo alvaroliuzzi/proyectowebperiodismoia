@@ -49,11 +49,28 @@
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#intro" data-spy="intro">Introducción</a></li>
-        <li><a href="#capitulos" data-spy="capitulos">Capítulos</a></li>
+        <li class="nav-dropdown">
+          <a href="#capitulos" data-spy="capitulos" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Capítulos
+            <svg class="nav-chevron" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li role="none"><a role="menuitem" href="capitulo-1.html"><span class="nav-cap-num">01</span><span class="nav-cap-title">Fundamentos de la IA</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-2.html"><span class="nav-cap-num">02</span><span class="nav-cap-title">Ética, transparencia y confianza</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-3.html"><span class="nav-cap-num">03</span><span class="nav-cap-title">Itinerarios para la integración</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-4.html"><span class="nav-cap-num">04</span><span class="nav-cap-title">Una nueva morfología de las redacciones</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-5.html"><span class="nav-cap-num">05</span><span class="nav-cap-title">Más allá del tráfico</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-6.html"><span class="nav-cap-num">06</span><span class="nav-cap-title">Casos de uso en medios</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-7.html"><span class="nav-cap-num">07</span><span class="nav-cap-title">Reflexiones finales</span></a></li>
+          </ul>
+        </li>
         <li><a href="recursos.html">Recursos</a></li>
         <li><a href="bibliografia.html">Bibliografía</a></li>
         <li><a href="sobre-metodologia.html" data-spy="metodologia">Metodología</a></li>
-        <li><a href="#about" data-spy="about">Programa y autor</a></li>
+        <li><a href="sobre-programa.html">Programa</a></li>
+        <li><a href="sobre-alvaro.html">Autor</a></li>
       </ul>
       <a href="descargar.html" class="nav-cta">Descargar guía</a>
       <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -171,23 +188,7 @@
       </div>
       <div class="cap-grid">
         <a class="cap-card" href="capitulo-1.html">
-          <div class="cap-cover cap-cover--violet cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots1" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov1-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov1-mask">
-                  <rect width="300" height="150" fill="url(#cov1-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots1)" mask="url(#cov1-mask)"/>
-            </svg>
-            <span class="cnum">01</span>
+          <div class="cap-cover cap-cover--violet cap-cover--dotted" style="background: linear-gradient(140deg, rgba(91,45,142,0.5) 0%, rgba(138,80,196,0.5) 100%), url('img/cap1-bg.webp'); background-size: cover; background-position: center;">
             <span class="clabel">Capítulo 01</span>
           </div>
           <div class="cap-body">
@@ -198,23 +199,7 @@
           </div>
         </a>
         <a class="cap-card" href="capitulo-2.html">
-          <div class="cap-cover cap-cover--violet cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots2" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov2-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov2-mask">
-                  <rect width="300" height="150" fill="url(#cov2-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots2)" mask="url(#cov2-mask)"/>
-            </svg>
-            <span class="cnum">02</span>
+          <div class="cap-cover cap-cover--violet cap-cover--dotted" style="background: linear-gradient(140deg, rgba(91,45,142,0.5) 0%, rgba(138,80,196,0.5) 100%), url('img/cap2-bg.webp'); background-size: cover; background-position: center;">
             <span class="clabel">Capítulo 02</span>
           </div>
           <div class="cap-body">
@@ -243,23 +228,7 @@
       </div>
       <div class="cap-grid">
         <a class="cap-card" href="capitulo-3.html">
-          <div class="cap-cover cap-cover--cyan cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots3" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov3-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov3-mask">
-                  <rect width="300" height="150" fill="url(#cov3-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots3)" mask="url(#cov3-mask)"/>
-            </svg>
-            <span class="cnum">03</span>
+          <div class="cap-cover cap-cover--cyan cap-cover--dotted" style="background: linear-gradient(140deg, rgba(14,111,168,0.5) 0%, rgba(0,180,216,0.5) 100%), url('img/cap3-bg.webp'); background-size: cover; background-position: center;">
             <span class="clabel">Capítulo 03</span>
           </div>
           <div class="cap-body">
@@ -270,23 +239,7 @@
           </div>
         </a>
         <a class="cap-card" href="capitulo-4.html">
-          <div class="cap-cover cap-cover--cyan cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots4" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov4-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov4-mask">
-                  <rect width="300" height="150" fill="url(#cov4-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots4)" mask="url(#cov4-mask)"/>
-            </svg>
-            <span class="cnum">04</span>
+          <div class="cap-cover cap-cover--cyan cap-cover--dotted" style="background: linear-gradient(140deg, rgba(14,111,168,0.5) 0%, rgba(0,180,216,0.5) 100%), url('img/cap4-bg.webp'); background-size: cover; background-position: center;">
             <span class="clabel">Capítulo 04</span>
           </div>
           <div class="cap-body">
@@ -315,23 +268,7 @@
       </div>
       <div class="cap-grid">
         <a class="cap-card" href="capitulo-5.html">
-          <div class="cap-cover cap-cover--dual cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots5" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov5-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov5-mask">
-                  <rect width="300" height="150" fill="url(#cov5-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots5)" mask="url(#cov5-mask)"/>
-            </svg>
-            <span class="cnum">05</span>
+          <div class="cap-cover cap-cover--dual cap-cover--dotted" style="background: linear-gradient(140deg, rgba(91,45,142,0.5) 0%, rgba(0,180,216,0.5) 100%), url('img/cap5-bg.webp'); background-size: cover; background-position: center;">
             <span class="clabel">Capítulo 05</span>
           </div>
           <div class="cap-body">
@@ -342,23 +279,7 @@
           </div>
         </a>
         <a class="cap-card" href="capitulo-6.html">
-          <div class="cap-cover cap-cover--dual cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots6" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov6-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov6-mask">
-                  <rect width="300" height="150" fill="url(#cov6-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots6)" mask="url(#cov6-mask)"/>
-            </svg>
-            <span class="cnum">06</span>
+          <div class="cap-cover cap-cover--dual cap-cover--dotted" style="background: linear-gradient(140deg, rgba(91,45,142,0.5) 0%, rgba(0,180,216,0.5) 100%), url('img/cap6-bg.webp'); background-size: cover; background-position: center;">
             <span class="clabel">Capítulo 06</span>
           </div>
           <div class="cap-body">
@@ -369,23 +290,7 @@
           </div>
         </a>
         <a class="cap-card" href="capitulo-7.html">
-          <div class="cap-cover cap-cover--dual cap-cover--dotted">
-            <svg class="cov-dots" viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <pattern id="dots7" width="11" height="11" patternUnits="userSpaceOnUse">
-                  <circle cx="5.5" cy="5.5" r="1.5" fill="rgba(255,255,255,.55)"/>
-                </pattern>
-                <radialGradient id="cov7-fade" cx="78%" cy="28%" r="72%">
-                  <stop offset="0%" stop-color="white" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="white" stop-opacity="0"/>
-                </radialGradient>
-                <mask id="cov7-mask">
-                  <rect width="300" height="150" fill="url(#cov7-fade)"/>
-                </mask>
-              </defs>
-              <rect width="300" height="150" fill="url(#dots7)" mask="url(#cov7-mask)"/>
-            </svg>
-            <span class="cnum">07</span>
+          <div class="cap-cover cap-cover--dual cap-cover--dotted" style="background: linear-gradient(140deg, rgba(91,45,142,0.5) 0%, rgba(0,180,216,0.5) 100%), url('img/cap7-bg.webp'); background-size: cover; background-position: center;">
             <span class="clabel">Capítulo 07</span>
           </div>
           <div class="cap-body">

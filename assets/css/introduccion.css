@@ -56,13 +56,13 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--off);color:var(
 
 .hero-logo{
   font-family:'DM Sans',sans-serif;
-  font-weight:700;
-  font-size:1.2rem;
+  font-weight:300;
+  font-size:1.9rem;
   color:var(--white);
   margin-bottom:1.8rem;
-  letter-spacing:.01em;
+  letter-spacing:-.02em;
 }
-.hero-logo span{color:var(--cyan);}
+.hero-logo span{color:var(--cyan);font-weight:800;}
 
 .hero-label{
   font-size:.75rem;
@@ -173,8 +173,8 @@ footer{
   flex-wrap:wrap;
   gap:1.5rem;
 }
-.footer-brand{font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.1rem;color:var(--white);}
-.footer-brand span{color:var(--cyan);}
+.footer-brand{font-family:'DM Sans',sans-serif;font-weight:300;font-size:1.1rem;color:var(--white);letter-spacing:-.02em;}
+.footer-brand span{color:var(--cyan);font-weight:800;}
 .footer-meta{font-size:.78rem;color:var(--g400);margin-top:.2rem;}
 .footer-links{display:flex;gap:2rem;}
 .footer-links a{font-size:.82rem;color:var(--g400);text-decoration:none;transition:color .2s;}

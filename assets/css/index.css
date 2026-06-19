@@ -610,14 +610,15 @@ footer{
 }
 .footer-brand{
   display:inline-flex;
-  align-items:baseline;
+  align-items:center;
   gap:0;
   font-family:'DM Sans',sans-serif;
-  font-weight:700;
-  font-size:.95rem;
+  font-weight:300;
+  font-size:1.1rem;
   color:var(--white);
+  letter-spacing:-.02em;
 }
-.footer-brand span{color:var(--cyan);}
+.footer-brand span{color:var(--cyan);font-weight:800;}
 .footer-brand .ver{font-size:.55rem;font-weight:600;letter-spacing:.12em;color:var(--cyan);border:1px solid rgba(0,180,216,.4);border-radius:99px;padding:.1rem .45rem;margin-left:.5rem;}
 .footer-meta{
   font-size:.8rem;
@@ -876,13 +877,72 @@ section[id], header[id] { scroll-margin-top: 88px; }
 /* ─── NAV FIJA ─── */
 .site-nav { position: fixed; top: 3px; left: 0; right: 0; z-index: 1000; background: rgba(13,27,62,.82); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.08); }
 .nav-inner { max-width: 1180px; margin: 0 auto; padding: .95rem 4rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.nav-brand { display: inline-flex; align-items: baseline; gap: 0; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.05rem; color: #fff; text-decoration: none; letter-spacing: -.01em; }
-.nav-brand span { color: var(--cyan); }
+.nav-brand { display: inline-flex; align-items: center; gap: 0; font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 1.15rem; color: #fff; text-decoration: none; letter-spacing: -.02em; }
+.nav-brand span { color: var(--cyan); font-weight: 800; }
 .nav-brand .ver { font-size: .6rem; font-weight: 600; letter-spacing: .12em; color: var(--cyan); border: 1px solid rgba(0,180,216,.4); border-radius: 99px; padding: .12rem .5rem; margin-left: .6rem; }
 .nav-right { display: flex; align-items: center; gap: 2rem; }
-.nav-links { display: flex; gap: 1.7rem; list-style: none; }
+.nav-links { display: flex; gap: 1.3rem; list-style: none; }
 .nav-links a { font-family: 'DM Sans', sans-serif; font-size: .76rem; font-weight: 500; letter-spacing: .04em; color: rgba(255,255,255,.62); text-decoration: none; transition: color .18s; white-space: nowrap; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--cyan); }
+
+/* ─── Dropdown de Capítulos ─── */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle { display: inline-flex; align-items: center; gap: .35rem; cursor: pointer; }
+.nav-chevron { transition: transform .25s ease; opacity: .7; }
+.nav-dropdown:hover .nav-chevron, .nav-dropdown:focus-within .nav-chevron { transform: rotate(180deg); opacity: 1; }
+/* Puente invisible para que el hover no se pierda en el gap */
+.nav-dropdown::before { content: ''; position: absolute; top: 100%; left: -1rem; right: -1rem; height: .9rem; }
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + .85rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 300px;
+  list-style: none;
+  background: rgba(13,27,62,.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 12px;
+  padding: .5rem;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity .22s ease, transform .22s ease, visibility .22s;
+  box-shadow: 0 18px 44px -18px rgba(0,0,0,.65);
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-menu li { list-style: none; }
+.nav-dropdown-menu a {
+  display: flex !important;
+  align-items: center;
+  gap: .75rem;
+  padding: .55rem .8rem;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.78) !important;
+  text-decoration: none;
+  transition: background .18s, color .18s;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover { background: rgba(255,255,255,.06); color: var(--cyan) !important; }
+.nav-cap-num {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1rem;
+  color: var(--cyan);
+  min-width: 1.8rem;
+  line-height: 1;
+}
+.nav-cap-title { line-height: 1.25; }
 .nav-cta { font-family: 'DM Sans', sans-serif; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--navy); background: var(--cyan); text-decoration: none; padding: .62rem 1.1rem; border-radius: 99px; transition: transform .18s, box-shadow .18s; white-space: nowrap; }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 22px -10px rgba(0,180,216,.8); }
 .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 4px; }
@@ -898,8 +958,8 @@ section[id], header[id] { scroll-margin-top: 88px; }
 
 /* ─── BLOQUES DE CAPÍTULOS (rediseñados) ─── */
 .cap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(232px, 1fr)); gap: 1.15rem; }
-.cap-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--g200); border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
-.cap-card:hover { transform: translateY(-4px); border-color: var(--violet); box-shadow: 0 18px 38px -20px rgba(13,27,62,.32); }
+.cap-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--g200); border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit; transition: transform .3s ease, border-color .25s ease, box-shadow .3s ease; }
+.cap-card:hover { transform: translateY(-4px); border-color: var(--cyan); box-shadow: 0 18px 38px -20px rgba(13,27,62,.32); }
 
 .cap-cover { position: relative; height: 132px; display: flex; align-items: flex-end; padding: 1.05rem 1.2rem; overflow: hidden; background: linear-gradient(140deg, var(--violet) 0%, var(--cyan) 115%); }
 .cap-cover::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.22) 1.3px, transparent 1.7px); background-size: 17px 17px; -webkit-mask: radial-gradient(80% 90% at 100% 0%, #000 0%, transparent 72%); mask: radial-gradient(80% 90% at 100% 0%, #000 0%, transparent 72%); }

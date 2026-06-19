@@ -21,6 +21,8 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <link rel="stylesheet" href="assets/css/chapter.css">
+<link rel="stylesheet" href="assets/css/a11y.css">
+<link rel="stylesheet" href="assets/css/nav.css">
 <style>
 :root{
   --bg-deep:#0D1B3E;
@@ -164,14 +166,30 @@ body.timeline-body{background:var(--bg-deep);color:var(--text-body);font-family:
 <!-- NAV FIJA -->
 <nav class="site-nav" aria-label="Navegación principal">
   <div class="nav-inner">
-    <a href="index.html#top" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
+    <a href="index.html" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
         <li><a href="introduccion.html">Introducción</a></li>
-        <li><a href="index.html#capitulos">Capítulos</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html#capitulos" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Capítulos
+            <svg class="nav-chevron" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li role="none"><a role="menuitem" href="capitulo-1.html"><span class="nav-cap-num">01</span><span class="nav-cap-title">Fundamentos de la IA</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-2.html"><span class="nav-cap-num">02</span><span class="nav-cap-title">Ética, transparencia y confianza</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-3.html"><span class="nav-cap-num">03</span><span class="nav-cap-title">Itinerarios para la integración</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-4.html"><span class="nav-cap-num">04</span><span class="nav-cap-title">Una nueva morfología de las redacciones</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-5.html"><span class="nav-cap-num">05</span><span class="nav-cap-title">Más allá del tráfico</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-6.html"><span class="nav-cap-num">06</span><span class="nav-cap-title">Casos de uso en medios</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-7.html"><span class="nav-cap-num">07</span><span class="nav-cap-title">Reflexiones finales</span></a></li>
+          </ul>
+        </li>
+        <li><a href="recursos.html" aria-current="page">Recursos</a></li>
         <li><a href="sobre-metodologia.html">Metodología</a></li>
+        <li><a href="bibliografia.html">Bibliografía</a></li>
         <li><a href="sobre-programa.html">Programa</a></li>
         <li><a href="sobre-alvaro.html">Autor</a></li>
       </ul>

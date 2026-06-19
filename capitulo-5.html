@@ -23,6 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/chapter.css">
 <link rel="stylesheet" href="assets/css/a11y.css">
+<link rel="stylesheet" href="assets/css/nav.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -39,36 +40,44 @@
 <body>
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<!-- NAV STICKY -->
-<nav class="chapter-nav" aria-label="Navegación entre capítulos">
-  <div class="chapter-nav-inner">
-    <a href="index.html" class="chapter-nav-brand">Periodismo<span>IA</span> <span class="ver">v2.0</span></a>
-    <ol class="chapter-nav-dots" aria-label="Capítulos">
-      <li><a href="capitulo-1.html" class="cnav-dot"><span class="cnav-num">01</span><span class="cnav-title">Fundamentos</span></a></li>
-      <li><a href="capitulo-2.html" class="cnav-dot"><span class="cnav-num">02</span><span class="cnav-title">Ética</span></a></li>
-      <li><a href="capitulo-3.html" class="cnav-dot"><span class="cnav-num">03</span><span class="cnav-title">Integración</span></a></li>
-      <li><a href="capitulo-4.html" class="cnav-dot"><span class="cnav-num">04</span><span class="cnav-title">Morfología</span></a></li>
-      <li><a href="capitulo-5.html" class="cnav-dot is-current" aria-current="page"><span class="cnav-num">05</span><span class="cnav-title">Audiencias</span></a></li>
-      <li><a href="capitulo-6.html" class="cnav-dot"><span class="cnav-num">06</span><span class="cnav-title">Casos</span></a></li>
-      <li><a href="capitulo-7.html" class="cnav-dot"><span class="cnav-num">07</span><span class="cnav-title">Reflexiones</span></a></li>
-      <li><a href="recursos.html" class="cnav-dot cnav-dot--rsc"><span class="cnav-num">+</span><span class="cnav-title">Recursos</span></a></li>
-    </ol>
+<!-- NAV FIJA -->
+<nav class="site-nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="introduccion.html">Introducción</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html#capitulos" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Capítulos
+            <svg class="nav-chevron" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li role="none"><a role="menuitem" href="capitulo-1.html"><span class="nav-cap-num">01</span><span class="nav-cap-title">Fundamentos de la IA</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-2.html"><span class="nav-cap-num">02</span><span class="nav-cap-title">Ética, transparencia y confianza</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-3.html"><span class="nav-cap-num">03</span><span class="nav-cap-title">Itinerarios para la integración</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-4.html"><span class="nav-cap-num">04</span><span class="nav-cap-title">Una nueva morfología de las redacciones</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-5.html" aria-current="page"><span class="nav-cap-num">05</span><span class="nav-cap-title">Más allá del tráfico</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-6.html"><span class="nav-cap-num">06</span><span class="nav-cap-title">Casos de uso en medios</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-7.html"><span class="nav-cap-num">07</span><span class="nav-cap-title">Reflexiones finales</span></a></li>
+          </ul>
+        </li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="sobre-metodologia.html">Metodología</a></li>
+        <li><a href="bibliografia.html">Bibliografía</a></li>
+        <li><a href="sobre-programa.html">Programa</a></li>
+        <li><a href="sobre-alvaro.html">Autor</a></li>
+      </ul>
+      <a href="descargar.html" class="nav-cta">Descargar guía</a>
+      <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero hero--dual">
-  <div class="hero-geo" aria-hidden="true">
-    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,180,216,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(0,180,216,.18) 1px,transparent 1px);background-size:40px 40px;-webkit-mask:radial-gradient(135% 125% at 100% 100%,#000 0%,#000 24%,transparent 82%);mask:radial-gradient(135% 125% at 100% 100%,#000 0%,#000 24%,transparent 82%);"></div>
-    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.35) 1.4px,transparent 1.7px);background-size:22px 22px;-webkit-mask:radial-gradient(92% 92% at 100% 0%,#000 0%,#000 18%,transparent 64%);mask:radial-gradient(92% 92% at 100% 0%,#000 0%,#000 18%,transparent 64%);"></div>
-    <svg viewBox="0 0 340 340" fill="none" style="position:absolute;top:-100px;left:-55px;width:340px;height:340px;">
-      <circle cx="170" cy="170" r="140" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
-      <circle cx="170" cy="170" r="85" stroke="rgba(0,180,216,0.25)" stroke-width="1.2"/>
-      <circle cx="170" cy="170" r="40" fill="rgba(91,45,142,0.3)" stroke="rgba(91,45,142,0.5)" stroke-width="1"/>
-      <path id="orb" d="M170 40 A130 130 0 1 1 169.9 40" fill="none"/>
-      <circle r="5.5" fill="#00B4D8"><animate attributeName="opacity" values="0.55;1;0.55" dur="3s" repeatCount="indefinite"/><animateMotion dur="22s" repeatCount="indefinite"><mpath href="#orb"/></animateMotion></circle>
-    </svg>
-  </div>
+<section class="hero hero--dual" style="background: linear-gradient(180deg, rgba(91,45,142,0.62) 0%, rgba(0,180,216,0.55) 100%), url('img/cap5-bg.webp'); background-size: cover; background-position: center;">
   <div class="hero-center">
     <div class="hero-logo anim-word" style="animation-delay:.05s">
       <span class="hero-logo-personal">Periodismo<span>IA</span></span>
@@ -86,12 +95,25 @@
   </div>
 </section>
 
-<main id="contenido">
+<!-- TOC LATERAL · orientador de lectura -->
+<aside class="cap-toc" aria-label="Tabla de contenidos del capítulo">
+  <div class="cap-toc-kick">En este capítulo</div>
+  <ol class="cap-toc-list">
+    <li><a href="#alcance">Del alcance al vínculo</a></li>
+    <li><a href="#distribucion">El colapso de un modelo</a></li>
+    <li><a href="#personalizacion">Personalización con criterio</a></li>
+    <li><a href="#conversacional">Periodismo conversacional</a></li>
+    <li><a href="#confianza">Confianza y transparencia</a></li>
+    <li><a href="#orientaciones">Nueve orientaciones</a></li>
+  </ol>
+</aside>
 
-<section class="section section--white">
+<main id="contenido">
+<section class="section section--white" id="alcance">
   <div class="container">
     <div class="prose">
       <div class="section-label reveal">Apertura</div>
+      <h2 class="section-title reveal" style="margin-bottom:1.5rem">Del alcance al vínculo</h2>
       <p class="lead reveal">Durante años, los medios midieron su relación con las audiencias en términos de alcance: cuántas personas llegaban a una nota, cuánto tiempo se quedaban, qué porcentaje hacía clic. Esas métricas organizaron redacciones, orientaron estrategias editoriales y definieron criterios de éxito. La inteligencia artificial llegó a un ecosistema donde esa lógica ya estaba agotada. Las audiencias que los medios buscan hoy son más fragmentadas, más exigentes, más difíciles de retener y, al mismo tiempo, más dispuestas a comprometerse cuando encuentran algo que les resulta genuinamente relevante.</p>
       <p class="reveal">El cambio es estructural. Durante más de una década, las plataformas digitales entrenaron a las personas para consumir contenido personalizado, inmediato y disponible a demanda. Spotify, Netflix, TikTok y los algoritmos de recomendación construyeron un nuevo estándar de experiencia que los medios periodísticos no pidieron, pero que sus audiencias internalizaron. Hoy, quien lee un diario o consume un podcast informativo lleva consigo expectativas formadas por sistemas que aprenden de cada interacción. Competir en ese entorno requiere entender que la vara de comparación se define por cualquier experiencia digital que dispute el mismo tiempo y la misma atención.</p>
       <p class="reveal">Lo que complica aún más este escenario es que la fragmentación alcanza también a la confianza. Los datos del Reuters Institute Digital News Report muestran que el interés activo en las noticias viene cayendo de manera sostenida desde 2017 en la mayoría de los mercados relevados, con un fenómeno que los investigadores denominaron "<a href="https://reutersinstitute.politics.ox.ac.uk/news/people-are-turning-away-news-heres-why-it-may-be-happening" target="_blank" rel="noopener noreferrer">evitación de noticias</a>", personas que se alejan de la información por agotamiento, ansiedad o sensación de impotencia frente a lo que consumen. En ese contexto, producir más contenido profundiza el problema.</p>
@@ -100,7 +122,7 @@
   </div>
 </section>
 
-<section class="section section--gray">
+<section class="section section--gray" id="distribucion">
   <div class="container">
     <div class="prose">
       <div class="section-label reveal">Distribución</div>
@@ -116,7 +138,7 @@
   </div>
 </section>
 
-<section class="section section--white">
+<section class="section section--white" id="personalizacion">
   <div class="container">
     <div class="prose">
       <div class="section-label reveal">Personalización</div>
@@ -131,7 +153,7 @@
   </div>
 </section>
 
-<section class="section section--gray">
+<section class="section section--gray" id="conversacional">
   <div class="container">
     <div class="prose">
       <div class="section-label reveal">Conversacional</div>
@@ -146,7 +168,7 @@
   </div>
 </section>
 
-<section class="section section--dark">
+<section class="section section--dark" id="confianza">
   <div class="container">
     <div class="prose">
       <div class="section-label reveal">Transparencia</div>
@@ -163,7 +185,7 @@
   </div>
 </section>
 
-<section class="section section--gray">
+<section class="section section--gray" id="orientaciones">
   <div class="container">
     <div class="prose">
       <div class="section-label reveal">Acción</div>
@@ -302,5 +324,78 @@
   </div>
 </footer>
 <script src="assets/js/app.js"></script>
+<script>
+/* TOC sticky: aparece después del hero, resalta sección activa y adapta paleta a fondos oscuros */
+(function() {
+  if (!('IntersectionObserver' in window)) return;
+  var toc = document.querySelector('.cap-toc');
+  var hero = document.querySelector('.hero');
+
+  if (toc && hero) {
+    var heroObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        toc.classList.toggle('is-visible', !entry.isIntersecting);
+      });
+    }, { threshold: 0, rootMargin: '-80px 0px 0px 0px' });
+    heroObserver.observe(hero);
+  }
+
+  var tocLinks = document.querySelectorAll('.cap-toc-list a');
+  if (tocLinks.length) {
+    var sections = [];
+    tocLinks.forEach(function(link) {
+      var id = link.getAttribute('href').substring(1);
+      var section = document.getElementById(id);
+      if (section) sections.push({ id: id, el: section, link: link });
+    });
+    var sectionObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          sections.forEach(function(s) {
+            s.link.classList.toggle('is-active', s.id === entry.target.id);
+          });
+        }
+      });
+    }, {
+      rootMargin: '-25% 0px -65% 0px',
+      threshold: 0
+    });
+    sections.forEach(function(s) { sectionObserver.observe(s.el); });
+  }
+
+  if (toc) {
+    var darkSections = document.querySelectorAll('.section--dark, .section--navy, .section--violet-deep');
+    if (darkSections.length) {
+      var darkInView = new Set();
+      var darkObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            darkInView.add(entry.target);
+          } else {
+            darkInView.delete(entry.target);
+          }
+        });
+        toc.classList.toggle('on-dark', darkInView.size > 0);
+      }, { rootMargin: '-30% 0px -30% 0px', threshold: 0 });
+      darkSections.forEach(function(s) { darkObserver.observe(s); });
+    }
+  }
+})();
+</script>
+
+<button class="totop" id="toTop" aria-label="Volver arriba">↑</button>
+<script>
+  (function(){
+    var tt = document.getElementById('toTop');
+    if (!tt) return;
+    function onScroll(){
+      tt.classList.toggle('show', document.documentElement.scrollTop > 600);
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+    tt.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  })();
+</script>
+
 </body>
 </html>

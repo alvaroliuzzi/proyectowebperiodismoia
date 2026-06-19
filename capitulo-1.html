@@ -23,6 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/chapter.css">
 <link rel="stylesheet" href="assets/css/a11y.css">
+<link rel="stylesheet" href="assets/css/nav.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -39,37 +40,44 @@
 <body>
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<!-- NAV STICKY -->
-<nav class="chapter-nav" aria-label="Navegación entre capítulos">
-  <div class="chapter-nav-inner">
-    <a href="index.html" class="chapter-nav-brand">Periodismo<span>IA</span> <span class="ver">v2.0</span></a>
-    <ol class="chapter-nav-dots" aria-label="Capítulos">
-      <li><a href="capitulo-1.html" class="cnav-dot is-current" aria-current="page"><span class="cnav-num">01</span><span class="cnav-title">Fundamentos</span></a></li>
-      <li><a href="capitulo-2.html" class="cnav-dot"><span class="cnav-num">02</span><span class="cnav-title">Ética</span></a></li>
-      <li><a href="capitulo-3.html" class="cnav-dot"><span class="cnav-num">03</span><span class="cnav-title">Integración</span></a></li>
-      <li><a href="capitulo-4.html" class="cnav-dot"><span class="cnav-num">04</span><span class="cnav-title">Morfología</span></a></li>
-      <li><a href="capitulo-5.html" class="cnav-dot"><span class="cnav-num">05</span><span class="cnav-title">Audiencias</span></a></li>
-      <li><a href="capitulo-6.html" class="cnav-dot"><span class="cnav-num">06</span><span class="cnav-title">Casos</span></a></li>
-      <li><a href="capitulo-7.html" class="cnav-dot"><span class="cnav-num">07</span><span class="cnav-title">Reflexiones</span></a></li>
-      <li><a href="recursos.html" class="cnav-dot cnav-dot--rsc"><span class="cnav-num">+</span><span class="cnav-title">Recursos</span></a></li>
-    </ol>
+<!-- NAV FIJA -->
+<nav class="site-nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Periodismo<span>IA</span><span class="ver">v2.0</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="introduccion.html">Introducción</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html#capitulos" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Capítulos
+            <svg class="nav-chevron" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <ul class="nav-dropdown-menu" role="menu">
+            <li role="none"><a role="menuitem" href="capitulo-1.html" aria-current="page"><span class="nav-cap-num">01</span><span class="nav-cap-title">Fundamentos de la IA</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-2.html"><span class="nav-cap-num">02</span><span class="nav-cap-title">Ética, transparencia y confianza</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-3.html"><span class="nav-cap-num">03</span><span class="nav-cap-title">Itinerarios para la integración</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-4.html"><span class="nav-cap-num">04</span><span class="nav-cap-title">Una nueva morfología de las redacciones</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-5.html"><span class="nav-cap-num">05</span><span class="nav-cap-title">Más allá del tráfico</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-6.html"><span class="nav-cap-num">06</span><span class="nav-cap-title">Casos de uso en medios</span></a></li>
+            <li role="none"><a role="menuitem" href="capitulo-7.html"><span class="nav-cap-num">07</span><span class="nav-cap-title">Reflexiones finales</span></a></li>
+          </ul>
+        </li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="sobre-metodologia.html">Metodología</a></li>
+        <li><a href="bibliografia.html">Bibliografía</a></li>
+        <li><a href="sobre-programa.html">Programa</a></li>
+        <li><a href="sobre-alvaro.html">Autor</a></li>
+      </ul>
+      <a href="descargar.html" class="nav-cta">Descargar guía</a>
+      <button class="nav-burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero hero--violet">
-
-  <div class="hero-geo" aria-hidden="true">
-    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,180,216,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(0,180,216,.18) 1px,transparent 1px);background-size:40px 40px;-webkit-mask:radial-gradient(135% 125% at 100% 100%,#000 0%,#000 24%,transparent 82%);mask:radial-gradient(135% 125% at 100% 100%,#000 0%,#000 24%,transparent 82%);"></div>
-    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.30) 1.4px,transparent 1.7px);background-size:22px 22px;-webkit-mask:radial-gradient(92% 92% at 0% 100%,#000 0%,#000 18%,transparent 64%);mask:radial-gradient(92% 92% at 0% 100%,#000 0%,#000 18%,transparent 64%);"></div>
-    <svg viewBox="0 0 340 340" fill="none" style="position:absolute;top:-90px;right:-70px;width:340px;height:340px;">
-      <circle cx="170" cy="170" r="140" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-      <circle cx="170" cy="170" r="85" stroke="rgba(0,180,216,0.25)" stroke-width="1.2"/>
-      <circle cx="170" cy="170" r="40" fill="rgba(91,45,142,0.3)" stroke="rgba(91,45,142,0.5)" stroke-width="1"/>
-      <path id="orb" d="M170 40 A130 130 0 1 1 169.9 40" fill="none"/>
-      <circle r="5.5" fill="#00B4D8"><animate attributeName="opacity" values="0.55;1;0.55" dur="3s" repeatCount="indefinite"/><animateMotion dur="22s" repeatCount="indefinite"><mpath href="#orb"/></animateMotion></circle>
-    </svg>
-  </div>
+<section class="hero hero--violet" style="background: linear-gradient(180deg, rgba(91,45,142,0.62) 0%, rgba(138,80,196,0.55) 100%), url('img/cap1-bg.webp'); background-size: cover; background-position: center;">
 
   <div class="hero-center">
     <div class="hero-logo anim-word" style="animation-delay:.05s">
@@ -93,6 +101,17 @@
   </div>
 </section>
 
+
+<!-- TOC LATERAL · orientador de lectura -->
+<aside class="cap-toc" aria-label="Tabla de contenidos del capítulo">
+  <div class="cap-toc-kick">En este capítulo</div>
+  <ol class="cap-toc-list">
+    <li><a href="#historia">Historia y contexto de la IA</a></li>
+    <li><a href="#terminos">Términos asociados</a></li>
+    <li><a href="#prompts">¿Qué es un prompt?</a></li>
+    <li><a href="#reflexion">Reflexión final</a></li>
+  </ol>
+</aside>
 
 <!-- SETENTA AÑOS -->
 <main id="contenido">
@@ -483,6 +502,25 @@
     <div class="prose reveal" style="transition-delay:.1s">
       <p>Dominar la terminología de la IA es una condición para participar con criterio propio en las decisiones que hoy atraviesan todas las redacciones: qué automatizar y qué preservar, cómo supervisar sistemas generativos, dónde establecer límites editoriales y cómo comunicar a las audiencias el rol de estas tecnologías en la producción de contenido.</p>
       <p>El ecosistema de la IA seguirá produciendo nuevos términos, sistemas y capacidades. Lo que permanece constante es la necesidad de evaluarlos desde una perspectiva periodística: qué problema editorial resuelven, qué riesgos introducen y qué principios deben gobernar su uso. Con ese marco, el glosario de este capítulo funciona como punto de partida para continuar aprendiendo en un campo que no dejará de moverse.</p>
+
+      <!-- COMPARTIR ESTA LECTURA -->
+      <div class="share-block reveal" style="transition-delay:.2s">
+        <div class="share-kicker">Compartir esta lectura</div>
+        <div class="share-btns">
+          <a class="share-btn share-btn--x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Compartir en X">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>X</span>
+          </a>
+          <a class="share-btn share-btn--linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Compartir en LinkedIn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <button class="share-btn share-btn--copy" type="button" aria-label="Copiar enlace">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span class="share-btn-label">Copiar enlace</span>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -502,5 +540,106 @@
 
 
 <script src="assets/js/app.js"></script>
+<script>
+/* TOC sticky: resaltar sección activa + mostrar solo cuando se pasó el hero */
+(function() {
+  if (!('IntersectionObserver' in window)) return;
+  var toc = document.querySelector('.cap-toc');
+  var hero = document.querySelector('.hero');
+
+  /* Mostrar el TOC solo cuando el hero ya no está en viewport */
+  if (toc && hero) {
+    var heroObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        toc.classList.toggle('is-visible', !entry.isIntersecting);
+      });
+    }, { threshold: 0, rootMargin: '-80px 0px 0px 0px' });
+    heroObserver.observe(hero);
+  }
+
+  /* Resaltar sección activa al scrollear */
+  var tocLinks = document.querySelectorAll('.cap-toc-list a');
+  if (tocLinks.length) {
+    var sections = [];
+    tocLinks.forEach(function(link) {
+      var id = link.getAttribute('href').substring(1);
+      var section = document.getElementById(id);
+      if (section) sections.push({ id: id, el: section, link: link });
+    });
+    var sectionObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          sections.forEach(function(s) {
+            s.link.classList.toggle('is-active', s.id === entry.target.id);
+          });
+        }
+      });
+    }, {
+      rootMargin: '-25% 0px -65% 0px',
+      threshold: 0
+    });
+    sections.forEach(function(s) { sectionObserver.observe(s.el); });
+  }
+
+  /* Adaptive theming: detectar secciones de fondo oscuro y cambiar la paleta del TOC */
+  if (toc) {
+    var darkSections = document.querySelectorAll('.section--dark, .section--navy');
+    if (darkSections.length) {
+      var darkInView = new Set();
+      var darkObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            darkInView.add(entry.target);
+          } else {
+            darkInView.delete(entry.target);
+          }
+        });
+        toc.classList.toggle('on-dark', darkInView.size > 0);
+      }, { rootMargin: '-30% 0px -30% 0px', threshold: 0 });
+      darkSections.forEach(function(s) { darkObserver.observe(s); });
+    }
+  }
+
+  /* Compartir esta lectura · hrefs dinámicos + copiar enlace */
+  var shareUrl = window.location.href;
+  var shareTitle = document.title;
+  var xLink = document.querySelector('.share-btn--x');
+  if (xLink) xLink.setAttribute('href', 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareTitle) + '&url=' + encodeURIComponent(shareUrl));
+  var liLink = document.querySelector('.share-btn--linkedin');
+  if (liLink) liLink.setAttribute('href', 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl));
+  var copyBtn = document.querySelector('.share-btn--copy');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function() {
+      var label = copyBtn.querySelector('.share-btn-label');
+      var orig = label ? label.textContent : '';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareUrl).then(function() {
+          if (label) label.textContent = '¡Copiado!';
+          copyBtn.classList.add('is-copied');
+          setTimeout(function() {
+            if (label) label.textContent = orig;
+            copyBtn.classList.remove('is-copied');
+          }, 1800);
+        });
+      }
+    });
+  }
+})();
+</script>
+
+<button class="totop" id="toTop" aria-label="Volver arriba">↑</button>
+<script>
+  (function(){
+    var tt = document.getElementById('toTop');
+    if (!tt) return;
+    function onScroll(){
+      tt.classList.toggle('show', document.documentElement.scrollTop > 600);
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+    tt.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  })();
+</script>
+
 </body>
 </html>

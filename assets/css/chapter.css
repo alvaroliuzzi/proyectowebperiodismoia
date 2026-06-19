@@ -29,12 +29,151 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--off);color:var(
   .cnav-num{font-size:.78rem;}
 }
 
+/* TOC LATERAL · orientador sticky para capítulos largos */
+.cap-toc{
+  position:fixed;
+  left:1.6rem;
+  top:50%;
+  transform:translateY(-50%);
+  width:200px;
+  z-index:50;
+  font-family:'DM Sans',sans-serif;
+  max-height:calc(100vh - 160px);
+  overflow-y:auto;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .35s ease, transform .35s ease;
+}
+.cap-toc.is-visible{
+  opacity:1;
+  pointer-events:auto;
+}
+.cap-toc-kick{
+  font-size:.58rem;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--g400);
+  margin-bottom:.85rem;
+  padding-left:.85rem;
+  transition:color .35s ease;
+}
+.cap-toc-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  border-left:1px solid var(--g200);
+  counter-reset:tocnum;
+  transition:border-color .35s ease;
+}
+.cap-toc-list li{list-style:none;counter-increment:tocnum;}
+.cap-toc-list a{
+  display:block;
+  padding:.5rem .85rem;
+  font-size:.74rem;
+  line-height:1.4;
+  color:var(--g700);
+  text-decoration:none;
+  border-left:2px solid transparent;
+  margin-left:-1px;
+  transition:color .35s ease, border-color .35s ease, padding-left .2s ease;
+}
+.cap-toc-list a:hover{
+  color:var(--cyan);
+}
+.cap-toc-list a.is-active{
+  color:var(--cyan);
+  border-left-color:var(--cyan);
+  font-weight:600;
+  padding-left:1rem;
+}
+
+/* Variante on-dark: TOC adapta su paleta cuando una sección oscura está en viewport */
+.cap-toc.on-dark .cap-toc-kick{
+  color:rgba(255,255,255,.5);
+}
+.cap-toc.on-dark .cap-toc-list{
+  border-left-color:rgba(255,255,255,.18);
+}
+.cap-toc.on-dark .cap-toc-list a{
+  color:rgba(255,255,255,.6);
+}
+.cap-toc.on-dark .cap-toc-list a:hover,
+.cap-toc.on-dark .cap-toc-list a.is-active{
+  color:#5DCBE6;
+  border-left-color:#5DCBE6;
+}
+section[id]{scroll-margin-top:80px;}
+
+/* TOC pegado al borde izquierdo del viewport, containers desplazados a la derecha
+   pero más generosos en ancho para liberar espacio editorial */
+@media (min-width:1280px){
+  .cap-toc{
+    left:1rem;
+  }
+  .cap-toc ~ main .container,
+  .cap-toc ~ main .container--wide{
+    margin-left:calc(200px + 2.5rem); /* TOC width + gap */
+    margin-right:auto;
+  }
+  .cap-toc ~ main .container{
+    max-width:1080px;
+  }
+}
+
+/* Pantallas grandes: hay margen suficiente para centrar el container normal */
+@media (min-width:1700px){
+  .cap-toc{
+    left:max(1rem, calc((100vw - 1080px) / 2 - 200px - 1.5rem));
+  }
+  .cap-toc ~ main .container{
+    margin-left:auto;
+  }
+}
+
+/* Pantallas muy grandes: el container--wide (1380px) también entra centrado */
+@media (min-width:1830px){
+  .cap-toc ~ main .container--wide{
+    margin-left:auto;
+  }
+}
+
+@media (max-width:1280px){
+  .cap-toc{display:none;}
+}
+
 /* HERO */
 .hero{background:#4B2E8E;min-height:70vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 /* Variantes de fondo del hero por grupo de movimiento (coherente con cap-cover del home) */
 .hero--violet{background:linear-gradient(140deg,#5B2D8E 0%,#8A50C4 110%);}
 .hero--cyan{background:linear-gradient(140deg,#0E6FA8 0%,#00B4D8 115%);}
 .hero--dual{background:linear-gradient(140deg,#5B2D8E 0%,#00B4D8 120%);}
+
+/* Video de fondo full hero + overlay violeta semitransparente para legibilidad */
+.hero-video{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  z-index:0;
+  pointer-events:none;
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(75,46,142,0.62) 0%, rgba(75,46,142,0.80) 100%);
+  z-index:1;
+  pointer-events:none;
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-video{display:none;}
+}
 
 /* Ajustes de líneas, animaciones y patrón por variante para mantener contraste */
 /* hero--violet: el patrón y acentos cyan funcionan bien tal cual */
@@ -89,8 +228,8 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--off);color:var(
 .hero-dots{position:absolute;bottom:3rem;left:50%;transform:translateX(-30%);width:140px;}
 .hero-center{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;gap:0;padding:1rem;}
 .hero-logo{margin-bottom:1.2rem;}
-.hero-logo-personal{display:block;font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.5rem;color:var(--white);letter-spacing:.02em;}
-.hero-logo-personal span{color:var(--cyan);font-weight:700;}
+.hero-logo-personal{display:block;font-family:'DM Sans',sans-serif;font-weight:300;font-size:1.9rem;color:var(--white);letter-spacing:-.02em;}
+.hero-logo-personal span{color:var(--cyan);font-weight:800;}
 .hero-logo-sub{display:block;font-size:.8rem;color:var(--cyan);letter-spacing:.1em;margin-top:.2rem;}
 .hero-sep{width:1px;height:1.8rem;background:rgba(255,255,255,.2);margin-bottom:1rem;}
 .hero-chapter{font-family:'DM Sans',sans-serif;font-size:clamp(1.4rem,2.5vw,2rem);color:rgba(255,255,255,.7);line-height:1;margin-bottom:1rem;font-weight:300;}
@@ -844,8 +983,8 @@ em{font-style:italic;}
 
 /* FOOTER */
 footer{background:var(--navy);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-.footer-brand{display:inline-flex;align-items:baseline;gap:0;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;color:var(--white);letter-spacing:-.01em;text-transform:none;}
-.footer-brand span{color:var(--cyan);}
+.footer-brand{display:inline-flex;align-items:center;gap:0;font-family:'DM Sans',sans-serif;font-weight:300;font-size:1.1rem;color:var(--white);letter-spacing:-.02em;text-transform:none;}
+.footer-brand span{color:var(--cyan);font-weight:800;}
 .footer-brand .ver{font-size:.55rem;font-weight:600;letter-spacing:.12em;color:var(--cyan);border:1px solid rgba(0,180,216,.4);border-radius:99px;padding:.1rem .45rem;margin-left:.5rem;}
 .footer-sub{font-size:11px;color:var(--g400);margin-top:.25rem;}
 footer a{font-size:12px;color:var(--g400);text-decoration:none;}
@@ -1262,6 +1401,110 @@ footer a:hover{color:var(--cyan);}
 /* Cap. 7 — recursos visuales para ensayo final */
 /* Fondo con gradiente sutil (blanco a off) para sensación de cierre */
 .section--coda-bg{background:linear-gradient(180deg,var(--white) 0%,var(--off) 90%);}
+
+/* ─── BLOQUE DE COMPARTIR · cierre de capítulo ─── */
+.share-block{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--g100);
+  display:flex;
+  align-items:center;
+  gap:1.25rem;
+  flex-wrap:wrap;
+}
+.share-kicker{
+  font-family:'DM Sans',sans-serif;
+  font-size:.58rem;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--g400);
+}
+.share-btns{
+  display:flex;
+  gap:.55rem;
+  flex-wrap:wrap;
+}
+.share-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.55rem .9rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  color:var(--g700);
+  background:#fff;
+  border:1px solid var(--g200);
+  border-radius:99px;
+  text-decoration:none;
+  cursor:pointer;
+  transition:color .2s ease, border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.share-btn:hover{
+  color:var(--cyan);
+  border-color:var(--cyan);
+  transform:translateY(-1px);
+}
+.share-btn svg{
+  flex-shrink:0;
+  opacity:.7;
+  transition:opacity .2s ease;
+}
+.share-btn:hover svg{
+  opacity:1;
+}
+.share-btn--copy.is-copied{
+  color:var(--cyan);
+  border-color:var(--cyan);
+  background:rgba(0,180,216,.06);
+}
+
+/* ─── Variante A · íconos circulares minimalistas (Medium/Substack style) ─── */
+.share-icons{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--g100);
+  display:flex;
+  gap:.65rem;
+  align-items:center;
+}
+.share-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:1px solid var(--g200);
+  background:#fff;
+  color:var(--g700);
+  text-decoration:none;
+  cursor:pointer;
+  transition:color .22s ease, border-color .22s ease, background .22s ease, transform .22s ease;
+  padding:0;
+  position:relative;
+}
+.share-icon:hover{
+  color:var(--cyan);
+  border-color:var(--cyan);
+  background:rgba(0,180,216,.05);
+  transform:translateY(-2px);
+}
+.share-icon svg{opacity:.78;transition:opacity .22s ease;}
+.share-icon:hover svg{opacity:1;}
+.share-icon .share-icon-check{display:none;}
+.share-icon.is-copied{color:var(--cyan);border-color:var(--cyan);background:rgba(0,180,216,.08);}
+.share-icon.is-copied .share-icon-default{display:none;}
+.share-icon.is-copied .share-icon-check{display:block;}
+
+/* Cap 7 · línea vertical cyan como hilo conductor del cierre */
+.section--coda-bg .prose{position:relative;padding-left:2.5rem;}
+.section--coda-bg .prose::before{content:'';position:absolute;left:0;top:.4rem;bottom:0;width:2px;background:linear-gradient(180deg,var(--violet) 0%,var(--cyan) 100%);border-radius:2px;opacity:.7;}
+@media (max-width:720px){
+  .section--coda-bg .prose{padding-left:1.4rem;}
+}
 
 /* Prose con borde lateral fino que recorre toda la conclusión */
 .prose--coda{position:relative;padding-left:2rem;}
