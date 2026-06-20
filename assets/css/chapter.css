@@ -1463,6 +1463,97 @@ footer a:hover{color:var(--cyan);}
   background:rgba(0,180,216,.06);
 }
 
+/* ─── INDICADOR VERTICAL DE CAPÍTULOS · sticky a la derecha ─── */
+.cap-side-pager{
+  position:fixed;
+  right:1.6rem;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:50;
+  display:flex;
+  flex-direction:column;
+  gap:.35rem;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .35s ease;
+}
+.cap-side-pager.is-visible{opacity:1;pointer-events:auto;}
+.csp-item{
+  display:inline-flex;
+  align-items:center;
+  gap:.65rem;
+  text-decoration:none;
+  padding:.15rem .35rem .15rem .15rem;
+  border-radius:99px;
+  flex-direction:row-reverse;
+  transition:background .22s ease;
+}
+.csp-item:hover{background:rgba(13,27,62,.04);}
+.csp-num{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:30px;
+  height:30px;
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:.78rem;
+  color:var(--g400);
+  background:#fff;
+  border:1px solid var(--g200);
+  border-radius:50%;
+  line-height:1;
+  flex-shrink:0;
+  transition:color .22s ease, background .22s ease, border-color .22s ease, transform .22s ease;
+}
+.csp-title{
+  font-family:'DM Sans',sans-serif;
+  font-size:.7rem;
+  font-weight:600;
+  color:var(--g700);
+  letter-spacing:.02em;
+  white-space:nowrap;
+  opacity:0;
+  transform:translateX(8px);
+  transition:opacity .25s ease, transform .25s ease, color .22s ease;
+  pointer-events:none;
+}
+.csp-item:hover .csp-num{
+  color:var(--cyan);
+  border-color:var(--cyan);
+  background:rgba(0,180,216,.05);
+}
+.csp-item:hover .csp-title{
+  opacity:1;
+  transform:translateX(0);
+  color:var(--cyan);
+}
+.csp-item.is-current .csp-num{
+  background:var(--cyan);
+  color:var(--navy);
+  border-color:var(--cyan);
+  font-weight:700;
+  transform:scale(1.08);
+}
+.csp-item.is-current .csp-title{
+  opacity:1;
+  transform:translateX(0);
+  color:var(--cyan);
+  font-weight:700;
+}
+
+/* Visible a partir de MBA 13" (1280px). Por debajo se oculta */
+@media (max-width:1279px){
+  .cap-side-pager{display:none;}
+}
+/* Cuando el side-pager está activo, reservar padding-right en el container
+   para que el dot no tape contenido cerca del borde derecho */
+@media (min-width:1280px){
+  .cap-side-pager ~ main .container,
+  .cap-side-pager ~ main .container--wide{
+    padding-right:6rem;
+  }
+}
+
 /* ─── NAVEGACIÓN ENTRE CAPÍTULOS · pager al pie ─── */
 .chapter-pager{
   max-width:1080px;

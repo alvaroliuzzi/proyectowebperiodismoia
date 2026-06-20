@@ -122,6 +122,17 @@
   </ol>
 </aside>
 
+<!-- INDICADOR VERTICAL DE CAPÍTULOS · sticky derecha -->
+<aside class="cap-side-pager" aria-label="Navegación entre capítulos">
+  <a href="capitulo-1.html" class="csp-item"><span class="csp-num">01</span><span class="csp-title">Fundamentos</span></a>
+  <a href="capitulo-2.html" class="csp-item"><span class="csp-num">02</span><span class="csp-title">Ética</span></a>
+  <a href="capitulo-3.html" class="csp-item"><span class="csp-num">03</span><span class="csp-title">Itinerarios</span></a>
+  <a href="capitulo-4.html" class="csp-item is-current"><span class="csp-num">04</span><span class="csp-title">Morfología</span></a>
+  <a href="capitulo-5.html" class="csp-item"><span class="csp-num">05</span><span class="csp-title">Audiencias</span></a>
+  <a href="capitulo-6.html" class="csp-item"><span class="csp-num">06</span><span class="csp-title">Casos</span></a>
+  <a href="capitulo-7.html" class="csp-item"><span class="csp-num">07</span><span class="csp-title">Reflexiones</span></a>
+</aside>
+
 <main id="contenido">
 
 <!-- ═══════════════════════════════════════════════ -->
@@ -526,14 +537,16 @@
   var toc = document.querySelector('.cap-toc');
   var hero = document.querySelector('.hero');
 
-  /* TOC se oculta cuando el hero o el footer están en viewport */
+  /* TOC y side-pager se ocultan cuando el hero o el footer están en viewport */
+  var sidePager = document.querySelector('.cap-side-pager');
   var heroInView = true;
   var footerInView = false;
   function updateTocVisibility() {
-    if (!toc) return;
-    toc.classList.toggle('is-visible', !heroInView && !footerInView);
+    var visible = !heroInView && !footerInView;
+    if (toc) toc.classList.toggle('is-visible', visible);
+    if (sidePager) sidePager.classList.toggle('is-visible', visible);
   }
-  if (toc && hero) {
+  if (hero && (toc || sidePager)) {
     var heroObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         heroInView = entry.isIntersecting;
@@ -543,7 +556,7 @@
     heroObserver.observe(hero);
   }
   var footerEl = document.querySelector('.site-footer, footer');
-  if (toc && footerEl) {
+  if (footerEl && (toc || sidePager)) {
     var footerObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         footerInView = entry.isIntersecting;

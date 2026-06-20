@@ -99,6 +99,17 @@
   </div>
 </section>
 
+<!-- INDICADOR VERTICAL DE CAPÍTULOS · sticky derecha -->
+<aside class="cap-side-pager" aria-label="Navegación entre capítulos">
+  <a href="capitulo-1.html" class="csp-item"><span class="csp-num">01</span><span class="csp-title">Fundamentos</span></a>
+  <a href="capitulo-2.html" class="csp-item"><span class="csp-num">02</span><span class="csp-title">Ética</span></a>
+  <a href="capitulo-3.html" class="csp-item"><span class="csp-num">03</span><span class="csp-title">Itinerarios</span></a>
+  <a href="capitulo-4.html" class="csp-item"><span class="csp-num">04</span><span class="csp-title">Morfología</span></a>
+  <a href="capitulo-5.html" class="csp-item"><span class="csp-num">05</span><span class="csp-title">Audiencias</span></a>
+  <a href="capitulo-6.html" class="csp-item"><span class="csp-num">06</span><span class="csp-title">Casos</span></a>
+  <a href="capitulo-7.html" class="csp-item is-current"><span class="csp-num">07</span><span class="csp-title">Reflexiones</span></a>
+</aside>
+
 <main id="contenido">
 <section class="section section--white section--coda-bg">
   <div class="container">
@@ -230,6 +241,32 @@
   }
   window.addEventListener('scroll', onScroll, {passive: true});
   onScroll();
+})();
+</script>
+
+<script>
+/* Side-pager: visibilidad según hero y footer */
+(function() {
+  if (!('IntersectionObserver' in window)) return;
+  var sidePager = document.querySelector('.cap-side-pager');
+  if (!sidePager) return;
+  var hero = document.querySelector('.hero');
+  var footerEl = document.querySelector('.site-footer, footer');
+  var heroInView = true;
+  var footerInView = false;
+  function update() {
+    sidePager.classList.toggle('is-visible', !heroInView && !footerInView);
+  }
+  if (hero) {
+    new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { heroInView = e.isIntersecting; update(); });
+    }, { threshold: 0, rootMargin: '-80px 0px 0px 0px' }).observe(hero);
+  } else { heroInView = false; update(); }
+  if (footerEl) {
+    new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { footerInView = e.isIntersecting; update(); });
+    }, { threshold: 0 }).observe(footerEl);
+  }
 })();
 </script>
 </body>
