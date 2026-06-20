@@ -1,0 +1,35 @@
+/* ════════════════════════════════════════════════════════════
+   FOOTER EDITORIAL · PeriodismoIA 2026
+   Dos zonas: principal (brand + navegación) + barra técnica fina
+   ════════════════════════════════════════════════════════════ */
+
+.site-footer{background:#0D1B3E;color:rgba(255,255,255,.7);}
+.footer-inner{max-width:1180px;margin:0 auto;padding:4rem 4rem 0;}
+.footer-main{display:grid;grid-template-columns:1.4fr 1fr;gap:4rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08);}
+.footer-brand-zone{max-width:42ch;}
+.footer-brand{display:inline-flex;align-items:center;gap:0;font-family:'DM Sans',sans-serif;font-weight:300;font-size:1.15rem;color:#fff;letter-spacing:-.02em;text-decoration:none;}
+.footer-brand span{color:#00B4D8;font-weight:800;}
+.footer-brand .ver{font-size:.55rem;font-weight:600;letter-spacing:.12em;color:#00B4D8;border:1px solid rgba(0,180,216,.4);border-radius:99px;padding:.1rem .45rem;margin-left:.5rem;}
+.footer-pitch{font-size:.82rem;line-height:1.65;color:rgba(255,255,255,.55);margin:1.2rem 0 .9rem;}
+.footer-publisher{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.45);margin:0;}
+.footer-publisher a{color:rgba(255,255,255,.7);text-decoration:none;border-bottom:1px solid rgba(0,180,216,.3);transition:color .2s,border-color .2s;}
+.footer-publisher a:hover{color:#00B4D8;border-bottom-color:#00B4D8;}
+.footer-cols{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+.footer-col-title{font-family:'DM Sans',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#00B4D8;margin-bottom:1.1rem;}
+.footer-col-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem;}
+.footer-col-links a{font-size:.82rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s,padding-left .2s;}
+.footer-col-links a:hover{color:#00B4D8;padding-left:.25rem;}
+.footer-tech{padding:1.5rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+.footer-tech-credits{font-size:.68rem;color:rgba(255,255,255,.4);letter-spacing:.04em;}
+.footer-tech-social{display:flex;gap:.6rem;}
+.footer-tech-social a{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s,border-color .2s,background .2s,transform .2s;}
+.footer-tech-social a:hover{color:#00B4D8;border-color:#00B4D8;background:rgba(0,180,216,.06);transform:translateY(-1px);}
+.footer-tech-meta{display:flex;gap:.55rem;align-items:center;font-size:.68rem;color:rgba(255,255,255,.4);letter-spacing:.04em;}
+.footer-tech-meta a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s;}
+.footer-tech-meta a:hover{color:#00B4D8;}
+@media(max-width:820px){
+  .footer-inner{padding:3rem 1.5rem 0;}
+  .footer-main{grid-template-columns:1fr;gap:2.5rem;}
+  .footer-cols{gap:1.5rem;}
+  .footer-tech{flex-direction:column;align-items:flex-start;padding:1.5rem 0 2rem;}
+}
