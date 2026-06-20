@@ -115,7 +115,8 @@ section[id]{scroll-margin-top:80px;}
     left:1rem;
   }
   .cap-toc ~ main .container,
-  .cap-toc ~ main .container--wide{
+  .cap-toc ~ main .container--wide,
+  .cap-toc ~ main .chapter-pager{
     margin-left:calc(200px + 2.5rem); /* TOC width + gap */
     margin-right:auto;
   }
@@ -129,7 +130,8 @@ section[id]{scroll-margin-top:80px;}
   .cap-toc{
     left:max(1rem, calc((100vw - 1080px) / 2 - 200px - 1.5rem));
   }
-  .cap-toc ~ main .container{
+  .cap-toc ~ main .container,
+  .cap-toc ~ main .chapter-pager{
     margin-left:auto;
   }
 }
