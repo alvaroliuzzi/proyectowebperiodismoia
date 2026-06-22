@@ -204,6 +204,43 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--off);color:var(
 .section{padding:5rem 0;}
 .section--gray{background:var(--g100);}
 .section--white{background:var(--white);}
+
+/* ════════════════════════════════════════
+   SECCIÓN CON PORTADA BLUREADA DE FONDO
+   ════════════════════════════════════════ */
+.section--portada-blur{
+  position:relative;
+  overflow:hidden;
+  background:#1a1410;
+  isolation:isolate;
+}
+.section--portada-blur::before{
+  content:'';
+  position:absolute;
+  inset:-40px;
+  background-image:url('../../img/portada-guia.webp');
+  background-size:cover;
+  background-position:center;
+  filter:blur(14px) saturate(.95) hue-rotate(-8deg);
+  transform:scale(1.08);
+  opacity:1;
+  z-index:-2;
+}
+.section--portada-blur::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 25% 35%, rgba(91,45,142,.14) 0%, transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(0,180,216,.10) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(28,20,16,.52) 0%, rgba(42,28,22,.36) 55%, rgba(28,20,16,.52) 100%);
+  z-index:-1;
+}
+.section--portada-blur .container{position:relative;z-index:1;}
+.section-label--light{color:rgba(255,255,255,.85);}
+.section-label--light::before{background:var(--cyan);}
+.section-title--light{color:#fff;}
+.lead--light{color:rgba(255,255,255,.82);}
 .section--dark{background:var(--navy);color:var(--white);}
 .section--violet{background:#1A0A2E;}
 .container{max-width:1180px;margin:0 auto;padding:0 4rem;}
