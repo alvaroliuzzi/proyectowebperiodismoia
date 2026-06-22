@@ -298,16 +298,6 @@
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
   if (tt) tt.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-  var burger = document.querySelector('.nav-burger');
-  if(burger){
-    burger.addEventListener('click', function(){
-      var open = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', String(!open));
-      var links = document.querySelector('.nav-links');
-      if(!open){ links.style.display='flex'; links.style.position='absolute'; links.style.flexDirection='column'; links.style.top='100%'; links.style.right='1.5rem'; links.style.background='var(--navy)'; links.style.padding='1.2rem 1.6rem'; links.style.borderRadius='0 0 10px 10px'; links.style.border='1px solid rgba(255,255,255,.1)'; links.style.gap='1.1rem'; links.style.zIndex='200'; }
-      else { links.style.display='none'; }
-    });
-  }
 </script>
 
 </body>
