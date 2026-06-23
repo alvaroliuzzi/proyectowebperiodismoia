@@ -1500,8 +1500,12 @@ html.hide-index .ruta, html.hide-index .ruta-caption { display: none; }
     padding: 0;
     margin: 0;
     max-height: 0;
+    min-width: 0;
+    width: 100%;
     overflow: hidden;
     transition: max-height .35s ease;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
   .nav-dropdown.is-open .nav-dropdown-menu {
     max-height: 600px;
@@ -1509,6 +1513,14 @@ html.hide-index .ruta, html.hide-index .ruta-caption { display: none; }
     padding: .3rem 0 .2rem .8rem;
     border-left: 1px solid rgba(0,180,216,.25);
   }
+  /* Items del dropdown en mobile: ancho contenido y wrap de títulos largos */
+  .nav-dropdown-menu a {
+    white-space: normal !important;
+    padding: .5rem .6rem !important;
+    font-size: .82rem;
+  }
+  .nav-cap-num { min-width: 1.6rem; font-size: .9rem; }
+  .nav-cap-title { line-height: 1.25; flex: 1; min-width: 0; }
   .nav-chevron { transition: transform .25s ease; }
   .nav-dropdown.is-open .nav-chevron { transform: rotate(180deg); }
   .nav-dropdown:hover .nav-dropdown-menu,
